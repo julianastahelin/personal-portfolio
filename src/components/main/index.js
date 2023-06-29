@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 async function getMainContent(lang) {
-    const response = await fetch(`http://localhost:3000/json/main-${lang}.json`)
+    const response = await fetch(`../../public/json/main-${lang}.json`)
     return await response.json()
 }
 
