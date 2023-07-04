@@ -1,24 +1,25 @@
 import styled from 'styled-components';
+import { forwardRef } from 'react';
 
-function CvSection({ content }) {
+const CvSection = forwardRef((props, ref) => {
+    const { content } = props;
     return (
-        <Section>
+        <Section ref={ref}>
             <H2>{content.cvSection.title}</H2>
-
             {content.cvSection.experiences.map((exp, index) => {
                 return (
-                    <Category key={exp.title+index}>
-                        <H3 key={index+exp.title}>{exp.title}</H3>
+                    <Category key={exp.title + index}>
+                        <H3 key={index + exp.title}>{exp.title}</H3>
                         <Div>
                             {exp.experience.map((item, index) => {
                                 return (
-                                    <ExpType key={item.subtitle+index}>
+                                    <ExpType key={item.subtitle + index}>
                                         <p>{item.subtitle}</p>
                                         {item.experience.map((item) => {
                                             return (
                                                 <>
                                                     <h4>{item.name}</h4>
-                                                    <Ul>    
+                                                    <Ul>
                                                         {item.description.map((item) => <Li>{item}</Li>)}
                                                     </Ul>
                                                 </>
@@ -35,16 +36,16 @@ function CvSection({ content }) {
             <Category>
                 <H3>{content.cvSection.abilities.title}</H3>
                 <Div>
-                {content.cvSection.abilities.list.map((type) => {
-                    return (
-                        <div key={type.type}>
-                            <h4>{type.type}</h4>
-                            <Ul>
-                                {type.abilities.map((ability) => <Li>{ability}</Li>)}
-                            </Ul>
-                        </div>
-                    )
-                })}
+                    {content.cvSection.abilities.list.map((type) => {
+                        return (
+                            <div key={type.type}>
+                                <h4>{type.type}</h4>
+                                <Ul>
+                                    {type.abilities.map((ability) => <Li>{ability}</Li>)}
+                                </Ul>
+                            </div>
+                        )
+                    })}
                 </Div>
             </Category>
 
@@ -61,13 +62,14 @@ function CvSection({ content }) {
                 <H3>{content.cvSection.links.title}</H3>
                 <Div>
                     <Ul>
-                        {content.cvSection.links.list.map((link) => <Li>{link.name} - {link.url}</Li>)}
+                        {content.cvSection.links.list.map((link) => <Li>{link.name} - <A href={link.url} target="_blank">{link.url}</A></Li>)}
                     </Ul>
                 </Div>
             </Category>
+
         </Section>
     )
-}
+})
 
 const Section = styled.section`
     display: flex;
@@ -75,6 +77,8 @@ const Section = styled.section`
     align-items: center;
     gap: 20px;
     padding-bottom: 30px;
+    scroll-margin-top: 85px;
+    margin-top: 55px;
 `
 const H2 = styled.h2`
     text-align: center;
@@ -131,5 +135,11 @@ const Li = styled.li`
         padding-right: 10px;
         font-size: 15px;
     }
-` 
+`
+const A = styled.a`
+    text-decoration: underline;
+    &:visited {
+        color: #2F5E55;
+    }
+`
 export default CvSection

@@ -1,17 +1,21 @@
-import styled from 'styled-components'
-// import portfolio from '../img/portfolio.png';
-// import juflix from '../img/julflix.png';
-// import pokedex from '../img/pokedex.png';
+import styled from 'styled-components';
+import { forwardRef } from 'react';
 
-function ProjectsSection({ content }) {
+const ProjectsSection = forwardRef((props, ref) => {
+    const { content } = props;
+
     return (
         <>
-            <H2>{content.projectSection.title}</H2>
+            <H2 ref={ref}>{content.projectSection.title}</H2>
             <Section> 
                 {content.projectSection.projects.map((project, index) => {
                     return (
                         <Project key={project+index} number={index}>
-                                <Img src={require(`../img/${project.image.desktop}`)} alt={project.image.desktop} />
+                                <Picture>
+                                    <Source media="(max-width: 425px)" srcSet={require(`../img/${project.image.mobile}`)} alt={`Screenshot of ${project.title} project`} />
+                                    <Source media="(max-width: 560px)" srcSet={require(`../img/${project.image.tablet}`)} alt={`Screenshot of ${project.title} project`} />
+                                    <Img src={require(`../img/${project.image.desktop}`)} alt={`Screenshot of ${project.title} project`} />
+                                </Picture>
                                 <Div key={project.title+index} style={project.image.boxPosition}>
                                     <H3>{project.title}</H3>
                                     <P>{project.subtitle}</P>
@@ -31,7 +35,7 @@ function ProjectsSection({ content }) {
             </Section>
         </>
     )
-}
+})
 
 const Section = styled.section`
     background: linear-gradient(180deg, #2F5E55 0%, #ACCCC6 45.83%, #2F5E55 100%);
@@ -40,13 +44,17 @@ const Section = styled.section`
     align-items: center;
     gap: 20px;
     padding: 20px;
+    @media (max-width: 768px) {
+        gap: 40px;
+    }
 `
-
 const H2 = styled.h2`
     text-align: center;
     font-size: 30px;
     font-weight: 300;
     padding-bottom: 20px;
+    scroll-margin-top: 85px;
+    margin-top: 55px;
 `
 const Project = styled.div`
     display: flex;
@@ -62,10 +70,10 @@ const Project = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 10px;
     }
 `
-
 const Div = styled.div` 
     padding: 20px;
     background: #000000;
@@ -76,6 +84,9 @@ const Div = styled.div`
     @media (max-width: 768px) {
         width: 90%;
     }
+`
+const Picture = styled.picture` 
+    text-align: center;
 `
 const Img = styled.img`
     width: 600px;
@@ -88,8 +99,29 @@ const Img = styled.img`
         width: 450px;
         height: 271px;
     }
+    @media (max-width: 900px) {
+        width: 420px;
+        height: 253px;
+    }
     @media (max-width: 768px) {
         width: 90%;
+        height: 100%;
+    }
+`
+const Source = styled.source`
+    width: 600px;
+    height: 361px;
+    @media (max-width: 1000px) {
+        width: 500px;
+        height: 301px;
+    }
+    @media (max-width: 900px) {
+        width: 450px;
+        height: 271px;
+    }
+    @media (max-width: 768px) {
+        width: 90%;
+        height: 100%;
     }
 `
 const H3 = styled.h3`
@@ -107,7 +139,6 @@ const H4 = styled.h4`
     color: #0FF76C;
     padding-top: 30px;
 `
-
 const Li = styled.li`
     list-style: none;
     &:before {
@@ -135,6 +166,6 @@ const Btn = styled.a`
         transition: ease-in-out 0.2s;
         opacity: 0.7;
     }
-    `
+`
 
 export default ProjectsSection

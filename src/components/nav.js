@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 
-function Nav({ content, changeLang }) {
+function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef }) {
+    
+    function scrollTo(section) { 
+        section.current.scrollIntoView({ behavior: 'smooth' });
+    }
 
     return (
         <Navbar>
             <Ul>
-                <Li>{content.nav.home}</Li>
-                <Li>{content.nav.cv}</Li>
-                <Li>{content.nav.projects}</Li>
-                <Li>{content.nav.contact}</Li>
+                <Li onClick={() => scrollTo(topRef)}>{content.nav.home}</Li>
+                <Li onClick={() => scrollTo(cvRef)}>{content.nav.cv}</Li>
+                <Li onClick={() => scrollTo(projectRef)}>{content.nav.projects}</Li>
+                <Li onClick={() => scrollTo(contactRef)}>{content.nav.contact}</Li>
             </Ul>
             <UlLang>
                 <li><Button onClick={() => changeLang('pt')}>PT</Button></li>
@@ -20,7 +24,7 @@ function Nav({ content, changeLang }) {
 
 const Navbar = styled.nav`
     list-style-type: none;
-    background: linear-gradient(180deg, #DCF6F1 14.73%, #DEF7F3 100%);
+    background: linear-gradient(180deg, #DCF2E7 0%, #DEF7F3 100%);
     box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.71);
     display: flex;
     align-items: flex-start;
@@ -43,13 +47,11 @@ const Li = styled.li`
         cursor: pointer;
     }
 `
-
 const UlLang = styled.ul`
     list-style-type: none;
     display: flex;
     gap: 20px;
 `
-
 const Button = styled.button`
     background: transparent;
     border: 0;

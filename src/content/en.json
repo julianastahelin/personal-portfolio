@@ -144,11 +144,11 @@
             "list": [
                 {
                     "name": "Github",
-                    "url": "https://github.com/julianasthelin"
+                    "url": "https://github.com/julianastahelin"
                 },
                 {
                     "name": "LinkedIn",
-                    "url": "https://www.linkedin.com/in/julianasthelin/"
+                    "url": "https://www.linkedin.com/in/julianastahelin/"
                 },
                 {
                     "name": "Curriculum - pdf",
@@ -161,15 +161,13 @@
         "title": "Projects",
         "projects": [
             {
-                "title": "Project 1",
-                "subtitle": "Project 1 sibtitle",
+                "title": "Pokédex",
+                "subtitle": "List of Pokémons",
                 "stack": {
                     "title": "Stack",
                     "list": [
-                        "HTML",
-                        "CSS",
-                        "Javascript",
-                        "React" ]
+                        "React",
+                        "Styled components" ]
                 },
                 "description": {
                     "title": "Description",
@@ -178,28 +176,25 @@
                 "links": [
                     { 
                         "title": "Repository",
-                        "url": ""
+                        "url": "https://github.com/julianastahelin/pokemon-api-challenge"
                     },
                     { 
                         "title": "Website",
-                        "url": ""
+                        "url": "https://pokemon-api-challenge-seven.vercel.app/"
                     }
                 ],
                 "image": {
-                    "desktop": "portfolio.png",
-                    "tablet": "",
-                    "mobile": ""
+                    "desktop": "pokedex-desktop.png",
+                    "tablet": "pokedex-tablet.png",
+                    "mobile": "pokedex-mobile.png"
                 }
             },
             {
-                "title": "Project 2",
-                "subtitle": "Project 2 sibtitle",
+                "title": "Juliana Stahelin - Portfolio",
+                "subtitle": "Personal portfolio",
                 "stack": {
                     "title": "Stack",
                     "list": [
-                        "HTML",
-                        "CSS",
-                        "Javascript",
                         "React" ]
                 },
                 "description": {
@@ -209,29 +204,29 @@
                 "links": [
                     { 
                         "title": "Repository",
-                        "url": ""
+                        "url": "https://github.com/julianastahelin/personal-portfolio"
                     },
                     { 
                         "title": "Website",
-                        "url": ""
+                        "url": "https://portfolio-juliana-stahelin.vercel.app/"
                     }
                 ],
                 "image": {
-                    "desktop": "juflix.png",
-                    "tablet": "",
-                    "mobile": ""
+                    "desktop": "portfolio-desktop.png",
+                    "tablet": "portfolio-tablet.png",
+                    "mobile": "portfolio-mobile.png"
                 }
             },
             {
-                "title": "Project 3",
-                "subtitle": "Project 3 sibtitle",
+                "title": "Juflix",
+                "subtitle": "Catalog of movies",
                 "stack": {
                     "title": "Stack",
                     "list": [
                         "HTML",
                         "CSS",
                         "Javascript",
-                        "React" ]
+                        "Use of API" ]
                 },
                 "description": {
                     "title": "Description",
@@ -240,17 +235,17 @@
                 "links": [
                     { 
                         "title": "Repository",
-                        "url": ""
+                        "url": "https://github.com/julianastahelin/juflix-movies-catalog"
                     },
                     { 
                         "title": "Website",
-                        "url": ""
+                        "url": "https://julianastahelin.github.io/juflix-movies-catalog/"
                     }
                 ],
                 "image": {
-                    "desktop": "portfolio.png",
-                    "tablet": "",
-                    "mobile": ""
+                    "desktop": "juflix-desktop.png",
+                    "tablet": "juflix-tablet.png",
+                    "mobile": "juflix-mobile.png"
                 }
             }
         ]     
@@ -268,8 +263,20 @@
             },
             {
                 "title": "Linkedin",
-                "address": "https://www.linkedin.com/in/julianasthelin/"
+                "address": "https://www.linkedin.com/in/julianastahelin/"
             }
         ]
-    }
+    },
+    "footer": [
+        { 
+            "title": "Code",
+            "name": "Juliana Stahelin",
+            "url": "https://github.com/julianastahelin"
+        },
+        {
+            "title": "Design",
+            "name": "Sabrina Stahelin",
+            "url": "https://www.linkedin.com/in/sabrina-stahelin-0a8119180/"
+        }
+    ]
 }

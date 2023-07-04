@@ -144,11 +144,11 @@
             "list": [
                 {
                     "name": "Github",
-                    "url": "https://github.com/julianasthelin"
+                    "url": "https://github.com/julianastahelin"
                 },
                 {
                     "name": "LinkedIn",
-                    "url": "https://www.linkedin.com/in/julianasthelin/"
+                    "url": "https://www.linkedin.com/in/julianastahelin/"
                 },
                 {
                     "name": "Currículo em pdf",
@@ -186,9 +186,39 @@
                     }
                 ],
                 "image": {
-                    "desktop": "pokedex.png",
-                    "tablet": "",
-                    "mobile": ""
+                    "desktop": "pokedex-desktop.png",
+                    "tablet": "pokedex-tablet.png",
+                    "mobile": "pokedex-mobile.png"
+                }
+            },
+            {
+                "title": "Portfólio - Juliana Stahelin",
+                "subtitle": "Site com informações pessoais, currículo e portfólio",
+                "stack": {
+                    "title": "Tecnologias",
+                    "list": [
+                        "React",
+                        "Styled Components"
+                    ]
+                },
+                "description": {
+                    "title": "Descrição",
+                    "text": "Projeto pessoal feito para demonstrar projetos e habilidades em programação."
+                },
+                "links": [
+                    {
+                        "title": "Repositório",
+                        "url": ""
+                    },
+                    {
+                        "title": "Site",
+                        "url": ""
+                    }
+                ],
+                "image": {
+                    "desktop": "portfolio-desktop.png",
+                    "tablet": "portfolio-tablet.png",
+                    "mobile": "portfolio-mobile.png"
                 }
             },
             {
@@ -218,39 +248,9 @@
                     }
                 ],
                 "image": {
-                    "desktop": "juflix.png",
-                    "tablet": "",
-                    "mobile": ""
-                }
-            },
-            {
-                "title": "Portfólio - Juliana Stahelin",
-                "subtitle": "Site com informações pessoais, currículo e portfólio",
-                "stack": {
-                    "title": "Tecnologias",
-                    "list": [
-                        "React",
-                        "Styled Components"
-                    ]
-                },
-                "description": {
-                    "title": "Descrição",
-                    "text": "Projeto pessoal feito para demonstrar projetos e habilidades em programação."
-                },
-                "links": [
-                    {
-                        "title": "Repositório",
-                        "url": ""
-                    },
-                    {
-                        "title": "Site",
-                        "url": ""
-                    }
-                ],
-                "image": {
-                    "desktop": "portfolio.png",
-                    "tablet": "",
-                    "mobile": ""
+                    "desktop": "juflix-desktop.png",
+                    "tablet": "juflix-tablet.png",
+                    "mobile": "juflix-mobile.png"
                 }
             }
         ]
@@ -268,8 +268,20 @@
             },
             {
                 "title": "Linkedin",
-                "address": "https://www.linkedin.com/in/julianasthelin/"
+                "address": "https://www.linkedin.com/in/julianastahelin/"
             }
         ]
-    }
+    },
+    "footer": [
+        { 
+            "title": "Código",
+            "name": "Juliana Stahelin",
+            "url": "https://github.com/julianastahelin"
+        },
+        {
+            "title": "Design",
+            "name": "Sabrina Stahelin",
+            "url": "https://www.linkedin.com/in/sabrina-stahelin-0a8119180/"
+        }
+    ]
 }
