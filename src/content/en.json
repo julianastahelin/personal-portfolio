@@ -1,0 +1,275 @@
+{
+    "lang": "en",
+    "title": "Juliana Stahelin - Portfolio",
+    "nav": {
+        "home": "Home",
+        "cv": "Abilities/curriculum",
+        "projects": "Projects",
+        "contact": "Contact",
+        "lang": [
+            "PT",
+            "EN"
+        ]
+    },
+    "header": {
+        "name": "Juliana Stahelin",
+        "jobTitle": "Frontend Web Developer",
+        "description": "Hello! I am Juliana, a Frontend Web Developer. I have been developing projects with HTML, CSS, Javascript, React and Bootstrap, trying to write my code the best way possible and looking forward to letting them functional, readable and well organised. I am currently studying frontend and, soon, will be diving into backend development.  check my recent projects!",
+        "projectsButton": "Go to projects"
+    },
+    "cvSection": {
+        "title": "Curriculum",
+        "experiences": [
+            {
+                "title": "Experience",
+                "experience": [
+                    {
+                        "subtitle": "Programming",
+                        "experience": [
+                            {
+                                "name": "Frontend Web Developer - CEPEDOC",
+                                "description": [
+                                    "Building HTML pages for online course;",
+                                    "Styling using CSS and Bootstrap;",
+                                    "Building interactive graphics using JS;",
+                                    "Version control using Git."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "subtitle": "Previous",
+                        "experience": [
+                            {
+                                "name": "Pharmacist - City Hall of Águas Mornas, SC",
+                                "description": [
+                                    "Technical manager;",
+                                    "Pharmaceutical Assistance;",
+                                    "Follow-up of patients;",
+                                    "Support to health team."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Education",
+                "experience": [
+                    {
+                        "subtitle": "Programming",
+                        "experience": [
+                            {
+                                "name": "Courses in fullstack web development",
+                                "description": [ "In progress" ]
+                            },
+                            {
+                                "name": "Personal Projects",
+                                "description": [
+                                    "HTML;", 
+                                    "CSS;", 
+                                    "JS;", 
+                                    "React;", 
+                                    "Bootstrap;", 
+                                    "Use of API"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "subtitle": "Previous",
+                        "experience": [
+                            {
+                                "name": "Graduation",
+                                "description": [ "Pharmacy (UFSC)" ]
+                            },
+                            {
+                                "name": "Post-graduation",
+                                "description": [ "Multiprofessional Residency in Family Health (UFSC)" ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "abilities": {
+            "title": "Abilities",
+            "list": [
+                {
+                    "type": "Hard skills",
+                    "abilities": [
+                        "HTML",
+                        "CSS",
+                        "JS",
+                        "React",
+                        "Bootstrap",
+                        "Git",
+                        "GitHub",
+                        "Use of API",
+                        "Figma"
+                    ]
+                },
+                {
+                    "type": "Soft skills",
+                    "abilities": [
+                        "Teamwork",
+                        "Proactivity"
+                    ]
+                }
+            ]
+        },
+        "languages": {
+            "title": "Languages", 
+            "list": [ 
+                {
+                    "name": "Portuguese",
+                    "level": "Native"
+                },
+                {
+                    "name": "English",
+                    "level": "Advanced"
+                },
+                {
+                    "name": "Spanish",
+                    "level": "Basic"
+                },
+                {
+                    "name": "French",
+                    "level": "Basic"
+                }
+            ]
+        },
+        "links": {
+            "title": "Links",
+            "list": [
+                {
+                    "name": "Github",
+                    "url": "https://github.com/julianasthelin"
+                },
+                {
+                    "name": "LinkedIn",
+                    "url": "https://www.linkedin.com/in/julianasthelin/"
+                },
+                {
+                    "name": "Curriculum - pdf",
+                    "url": ""
+                }
+            ]    
+        }
+    },
+    "projectSection": {
+        "title": "Projects",
+        "projects": [
+            {
+                "title": "Project 1",
+                "subtitle": "Project 1 sibtitle",
+                "stack": {
+                    "title": "Stack",
+                    "list": [
+                        "HTML",
+                        "CSS",
+                        "Javascript",
+                        "React" ]
+                },
+                "description": {
+                    "title": "Description",
+                    "text": "Personal project built for practicing..."
+                },
+                "links": [
+                    { 
+                        "title": "Repository",
+                        "url": ""
+                    },
+                    { 
+                        "title": "Website",
+                        "url": ""
+                    }
+                ],
+                "image": {
+                    "desktop": "portfolio.png",
+                    "tablet": "",
+                    "mobile": ""
+                }
+            },
+            {
+                "title": "Project 2",
+                "subtitle": "Project 2 sibtitle",
+                "stack": {
+                    "title": "Stack",
+                    "list": [
+                        "HTML",
+                        "CSS",
+                        "Javascript",
+                        "React" ]
+                },
+                "description": {
+                    "title": "Description",
+                    "text": "Personal project built for practicing..."
+                },
+                "links": [
+                    { 
+                        "title": "Repository",
+                        "url": ""
+                    },
+                    { 
+                        "title": "Website",
+                        "url": ""
+                    }
+                ],
+                "image": {
+                    "desktop": "juflix.png",
+                    "tablet": "",
+                    "mobile": ""
+                }
+            },
+            {
+                "title": "Project 3",
+                "subtitle": "Project 3 sibtitle",
+                "stack": {
+                    "title": "Stack",
+                    "list": [
+                        "HTML",
+                        "CSS",
+                        "Javascript",
+                        "React" ]
+                },
+                "description": {
+                    "title": "Description",
+                    "text": "Personal project built for practicing..."
+                },
+                "links": [
+                    { 
+                        "title": "Repository",
+                        "url": ""
+                    },
+                    { 
+                        "title": "Website",
+                        "url": ""
+                    }
+                ],
+                "image": {
+                    "desktop": "portfolio.png",
+                    "tablet": "",
+                    "mobile": ""
+                }
+            }
+        ]     
+    },
+    "contactSection": {
+        "title": "Contact",
+        "contact": [
+            {
+                "title": "Email",
+                "address": "julianastahelin@gmail.com"
+            },
+            {
+                "title": "Phone Number",
+                "address": "(+55) 48 9 9111-1966"
+            },
+            {
+                "title": "Linkedin",
+                "address": "https://www.linkedin.com/in/julianasthelin/"
+            }
+        ]
+    }
+}

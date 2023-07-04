@@ -1,0 +1,61 @@
+{
+    "data": {
+        "lang": "en",
+        "title": "Juliana Stahelin - Portfolio",
+        "nav": {
+            "home": "Home",
+            "cv": "Abilities/curriculum",
+            "projects": "Projects",
+            "contact": "Contact",
+            "lang": [ "PT", "EN" ]
+        },
+        "header": {
+            "name": "Juliana Stahelin",
+            "job-title": "Frontend Web Developer",
+            "description": "Hello!
+    
+            I am Juliana, a Frontend Web Developer. I have been developing projects with HTML, CSS, Javascript, React and Bootstrap, trying to write my code the best way possible and looking forward to letting them functional, readable and well organised. I am currently studying frontend and, soon, will be diving into backend development.
+            
+            Come check my recent projects!",
+            "projects-button": "Go to projects"
+        },
+        "cv-section": {
+            "title": "Curriculum",
+            "experiences": {
+                "title": "Experience",
+                "experience": [ 
+                    {
+                        "subtitle": "Programming",
+                        "experience": [
+                            {
+                                "name": "Frontend Web Developer - CEPEDOC",
+                                "activities": [ 
+                                    "Building HTML pages for online course;",
+                                    "Styling using CSS and Bootstrap;",
+                                    "Building interactive graphics using JS;",
+                                    "Version control using Git."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "subtitle": "Previous",
+                        "experience": [
+                            {
+                                "name": "Pharmacist - City Hall of Águas Mornas, SC",
+                                "activities": [ 
+                                    "Technical manager;",
+                                    "Pharmaceutical Assistance;",
+                                    "Follow-up of patients;",
+                                    "Support to health team."
+                                ]
+                            }
+                        ]
+                    }
+                    
+                ]
+            }
+        }
+   
+    }
+}

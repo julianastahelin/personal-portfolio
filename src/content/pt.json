@@ -1,0 +1,275 @@
+{
+    "lang": "pt",
+    "title": "Juliana Stahelin - Portfólio",
+    "nav": {
+        "home": "Início",
+        "cv": "Habilidades/currículo",
+        "projects": "Projetos",
+        "contact": "Contato",
+        "lang": [
+            "PT",
+            "EN"
+        ]
+    },
+    "header": {
+        "name": "Juliana Stahelin",
+        "jobTitle": "Desenvolvedora front-end",
+        "description": "Olá! Eu sou a Juliana, sou programadora front-end. Tenho desenvolvido projetos envolvendo HTML, CSS, Javascript, React e Bootstrap, buscando escrever meus códigos da melhor maneira possível a fim de deixá-los funcionais, facilmente compreensíveis e bem organizados. Sigo me desenvolvendo em front-end e, em breve, em back-end. Venha conhecer um pouco dos meus projetos recentes!",
+        "projectsButton": "Ir para projetos"
+    },
+    "cvSection": {
+        "title": "Currículo",
+        "experiences": [
+            {
+                "title": "Experiência",
+                "experience": [
+                    {
+                        "subtitle": "Programação",
+                        "experience": [
+                            {
+                                "name": "Desenvolvedora Web Frontend - CEPEDOC",
+                                "description": [
+                                    "Plotagem de conteúdo em HTML para curso online;",
+                                    "Estilização em CSS e Bootstrap;",
+                                    "Aplicação de gráficos interativos em JS;",
+                                    "Versionamento em Git."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "subtitle": "Anteriores",
+                        "experience": [
+                            {
+                                "name": "Farmacêutica - Prefeitura Municipal de Águas Mornas, SC",
+                                "description": [
+                                    "Responsabilidade técnica;",
+                                    "Assistência Farmacêutica;",
+                                    "Acompanhamento de pacientes;",
+                                    "Suporte à equipe de saúde."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Formação",
+                "experience": [
+                    {
+                        "subtitle": "Programação",
+                        "experience": [
+                            {
+                                "name": "Cursos em desenvolvimento web fullstack",
+                                "description": [ "Em andamento" ]
+                            },
+                            {
+                                "name": "Elaboração de projetos",
+                                "description": [
+                                    "HTML;", 
+                                    "CSS;", 
+                                    "JS;", 
+                                    "React;", 
+                                    "Bootstrap;", 
+                                    "consumo de API"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "subtitle": "Anteriores",
+                        "experience": [
+                            {
+                                "name": "Graduação",
+                                "description": [ "Farmácia (UFSC)" ]
+                            },
+                            {
+                                "name": "Pós-graduação",
+                                "description": [ "Residência Multiprofissional em Saúde da Família (UFSC)" ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "abilities": {
+            "title": "Habilidades",
+            "list": [
+                {
+                    "type": "Técnicas/específicas",
+                    "abilities": [
+                        "HTML",
+                        "CSS",
+                        "JS",
+                        "React",
+                        "Bootstrap",
+                        "Git",
+                        "GitHub",
+                        "Consumo de API",
+                        "Figma"
+                    ]
+                },
+                {
+                    "type": "Gerais e interpessoais",
+                    "abilities": [
+                        "Trabalho em equipe",
+                        "Pró-atividade"
+                    ]
+                }
+            ]
+        },
+        "languages": {
+            "title": "Idiomas",
+            "list": [
+                {
+                    "name": "Português",
+                    "level": "Nativo"
+                },
+                {
+                    "name": "Inglês",
+                    "level": "Avançado"
+                },
+                {
+                    "name": "Espanhol",
+                    "level": "Básico"
+                },
+                {
+                    "name": "Francês",
+                    "level": "Básico"
+                }
+            ]
+        },
+        "links": {
+            "title": "Links",
+            "list": [
+                {
+                    "name": "Github",
+                    "url": "https://github.com/julianasthelin"
+                },
+                {
+                    "name": "LinkedIn",
+                    "url": "https://www.linkedin.com/in/julianasthelin/"
+                },
+                {
+                    "name": "Currículo em pdf",
+                    "url": ""
+                }
+            ]
+        }
+    },
+    "projectSection": {
+        "title": "Projetos",
+        "projects": [
+            {
+                "title": "Pokédex",
+                "subtitle": "Lista de Pokémons",
+                "stack": {
+                    "title": "Tecnologias",
+                    "list": [
+                        "React",
+                        "Consumo API",
+                        "Styled Components"
+                    ]
+                },
+                "description": {
+                    "title": "Descrição",
+                    "text": "Projeto pessoal feito para treino de React."
+                },
+                "links": [
+                    {
+                        "title": "Repositório",
+                        "url": "https://github.com/julianastahelin/pokemon-api-challenge"
+                    },
+                    {
+                        "title": "Site",
+                        "url": "https://pokemon-api-challenge-seven.vercel.app/"
+                    }
+                ],
+                "image": {
+                    "desktop": "pokedex.png",
+                    "tablet": "",
+                    "mobile": ""
+                }
+            },
+            {
+                "title": "Juflix",
+                "subtitle": "Catálogo de filmes",
+                "stack": {
+                    "title": "Tecnologias",
+                    "list": [
+                        "HTML",
+                        "CSS",
+                        "Javascript",
+                        "Consumo de API"
+                    ]
+                },
+                "description": {
+                    "title": "Descrição",
+                    "text": "Projeto pessoal. Catálogo que retorna filmes e séries de uma API. Possível filtrar por gênero ou mais bem ranqueados e realizar busca por nome."
+                },
+                "links": [
+                    {
+                        "title": "Repositório",
+                        "url": "https://github.com/julianastahelin/juflix-movies-catalog"
+                    },
+                    {
+                        "title": "Site",
+                        "url": "https://julianastahelin.github.io/juflix-movies-catalog/"
+                    }
+                ],
+                "image": {
+                    "desktop": "juflix.png",
+                    "tablet": "",
+                    "mobile": ""
+                }
+            },
+            {
+                "title": "Portfólio - Juliana Stahelin",
+                "subtitle": "Site com informações pessoais, currículo e portfólio",
+                "stack": {
+                    "title": "Tecnologias",
+                    "list": [
+                        "React",
+                        "Styled Components"
+                    ]
+                },
+                "description": {
+                    "title": "Descrição",
+                    "text": "Projeto pessoal feito para demonstrar projetos e habilidades em programação."
+                },
+                "links": [
+                    {
+                        "title": "Repositório",
+                        "url": ""
+                    },
+                    {
+                        "title": "Site",
+                        "url": ""
+                    }
+                ],
+                "image": {
+                    "desktop": "portfolio.png",
+                    "tablet": "",
+                    "mobile": ""
+                }
+            }
+        ]
+    },
+    "contactSection": {
+        "title": "Contato",
+        "contact": [
+            {
+                "title": "Email",
+                "address": "julianastahelin@gmail.com"
+            },
+            {
+                "title": "Telefone",
+                "address": "(+55) 48 9 9111-1966"
+            },
+            {
+                "title": "Linkedin",
+                "address": "https://www.linkedin.com/in/julianasthelin/"
+            }
+        ]
+    }
+}
