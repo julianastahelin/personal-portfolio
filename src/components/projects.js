@@ -42,10 +42,12 @@ const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 50px;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 1440px;
     @media (max-width: 768px) {
-        gap: 40px;
+        gap: 60px;
     }
 `
 const H2 = styled.h2`
@@ -59,34 +61,41 @@ const H2 = styled.h2`
 const Project = styled.div`
     display: flex;
     width: 90%;
-    gap: 30px;
-    justify-content: space-around;
+    gap: 0;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
     flex-direction: ${props => props.number === 0 || props.number%2 === 0 ? 'row' : 'row-reverse'};
     @media (max-width: 1000px) {
         width: 95%;
         gap: 20px;
     }
     @media (max-width: 768px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 5px;
     }
-`
-const Div = styled.div` 
-    padding: 20px;
+
     background: #000000;
     border: 5px solid #D8D8D8;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
+`
+const Div = styled.div` 
+    padding: 20px;
+
     color: #fff;
     width: 40%;
     @media (max-width: 768px) {
         width: 90%;
     }
 `
+// background: #000000;
+// border: 5px solid #D8D8D8;
+// box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
 const Picture = styled.picture` 
     text-align: center;
+    padding: 10px 0;
 `
 const Img = styled.img`
     width: 600px;
@@ -103,11 +112,18 @@ const Img = styled.img`
         width: 420px;
         height: 253px;
     }
+    @media (max-width: 825px) {
+        width: 390px;
+        height: 235px;
+    }
     @media (max-width: 768px) {
         width: 90%;
         height: 100%;
     }
+
 `
+// border: 5px solid #D8D8D8;
+// box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
 const Source = styled.source`
     width: 600px;
     height: 361px;

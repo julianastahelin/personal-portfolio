@@ -41,5 +41,9 @@ function App() {
 
 const Div = styled.div`
   background: linear-gradient(180deg, #DCF2E7 0%, #DEF7F3 100%);
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+
 `
 export default App;

@@ -20,7 +20,7 @@ const TopSection = forwardRef ((props, ref) => {
 
             <Div>
                 <p>{content.header.description}</p>
-                <Button onClick={() => scrollTo(projectRef)}>&lt;<Span>button</Span>&gt;{content.header.projectsButton}&lt;<Span>button</Span>&gt;</Button>
+                <Button onClick={() => scrollTo(projectRef)}>&lt;<Span>button</Span>&gt; {content.header.projectsButton} &lt;<Span>button</Span>&gt;</Button>
             </Div>
         </Section>
     )
@@ -30,10 +30,12 @@ const Section = styled.section`
     display: flex;
     padding: 80px 70px;
     justify-content: space-evenly;
-    scroll-margin-top: 72px;
     margin-top: 73px;
+    scroll-margin-top: 72px;
+    padding-top: 70px;
     align-items: center;
-    gap: 30px;
+    max-width: 1200px;
+    gap: 20px;
     @media (max-width: 980px) {
         padding: 50px 40px;
         gap: 10px;
@@ -69,10 +71,10 @@ const Div = styled.div`
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 34px;
-    width: 40%;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 31px;
+    width: 45%;
     @media (max-width: 768px) {
         width: 70%;
     }
@@ -116,6 +118,13 @@ const Button = styled.button`
     color: #fff;
     cursor: pointer;
     margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    &:hover{
+        transform: scale(1.03);
+        transition: ease-in-out 0.2s;
+        opacity: 0.7;
+    }
 `
 const Span = styled.span`
     color: #FF00A1;

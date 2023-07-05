@@ -3,7 +3,7 @@
     "title": "Juliana Stahelin - Portfolio",
     "nav": {
         "home": "Home",
-        "cv": "Abilities/curriculum",
+        "cv": "Curriculum",
         "projects": "Projects",
         "contact": "Contact",
         "lang": [
@@ -151,8 +151,8 @@
                     "url": "https://www.linkedin.com/in/julianastahelin/"
                 },
                 {
-                    "name": "Curriculum - pdf",
-                    "url": ""
+                    "name": "Curriculum in pdf",
+                    "url": "cv-en.pdf"
                 }
             ]    
         }
@@ -175,12 +175,12 @@
                 },
                 "links": [
                     { 
-                        "title": "Repository",
-                        "url": "https://github.com/julianastahelin/pokemon-api-challenge"
-                    },
-                    { 
                         "title": "Website",
                         "url": "https://pokemon-api-challenge-seven.vercel.app/"
+                    },
+                    { 
+                        "title": "Repository",
+                        "url": "https://github.com/julianastahelin/pokemon-api-challenge"
                     }
                 ],
                 "image": {
@@ -203,12 +203,12 @@
                 },
                 "links": [
                     { 
-                        "title": "Repository",
-                        "url": "https://github.com/julianastahelin/personal-portfolio"
-                    },
-                    { 
                         "title": "Website",
                         "url": "https://portfolio-juliana-stahelin.vercel.app/"
+                    },
+                    { 
+                        "title": "Repository",
+                        "url": "https://github.com/julianastahelin/personal-portfolio"
                     }
                 ],
                 "image": {
@@ -234,12 +234,12 @@
                 },
                 "links": [
                     { 
-                        "title": "Repository",
-                        "url": "https://github.com/julianastahelin/juflix-movies-catalog"
-                    },
-                    { 
                         "title": "Website",
                         "url": "https://julianastahelin.github.io/juflix-movies-catalog/"
+                    },
+                    { 
+                        "title": "Repository",
+                        "url": "https://github.com/julianastahelin/juflix-movies-catalog"
                     }
                 ],
                 "image": {

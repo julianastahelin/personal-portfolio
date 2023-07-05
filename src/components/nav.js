@@ -1,23 +1,37 @@
 import styled from 'styled-components';
+import { useState } from 'react';
+import ReactCountryFlag from 'react-country-flag';
 
 function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef }) {
-    
-    function scrollTo(section) { 
+
+    const [open, setOpen] = useState(false)
+
+    function scrollTo(section) {
         section.current.scrollIntoView({ behavior: 'smooth' });
     }
 
     return (
         <Navbar>
-            <Ul>
+            <Ul open={open}>
                 <Li onClick={() => scrollTo(topRef)}>{content.nav.home}</Li>
                 <Li onClick={() => scrollTo(cvRef)}>{content.nav.cv}</Li>
                 <Li onClick={() => scrollTo(projectRef)}>{content.nav.projects}</Li>
                 <Li onClick={() => scrollTo(contactRef)}>{content.nav.contact}</Li>
+                <Lang>
+                    <Button onClick={() => changeLang('pt')}>
+                        <ReactCountryFlag countryCode="BR" svg style={{borderRadius: 20}}/>
+                    </Button>
+                    <Button onClick={() => changeLang('en')}>
+                        <ReactCountryFlag countryCode="GB" svg style={{borderRadius: 20}} />
+                    </Button>
+                </Lang>
             </Ul>
-            <UlLang>
-                <li><Button onClick={() => changeLang('pt')}>PT</Button></li>
-                <li><Button onClick={() => changeLang('en')}>EN</Button></li>
-            </UlLang>
+
+            <StyledBurger open={open} onClick={() => setOpen(!open)}>
+                <div />
+                <div />
+                <div />
+            </StyledBurger>
         </Navbar>
     )
 }
@@ -27,11 +41,12 @@ const Navbar = styled.nav`
     background: linear-gradient(180deg, #DCF2E7 0%, #DEF7F3 100%);
     box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.71);
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     width: 100%;
+    min-height: 70px;
     padding: 25px 50px 25px 80px;
 `
 const Ul = styled.ul`
@@ -39,7 +54,28 @@ const Ul = styled.ul`
     display: flex;
     padding: 0;
     gap: 150px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
 
+    @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: #395f56;
+    position: fixed;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    padding: 60px 20px;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+    li {
+        color: #fff;
+    }
+    }
 `
 const Li = styled.li`
     &:hover {
@@ -47,13 +83,18 @@ const Li = styled.li`
         cursor: pointer;
     }
 `
-const UlLang = styled.ul`
-    list-style-type: none;
+const Lang = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 8px;
+    @media (max-width: 768px) {
+    Button {
+    color: #fff;
+    }
+    }
 `
 const Button = styled.button`
     background: transparent;
+    font-size: 23px;
     border: 0;
     outline: 0;
     &:hover {
@@ -61,4 +102,41 @@ const Button = styled.button`
         cursor: pointer;
     }
 `
+const StyledBurger = styled.div`
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 2;
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    }
+  div {
+    width: 32px;
+    height: 2px;
+    background-color: ${({ open }) => open ? '#fff' : '#000'};
+    border-radius: 20px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    &:nth-child(1) {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+    &:nth-child(2) {
+      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+      opacity: ${({ open }) => open ? 0 : 1};
+    }
+    &:nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
+  }
+`;
+
 export default Nav

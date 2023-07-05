@@ -3,7 +3,7 @@
     "title": "Juliana Stahelin - Portfólio",
     "nav": {
         "home": "Início",
-        "cv": "Habilidades/currículo",
+        "cv": "Currículo",
         "projects": "Projetos",
         "contact": "Contato",
         "lang": [
@@ -152,7 +152,7 @@
                 },
                 {
                     "name": "Currículo em pdf",
-                    "url": ""
+                    "url": "cv-pt.pdf"
                 }
             ]
         }
@@ -173,16 +173,16 @@
                 },
                 "description": {
                     "title": "Descrição",
-                    "text": "Projeto pessoal feito para treino de React."
+                    "text": "Projeto pessoal. Catálogo que retorna filmes e séries de uma API. Possível filtrar por gênero ou mais bem ranqueados e realizar busca por nome."
                 },
                 "links": [
                     {
-                        "title": "Repositório",
-                        "url": "https://github.com/julianastahelin/pokemon-api-challenge"
-                    },
-                    {
                         "title": "Site",
                         "url": "https://pokemon-api-challenge-seven.vercel.app/"
+                    },
+                    {
+                        "title": "Repositório",
+                        "url": "https://github.com/julianastahelin/pokemon-api-challenge"
                     }
                 ],
                 "image": {
@@ -207,12 +207,12 @@
                 },
                 "links": [
                     {
-                        "title": "Repositório",
-                        "url": ""
+                        "title": "Site",
+                        "url": "https://portfolio-juliana-stahelin.vercel.app/"
                     },
                     {
-                        "title": "Site",
-                        "url": ""
+                        "title": "Repositório",
+                        "url": "https://github.com/julianastahelin/personal-portfolio"
                     }
                 ],
                 "image": {
@@ -239,12 +239,12 @@
                 },
                 "links": [
                     {
-                        "title": "Repositório",
-                        "url": "https://github.com/julianastahelin/juflix-movies-catalog"
-                    },
-                    {
                         "title": "Site",
                         "url": "https://julianastahelin.github.io/juflix-movies-catalog/"
+                    },
+                    {
+                        "title": "Repositório",
+                        "url": "https://github.com/julianastahelin/juflix-movies-catalog"
                     }
                 ],
                 "image": {

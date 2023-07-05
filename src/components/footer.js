@@ -9,8 +9,9 @@ function Footer({content}) {
 }
 
 const Foot = styled.footer`
-    background: #2F5E55;
-    color: #fff;
+    background: #DCF2E7;
+    
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.6);
     text-align: center;
     padding: 30px;
     font-weight: 300;
@@ -18,11 +19,12 @@ const Foot = styled.footer`
     flex-direction: column;
     gap: 10px;
     margin-top: 55px;
+    width: 100%;
+    max-width: 1440px;
 `
 const A = styled.a`
-    color: #fff;
     &:visited {
-        color: #f6f6f6;
+        color: #2F5E55;
     }
 `
 export default Footer
