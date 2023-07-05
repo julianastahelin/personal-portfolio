@@ -61,28 +61,26 @@ const H2 = styled.h2`
 const Project = styled.div`
     display: flex;
     width: 90%;
-    gap: 0;
+    gap: 20px;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     flex-direction: ${props => props.number === 0 || props.number%2 === 0 ? 'row' : 'row-reverse'};
-    @media (max-width: 1000px) {
+    @media (max-width: 1052px) {
         width: 95%;
-        gap: 20px;
     }
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        gap: 5px;
     }
-
     background: #000000;
     border: 5px solid #D8D8D8;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
 `
 const Div = styled.div` 
-    padding: 20px;
+   
 
     color: #fff;
     width: 40%;
@@ -90,17 +88,13 @@ const Div = styled.div`
         width: 90%;
     }
 `
-// background: #000000;
-// border: 5px solid #D8D8D8;
-// box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
 const Picture = styled.picture` 
     text-align: center;
-    padding: 10px 0;
 `
 const Img = styled.img`
     width: 600px;
     height: 361px;
-    @media (max-width: 1000px) {
+    @media (max-width: 1052px) {
         width: 500px;
         height: 301px;
     }

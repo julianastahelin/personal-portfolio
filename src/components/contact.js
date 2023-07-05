@@ -50,11 +50,6 @@ const Title = styled.p`
     letter-spacing: 3px;
     font-size: 20px;
     font-weight: 400;
-    &:before{
-        content: "•";
-        padding-right: 10px;
-        font-size: 15px;
-    }
 `
 const P = styled.p`
     font-weight: 300;

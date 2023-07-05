@@ -19,10 +19,10 @@ function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef }) {
                 <Li onClick={() => scrollTo(contactRef)}>{content.nav.contact}</Li>
                 <Lang>
                     <Button onClick={() => changeLang('pt')}>
-                        <ReactCountryFlag countryCode="BR" svg style={{borderRadius: 20}}/>
+                        <ReactCountryFlag countryCode="BR" svg style={{ borderRadius: 20 }} />
                     </Button>
                     <Button onClick={() => changeLang('en')}>
-                        <ReactCountryFlag countryCode="GB" svg style={{borderRadius: 20}} />
+                        <ReactCountryFlag countryCode="GB" svg style={{ borderRadius: 20 }} />
                     </Button>
                 </Lang>
             </Ul>
@@ -70,11 +70,8 @@ const Ul = styled.ul`
     height: 100vh;
     width: 200px;
     padding: 60px 20px;
-    gap: 10px;
+    gap: 40px;
     transition: transform 0.3s ease-in-out;
-    li {
-        color: #fff;
-    }
     }
 `
 const Li = styled.li`
@@ -82,15 +79,13 @@ const Li = styled.li`
         opacity: 0.8;
         cursor: pointer;
     }
+    @media (max-width: 768px) {
+        color: #fff;
+    }
 `
 const Lang = styled.div`
     display: flex;
     gap: 8px;
-    @media (max-width: 768px) {
-    Button {
-    color: #fff;
-    }
-    }
 `
 const Button = styled.button`
     background: transparent;
@@ -103,40 +98,40 @@ const Button = styled.button`
     }
 `
 const StyledBurger = styled.div`
-  width: 32px;
-  height: 32px;
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 2;
-  display: none;
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-  }
-  &:hover {
-    opacity: 0.8;
-    cursor: pointer;
-    }
-  div {
     width: 32px;
-    height: 2px;
-    background-color: ${({ open }) => open ? '#fff' : '#000'};
-    border-radius: 20px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
-    &:nth-child(1) {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    height: 32px;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 2;
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column nowrap;
     }
-    &:nth-child(2) {
-      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ open }) => open ? 0 : 1};
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
     }
-    &:nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    div {
+        width: 32px;
+        height: 2px;
+        background-color: ${({ open }) => open ? '#fff' : '#000'};
+        border-radius: 20px;
+        transform-origin: 1px;
+        transition: all 0.3s linear;
+        &:nth-child(1) {
+        transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+        }
+        &:nth-child(2) {
+            transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+            opacity: ${({ open }) => open ? 0 : 1};
+        }
+        &:nth-child(3) {
+            transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+        }
     }
-  }
 `;
 
 export default Nav
