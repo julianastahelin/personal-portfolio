@@ -58,7 +58,9 @@ const Ul = styled.ul`
     justify-content: space-between;
     width: 100%;
     max-width: 1440px;
-
+    @media (max-width: 1100px) {
+        gap: 80px;
+    }
     @media (max-width: 768px) {
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -70,7 +72,7 @@ const Ul = styled.ul`
     height: 100vh;
     width: 200px;
     padding: 60px 20px;
-    gap: 40px;
+    gap: 30px;
     transition: transform 0.3s ease-in-out;
     }
 `
@@ -85,7 +87,10 @@ const Li = styled.li`
 `
 const Lang = styled.div`
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    @media (max-width: 768px) {
+        gap: 15px;
+    }
 `
 const Button = styled.button`
     background: transparent;
