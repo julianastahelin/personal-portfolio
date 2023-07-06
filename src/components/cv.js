@@ -4,8 +4,9 @@ import { FaRegFilePdf } from 'react-icons/fa6';
 
 const CvSection = forwardRef((props, ref) => {
     const { content } = props;
+    const { fadeIn } = props;
     return (
-        <Section ref={ref}>
+        <Section ref={ref} style={fadeIn}>
             <H2>{content.cvSection.title}</H2>
             {content.cvSection.experiences.map((exp, index) => {
                 return (

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 
-function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef }) {
+function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef, fadeIn }) {
 
     const [open, setOpen] = useState(false)
 
@@ -13,10 +13,10 @@ function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef }) {
     return (
         <Navbar>
             <Ul open={open}>
-                <Li onClick={() => scrollTo(topRef)}>{content.nav.home}</Li>
-                <Li onClick={() => scrollTo(cvRef)}>{content.nav.cv}</Li>
-                <Li onClick={() => scrollTo(projectRef)}>{content.nav.projects}</Li>
-                <Li onClick={() => scrollTo(contactRef)}>{content.nav.contact}</Li>
+                <Li style={fadeIn} onClick={() => scrollTo(topRef)}>{content.nav.home}</Li>
+                <Li style={fadeIn} onClick={() => scrollTo(cvRef)}>{content.nav.cv}</Li>
+                <Li style={fadeIn} onClick={() => scrollTo(projectRef)}>{content.nav.projects}</Li>
+                <Li style={fadeIn} onClick={() => scrollTo(contactRef)}>{content.nav.contact}</Li>
                 <Lang>
                     <Button onClick={() => changeLang('pt')}>
                         <ReactCountryFlag countryCode="BR" svg style={{ borderRadius: 20 }} />
@@ -48,6 +48,7 @@ const Navbar = styled.nav`
     width: 100%;
     min-height: 70px;
     padding: 25px 50px 25px 80px;
+    z-index: 3;
 `
 const Ul = styled.ul`
     list-style-type: none;
@@ -108,7 +109,7 @@ const StyledBurger = styled.div`
     position: fixed;
     top: 15px;
     right: 20px;
-    z-index: 2;
+    z-index: 4;
     display: none;
     @media (max-width: 768px) {
         display: flex;

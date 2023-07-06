@@ -5,6 +5,7 @@ import { forwardRef } from 'react';
 const TopSection = forwardRef ((props, ref) => {
     const { content } = props;
     const { projectRef } = props;
+    const { fadeIn } = props;
 
     function scrollTo(section) { 
         section.current.scrollIntoView({ behavior: 'smooth' });
@@ -15,12 +16,12 @@ const TopSection = forwardRef ((props, ref) => {
             <Container>
             <Img src={png} alt="Profile photo"/>
                 <H1>{content.header.name}</H1>
-                <Subtitle>{content.header.jobTitle}</Subtitle>
+                <Subtitle style={fadeIn}>{content.header.jobTitle}</Subtitle>
             </Container>
 
             <Div>
-                <p>{content.header.description}</p>
-                <Button onClick={() => scrollTo(projectRef)}>&lt;<Span>button</Span>&gt; {content.header.projectsButton} &lt;<Span>button</Span>&gt;</Button>
+                <p style={fadeIn}>{content.header.description}</p>
+                <Button style={fadeIn} onClick={() => scrollTo(projectRef)}>&lt;<Span>button</Span>&gt; {content.header.projectsButton} &lt;<Span>button</Span>&gt;</Button>
             </Div>
         </Section>
     )

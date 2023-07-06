@@ -3,10 +3,11 @@ import { forwardRef } from 'react';
 
 const ProjectsSection = forwardRef((props, ref) => {
     const { content } = props;
+    const { fadeIn } = props;
 
     return (
         <>
-            <H2 ref={ref}>{content.projectSection.title}</H2>
+            <H2 ref={ref} style={fadeIn}>{content.projectSection.title}</H2>
             <Section> 
                 {content.projectSection.projects.map((project, index) => {
                     return (
@@ -16,7 +17,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                     <Source media="(max-width: 560px)" srcSet={require(`../img/${project.image.tablet}`)} alt={`Screenshot of ${project.title} project`} />
                                     <Img src={require(`../img/${project.image.desktop}`)} alt={`Screenshot of ${project.title} project`} />
                                 </Picture>
-                                <Div key={project.title+index} style={project.image.boxPosition}>
+                                <Div key={project.title+index} style={project.image.boxPosition} style={fadeIn}>
                                     <H3>{project.title}</H3>
                                     <P>{project.subtitle}</P>
                                     <H4>{project.stack.title}</H4>

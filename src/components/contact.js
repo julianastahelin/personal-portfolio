@@ -3,8 +3,10 @@ import { forwardRef } from 'react';
 
 const ContactSection = forwardRef ((props, ref) => {
     const { content } = props;
+    const { fadeIn } = props;
+
     return (
-        <Section ref={ref}>
+        <Section ref={ref} style={fadeIn}>
         <H2>{content.contactSection.title}</H2>
         <Ul>
             {content.contactSection.contact.map((contact) => { return(
