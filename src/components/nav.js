@@ -4,7 +4,7 @@ import ReactCountryFlag from 'react-country-flag';
 
 function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef, fadeIn }) {
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
 
     function scrollTo(section) {
         section.current.scrollIntoView({ behavior: 'smooth' });

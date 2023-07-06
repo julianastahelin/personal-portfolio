@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 function Footer({content, fadeIn}) {
     return (
-        <Foot style={fadeIn}>
-            {content.footer.map((item, index) => <p key={index}>{item.title} - <A href={item.url} target="_blank">@{item.name}</A></p>)}
+        <Foot>
+            {content.footer.map((item, index) => <p key={index} style={fadeIn}>{item.title} - <A href={item.url} target="_blank">@{item.name}</A></p>)}
         </Foot>
     )   
 }
