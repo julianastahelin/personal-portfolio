@@ -41,8 +41,7 @@ const H2 = styled.h2`
 `
 const Ul = styled.ul` 
     list-style: none;
-    padding-left: 10px; 
-    width: 85%;
+    width: 90%;
 `
 const Li = styled.li`
     margin-bottom: 30px;

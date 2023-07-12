@@ -41,10 +41,10 @@ function App() {
   return (
     <Div>
       <Nav content={content} changeLang={changeLang} topRef={top} cvRef={cv} projectRef={project} contactRef={contact} fadeIn={fadeIn} />
-      <TopSection changeLang={changeLang} content={content} ref={top} projectRef={project} fadeIn={fadeIn} />
-      <CvSection content={content} ref={cv} fadeIn={fadeIn} />
-      <ProjectsSection content={content} ref={project} fadeIn={fadeIn} />
-      <ContactSection content={content} ref={contact} fadeIn={fadeIn} />
+        <TopSection changeLang={changeLang} content={content} ref={top} projectRef={project} fadeIn={fadeIn} />
+        <CvSection content={content} ref={cv} fadeIn={fadeIn} />
+        <ProjectsSection content={content} ref={project} fadeIn={fadeIn} />
+        <ContactSection content={content} ref={contact} fadeIn={fadeIn} />
       <Footer content={content} fadeIn={fadeIn} />
     </Div>
   );
@@ -55,6 +55,5 @@ const Div = styled.div`
   align-items: center;
   flex-direction: column;
   display: flex;
-
 `
 export default App;

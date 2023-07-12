@@ -16,7 +16,7 @@ const CvSection = forwardRef((props, ref) => {
                             {exp.experience.map((item, index) => {
                                 return (
                                     <ExpType key={item.subtitle+index}>
-                                        <P>{item.subtitle}</P>
+                                        {/* <P>{item.subtitle}</P> */}
                                         {item.experience.map((item) => {
                                             return (
                                                 <>
@@ -84,7 +84,8 @@ const Section = styled.section`
     width: 80%;
     max-width: 1200px;
     @media (max-width: 768px) {
-        gap: 60px;
+        gap: 40px;
+        width: 100%;
     }
 `
 const H2 = styled.h2`
@@ -92,6 +93,9 @@ const H2 = styled.h2`
     font-size: 30px;
     font-weight: 300;
     padding-bottom: 25px;
+    @media (max-width: 768px) {
+        padding-bottom: 0;
+    }
 `
 const Category = styled.div`
     display: flex;
@@ -119,7 +123,7 @@ const H3 = styled.h3`
         justify-content: center;
         padding-bottom: 5px;
         padding-right: 0;
-        width: 50%;
+        width: 55%;
     }
 `
 const Div = styled.div`
@@ -127,12 +131,15 @@ const Div = styled.div`
     flex-direction: column;
     width: 70%;
     padding: 10px 0;
-    gap: 25px;
+    @media (max-width: 768px) {
+        width: 80%;
+    }
 `
 
 const ExpType = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 5px;
 `
 const H4 = styled.h4`
     line-height: 25px;

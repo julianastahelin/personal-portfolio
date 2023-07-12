@@ -8,6 +8,12 @@ function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef, fadeI
 
     function scrollTo(section) {
         section.current.scrollIntoView({ behavior: 'smooth' });
+        setOpen(!open);
+    }
+
+    function handleLanguageChange(lang) {
+        changeLang(lang);
+        setOpen(!open);
     }
 
     return (
@@ -18,10 +24,10 @@ function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef, fadeI
                 <Li style={fadeIn} onClick={() => scrollTo(projectRef)}>{content.nav.projects}</Li>
                 <Li style={fadeIn} onClick={() => scrollTo(contactRef)}>{content.nav.contact}</Li>
                 <Lang>
-                    <Button onClick={() => changeLang('pt')}>
+                    <Button onClick={() => handleLanguageChange('pt')}>
                         <ReactCountryFlag countryCode="BR" svg style={{ borderRadius: 20 }} />
                     </Button>
-                    <Button onClick={() => changeLang('en')}>
+                    <Button onClick={() => handleLanguageChange('en')}>
                         <ReactCountryFlag countryCode="GB" svg style={{ borderRadius: 20 }} />
                     </Button>
                 </Lang>
