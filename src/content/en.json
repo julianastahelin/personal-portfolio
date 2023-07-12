@@ -219,7 +219,8 @@
                 "stack": {
                     "title": "Stack",
                     "list": [
-                        "React"
+                        "React",
+                        "Styled Components"
                     ]
                 },
                 "description": {

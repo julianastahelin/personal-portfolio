@@ -125,6 +125,7 @@ const H3 = styled.h3`
         border-right: none;
         border-bottom: 1px solid;
         justify-content: center;
+        text-align: center;
         padding-bottom: 5px;
         padding-right: 0;
         width: 55%;

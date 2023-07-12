@@ -239,9 +239,9 @@
                     }
                 ],
                 "image": {
-                    "desktop": "portfolio-desktop.png",
-                    "tablet": "portfolio-tablet.png",
-                    "mobile": "portfolio-mobile.png"
+                    "desktop": "portfolio-desktop.gif",
+                    "tablet": "portfolio-tablet.gif",
+                    "mobile": "portfolio-mobile.gif"
                 }
             },
             {
