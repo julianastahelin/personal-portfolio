@@ -17,7 +17,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                     <Source media="(max-width: 560px)" srcSet={require(`../img/${project.image.tablet}`)} alt={`Screenshot of ${project.title} project`} />
                                     <Img src={require(`../img/${project.image.desktop}`)} alt={`Screenshot of ${project.title} project`} />
                                 </Picture>
-                                <Div key={project.title+index} style={project.image.boxPosition} style={fadeIn}>
+                                <Div key={project.title+index} style={fadeIn}>
                                     <H3>{project.title}</H3>
                                     <P>{project.subtitle}</P>
                                     <H4>{project.stack.title}</H4>
@@ -81,8 +81,6 @@ const Project = styled.div`
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
 `
 const Div = styled.div` 
-   
-
     color: #fff;
     width: 40%;
     @media (max-width: 768px) {

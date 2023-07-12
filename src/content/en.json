@@ -14,7 +14,7 @@
     "header": {
         "name": "Juliana Stahelin",
         "jobTitle": "Frontend Web Developer",
-        "description": "Hello! I am Juliana, a Frontend Web Developer. I have been developing projects with HTML, CSS, Javascript, React and Bootstrap, trying to write my code the best way possible and looking forward to letting them functional, readable and well organised. I am currently studying frontend and, soon, will be diving into backend development.  check my recent projects!",
+        "description": "Hello! I am Juliana, a Frontend Web Developer. I have been developing projects with HTML, CSS, Javascript, React, Bootstrap and Styled Components, trying to write my code the best way possible and looking forward to letting them functional, readable and well organised. I am currently studying frontend and, soon, will be diving into backend development.  check my recent projects!",
         "projectsButton": "Go to projects"
     },
     "cvSection": {
@@ -27,7 +27,7 @@
                         "subtitle": "Programming",
                         "experience": [
                             {
-                                "name": "Frontend Web Developer - CEPEDOC",
+                                "name": "Frontend Web Developer - CEPEDOC - apr/23 - jun/23",
                                 "description": [
                                     "Building HTML pages for online course;",
                                     "Styling using CSS and Bootstrap;",
@@ -41,7 +41,7 @@
                         "subtitle": "Previous",
                         "experience": [
                             {
-                                "name": "Pharmacist - City Hall of Águas Mornas, SC",
+                                "name": "Pharmacist - City Hall of Águas Mornas, SC - may/22 - nov/22",
                                 "description": [
                                     "Technical manager;",
                                     "Pharmaceutical Assistance;",
@@ -62,17 +62,6 @@
                             {
                                 "name": "Courses in fullstack web development",
                                 "description": [ "In progress" ]
-                            },
-                            {
-                                "name": "Personal Projects",
-                                "description": [
-                                    "HTML;", 
-                                    "CSS;", 
-                                    "JS;", 
-                                    "React;", 
-                                    "Bootstrap;", 
-                                    "Use of API"
-                                ]
                             }
                         ]
                     },
@@ -80,12 +69,12 @@
                         "subtitle": "Previous",
                         "experience": [
                             {
-                                "name": "Graduation",
-                                "description": [ "Pharmacy (UFSC)" ]
+                                "name": "Post-graduation",
+                                "description": [ "Multiprofessional Residency in Family Health (UFSC) - mar/20 - feb/22" ]
                             },
                             {
-                                "name": "Post-graduation",
-                                "description": [ "Multiprofessional Residency in Family Health (UFSC)" ]
+                                "name": "Graduation",
+                                "description": [ "Pharmacy (UFSC)  - mar/12 - jul/19" ]
                             }
                         ]
                     }
@@ -106,7 +95,8 @@
                         "Git",
                         "GitHub",
                         "Use of API",
-                        "Figma"
+                        "Figma", 
+                        "Styled Components"
                     ]
                 },
                 {
@@ -171,7 +161,7 @@
                 },
                 "description": {
                     "title": "Description",
-                    "text": "Personal project built for practicing..."
+                    "text": "Personal projects. Application that returns pokémons from an API. Displays details of each pokémon and features search by name and sort by type."
                 },
                 "links": [
                     { 
@@ -199,12 +189,12 @@
                 },
                 "description": {
                     "title": "Description",
-                    "text": "Personal project built for practicing..."
+                    "text": "Personal project built to show curriculum, projects and abilities in web development."
                 },
                 "links": [
                     { 
                         "title": "Website",
-                        "url": "https://portfolio-juliana-stahelin.vercel.app/"
+                        "url": "https://juliana-stahelin-portfolio.vercel.app/"
                     },
                     { 
                         "title": "Repository",
@@ -230,7 +220,7 @@
                 },
                 "description": {
                     "title": "Description",
-                    "text": "Personal project built for practicing..."
+                    "text": "Personal project. Catalog that returns movies from an API. It is possible to filter by genre, by best ranked movies and search by name."
                 },
                 "links": [
                     { 

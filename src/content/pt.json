@@ -14,7 +14,7 @@
     "header": {
         "name": "Juliana Stahelin",
         "jobTitle": "Desenvolvedora front-end",
-        "description": "Olá! Eu sou a Juliana, sou programadora front-end. Tenho desenvolvido projetos envolvendo HTML, CSS, Javascript, React e Bootstrap, buscando escrever meus códigos da melhor maneira possível a fim de deixá-los funcionais, facilmente compreensíveis e bem organizados. Sigo me desenvolvendo em front-end e, em breve, em back-end. Venha conhecer um pouco dos meus projetos recentes!",
+        "description": "Olá! Eu sou a Juliana, sou programadora front-end. Tenho desenvolvido projetos envolvendo HTML, CSS, Javascript, React, Bootstrap e Styled Components, buscando escrever meus códigos da melhor maneira possível a fim de deixá-los funcionais, facilmente compreensíveis e bem organizados. Sigo me desenvolvendo em front-end e, em breve, em back-end. Venha conhecer um pouco dos meus projetos recentes!",
         "projectsButton": "Ir para projetos"
     },
     "cvSection": {
@@ -27,7 +27,7 @@
                         "subtitle": "Programação",
                         "experience": [
                             {
-                                "name": "Desenvolvedora Web Frontend - CEPEDOC",
+                                "name": "Desenvolvedora Web Frontend - CEPEDOC - abr/23 - jun/23",
                                 "description": [
                                     "Plotagem de conteúdo em HTML para curso online;",
                                     "Estilização em CSS e Bootstrap;",
@@ -41,7 +41,7 @@
                         "subtitle": "Anteriores",
                         "experience": [
                             {
-                                "name": "Farmacêutica - Prefeitura Municipal de Águas Mornas, SC",
+                                "name": "Farmacêutica - Prefeitura Municipal de Águas Mornas, SC - mai/22 - nov/22",
                                 "description": [
                                     "Responsabilidade técnica;",
                                     "Assistência Farmacêutica;",
@@ -62,17 +62,6 @@
                             {
                                 "name": "Cursos em desenvolvimento web fullstack",
                                 "description": [ "Em andamento" ]
-                            },
-                            {
-                                "name": "Elaboração de projetos",
-                                "description": [
-                                    "HTML;", 
-                                    "CSS;", 
-                                    "JS;", 
-                                    "React;", 
-                                    "Bootstrap;", 
-                                    "consumo de API"
-                                ]
                             }
                         ]
                     },
@@ -80,12 +69,12 @@
                         "subtitle": "Anteriores",
                         "experience": [
                             {
-                                "name": "Graduação",
-                                "description": [ "Farmácia (UFSC)" ]
+                                "name": "Pós-graduação",
+                                "description": [ "Residência Multiprofissional em Saúde da Família (UFSC) - mar/20 - fev/22" ]
                             },
                             {
-                                "name": "Pós-graduação",
-                                "description": [ "Residência Multiprofissional em Saúde da Família (UFSC)" ]
+                                "name": "Graduação",
+                                "description": [ "Farmácia (UFSC) - mar/12 - jul/19" ]
                             }
                         ]
                     }
@@ -106,7 +95,8 @@
                         "Git",
                         "GitHub",
                         "Consumo de API",
-                        "Figma"
+                        "Figma", 
+                        "Styled Components"
                     ]
                 },
                 {
@@ -173,7 +163,7 @@
                 },
                 "description": {
                     "title": "Descrição",
-                    "text": "Projeto pessoal. Catálogo que retorna filmes e séries de uma API. Possível filtrar por gênero ou mais bem ranqueados e realizar busca por nome."
+                    "text": "Projeto pessoal. Aplicação que retorna pokémons de uma API. Mostra detalhes de cada pokémon, permite busca por nome e classificar por tipo."
                 },
                 "links": [
                     {
@@ -203,12 +193,12 @@
                 },
                 "description": {
                     "title": "Descrição",
-                    "text": "Projeto pessoal feito para demonstrar projetos e habilidades em programação."
+                    "text": "Projeto pessoal feito para demonstrar currículo, projetos e habilidades em programação."
                 },
                 "links": [
                     {
                         "title": "Site",
-                        "url": "https://portfolio-juliana-stahelin.vercel.app/"
+                        "url": "https://juliana-stahelin-portfolio.vercel.app/"
                     },
                     {
                         "title": "Repositório",
@@ -235,7 +225,7 @@
                 },
                 "description": {
                     "title": "Descrição",
-                    "text": "Projeto pessoal. Catálogo que retorna filmes e séries de uma API. Possível filtrar por gênero ou mais bem ranqueados e realizar busca por nome."
+                    "text": "Projeto pessoal. Catálogo que retorna filmes de uma API. Possível filtrar por gênero ou mais bem ranqueados e realizar busca por nome."
                 },
                 "links": [
                     {
