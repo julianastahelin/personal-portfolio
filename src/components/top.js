@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import png from '../img/ju.jpg';
+import png from '../img/ju2.JPG';
 import { forwardRef } from 'react';
 
 const TopSection = forwardRef ((props, ref) => {

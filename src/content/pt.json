@@ -24,29 +24,31 @@
                 "title": "Experiência",
                 "experience": [
                     {
-                        "subtitle": "Programação",
+                        "subtitle": "",
                         "experience": [
                             {
-                                "name": "Desenvolvedora Web Frontend - CEPEDOC - abr/23 - jun/23",
+                                "name": "Desenvolvedora Web Frontend – CEPEDOC",
+                                "period": "abr/23 – jun/23",
                                 "description": [
-                                    "Plotagem de conteúdo em HTML para curso online;",
-                                    "Estilização em CSS e Bootstrap;",
-                                    "Aplicação de gráficos interativos em JS;",
-                                    "Versionamento em Git."
+                                    "Plotagem de conteúdo em HTML para curso online",
+                                    "Estilização em CSS e Bootstrap",
+                                    "Aplicação de gráficos interativos em JS",
+                                    "Versionamento em Git"
                                 ]
                             }
                         ]
                     },
                     {
-                        "subtitle": "Anteriores",
+                        "subtitle": "",
                         "experience": [
                             {
-                                "name": "Farmacêutica - Prefeitura Municipal de Águas Mornas, SC - mai/22 - nov/22",
+                                "name": "Farmacêutica – Prefeitura Municipal de Águas Mornas, SC",
+                                "period": "mai/22 – nov/22",
                                 "description": [
-                                    "Responsabilidade técnica;",
-                                    "Assistência Farmacêutica;",
-                                    "Acompanhamento de pacientes;",
-                                    "Suporte à equipe de saúde."
+                                    "Responsabilidade técnica",
+                                    "Assistência Farmacêutica",
+                                    "Acompanhamento de pacientes",
+                                    "Suporte à equipe de saúde"
                                 ]
                             }
                         ]
@@ -54,27 +56,57 @@
                 ]
             },
             {
-                "title": "Formação",
+                "title": "Formação acadêmica",
                 "experience": [
                     {
-                        "subtitle": "Programação",
+                        "subtitle": "Pós-graduação",
                         "experience": [
                             {
-                                "name": "Cursos em desenvolvimento web fullstack",
-                                "description": [ "Em andamento" ]
+                                "name": "Residência Multiprofissional em Saúde da Família – UFSC",
+                                "period": "mar/20 – fev/22",
+                                "description": []
                             }
                         ]
                     },
                     {
-                        "subtitle": "Anteriores",
+                        "subtitle": "Graduação",
                         "experience": [
                             {
-                                "name": "Pós-graduação",
-                                "description": [ "Residência Multiprofissional em Saúde da Família (UFSC) - mar/20 - fev/22" ]
+                                "name": "Intercâmbio Acadêmico – Anglia Ruskin University/UK",
+                                "period": "set/2015 – ago/2016",
+                                "description": [
+                                    "Programa Ciência Sem Fronteiras (CsF/CNPq)",
+                                    "Curso de Saúde Pública"
+                                ]
                             },
                             {
-                                "name": "Graduação",
-                                "description": [ "Farmácia (UFSC) - mar/12 - jul/19" ]
+                                "name": "Farmácia – UFSC",
+                                "period": "mar/12 – jul/19",
+                                "description": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Cursos",
+                "experience": [
+                    {
+                        "subtitle": "",
+                        "experience": [
+                            {
+                                "name": "DevQuest",
+                                "period": "jan/23 – presente",
+                                "description": [
+                                    "Curso de desenvolvimento web fullstack com mentoria e suporte"
+                                ]
+                            },
+                            {
+                                "name": "Udemy",
+                                "period": "dez/22 – presente",
+                                "description": [
+                                    "Curso de desenvolvimento web fullstack"
+                                ]
                             }
                         ]
                     }
@@ -95,7 +127,7 @@
                         "Git",
                         "GitHub",
                         "Consumo de API",
-                        "Figma", 
+                        "Figma",
                         "Styled Components"
                     ]
                 },
@@ -103,7 +135,8 @@
                     "type": "Gerais e interpessoais",
                     "abilities": [
                         "Trabalho em equipe",
-                        "Pró-atividade"
+                        "Pró-atividade",
+                        "Flexibilidade"
                     ]
                 }
             ]
@@ -176,9 +209,9 @@
                     }
                 ],
                 "image": {
-                    "desktop": "pokedex-desktop.png",
-                    "tablet": "pokedex-tablet.png",
-                    "mobile": "pokedex-mobile.png"
+                    "desktop": "pokedex-desktop.gif",
+                    "tablet": "pokedex-tablet.gif",
+                    "mobile": "pokedex-mobile.gif"
                 }
             },
             {
@@ -198,7 +231,7 @@
                 "links": [
                     {
                         "title": "Site",
-                        "url": "https://juliana-stahelin-portfolio.vercel.app/"
+                        "url": "https://julianastahelin.vercel.app/"
                     },
                     {
                         "title": "Repositório",
@@ -238,9 +271,9 @@
                     }
                 ],
                 "image": {
-                    "desktop": "juflix-desktop.png",
-                    "tablet": "juflix-tablet.png",
-                    "mobile": "juflix-mobile.png"
+                    "desktop": "juflix-desktop.gif",
+                    "tablet": "juflix-tablet.gif",
+                    "mobile": "juflix-mobile.gif"
                 }
             }
         ]
@@ -263,7 +296,7 @@
         ]
     },
     "footer": [
-        { 
+        {
             "title": "Código",
             "name": "Juliana Stahelin",
             "url": "https://github.com/julianastahelin"

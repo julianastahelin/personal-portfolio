@@ -10,23 +10,26 @@ const CvSection = forwardRef((props, ref) => {
             <H2>{content.cvSection.title}</H2>
             {content.cvSection.experiences.map((exp, index) => {
                 return (
-                    <Category key={exp.title + index}>
-                        <H3 key={index + exp.title}>{exp.title}</H3>
+                    <Category key={index}>
+                        <H3 key={index}>{exp.title}</H3>
                         <Div>
                             {exp.experience.map((item, index) => {
                                 return (
                                     <ExpType key={item.subtitle+index}>
-                                        {/* <P>{item.subtitle}</P> */}
+                                        <P>{item.subtitle}</P>
+                                        <ExpDiv>
                                         {item.experience.map((item) => {
                                             return (
-                                                <>
+                                                <div>
                                                     <H4>{item.name}</H4>
+                                                    <TimeP>{item.period}</TimeP>
                                                     <Ul>
                                                         {item.description.map((item) => <Li>{item}</Li>)}
                                                     </Ul>
-                                                </>
+                                                </div>
                                             )
                                         })}
+                                        </ExpDiv>
                                     </ExpType>
                                 )
                             })}
@@ -109,7 +112,7 @@ const Category = styled.div`
 `
 
 const H3 = styled.h3`
-    font-weight: 300;
+    font-weight: 400;
     font-size: 23px;
     width: 30%;
     padding-right: 15px;
@@ -117,6 +120,7 @@ const H3 = styled.h3`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    text-align: right;
     @media (max-width: 768px) {
         border-right: none;
         border-bottom: 1px solid;
@@ -134,25 +138,38 @@ const Div = styled.div`
     @media (max-width: 768px) {
         width: 80%;
     }
+    gap: 20px;
 `
-
 const ExpType = styled.div`
     display: flex;
     flex-direction: column;
     padding: 5px;
 `
+const ExpDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
 const H4 = styled.h4`
     line-height: 25px;
+    font-weight: 600;
+`
+const TimeP = styled.p`
+    font-weight: 400;
 `
 const P = styled.p`
     font-size: 18px;
     line-height: 25px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 300;
 `
 const Ul = styled.ul` 
     list-style: none;
     padding-left: 10px;
 `
 const Li = styled.li`
+    font-weight: 300;
     &:before{
         content: "•";
         padding-right: 10px;
