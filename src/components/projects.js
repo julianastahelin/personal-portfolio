@@ -1,180 +1,115 @@
-import styled from 'styled-components';
-import { forwardRef } from 'react';
+import { forwardRef } from 'react'
+
 
 const ProjectsSection = forwardRef((props, ref) => {
-    const { content } = props;
-    const { fadeIn } = props;
+    const { content } = props
+    const { fadeIn } = props
 
     return (
         <>
-            <H2 ref={ref} style={fadeIn}>{content.projectSection.title}</H2>
-            <Section> 
+            <h2
+                ref={ref}
+                style={fadeIn}
+                className='text-center text-3xl font-light pb-6 mt-14 scroll-mt-24'
+            >
+                {content.projectSection.title}
+            </h2>
+            <section className='
+                    flex flex-col items-center gap-14 md:gap-12 
+                    px-5 py-14 w-full max-w-[1440px]
+                    bg-gradient-to-b from-[#2F5E55] via-[#ACCCC6] via-45% to-[#2F5E55] 
+                '
+            >
                 {content.projectSection.projects.map((project, index) => {
                     return (
-                        <Project key={project+index} number={index}>
-                                <Picture>
-                                    <Source media="(max-width: 425px)" srcSet={require(`../img/${project.image.mobile}`)} alt={`Screenshot of ${project.title} project`} />
-                                    <Source media="(max-width: 560px)" srcSet={require(`../img/${project.image.tablet}`)} alt={`Screenshot of ${project.title} project`} />
-                                    <Img src={require(`../img/${project.image.desktop}`)} alt={`Screenshot of ${project.title} project`} />
-                                </Picture>
-                                <Div key={project.title+index} style={fadeIn}>
-                                    <H3>{project.title}</H3>
-                                    <P>{project.subtitle}</P>
-                                    <H4>{project.stack.title}</H4>
-                                    <ul>
-                                        {project.stack.list.map((item) => <Li key={item}>{item} </Li>)}
-                                    </ul>
-                                    <H4>{project.description.title}</H4>
-                                    <P>{project.description.text}</P>
-                                    <BtnContainer>
-                                        {project.links.map((link,index) => <Btn key={link+index} href={link.url} target="_blank">{link.title}</Btn>)}
-                                    </BtnContainer>
-                                </Div>                             
-                        </Project>
+                        <div key={project + index} number={index} className={`
+                                flex justify-center md:justify-between items-center flex-col-reverse 
+                                ${index === 0 || index % 2 === 0
+                                ? 'md:flex-row'
+                                : 'md:flex-row-reverse'
+                            }
+                                max-w-7xl w-11/12 lg:w-[95%] gap-5 p-5 
+                                border-4 border-[#D8D8D8] bg-black shadow-[1px_1px_7px_0px_rgba(0,0,0,0.6)]
+                            `}
+                        >
+                            <picture>
+                                <source
+                                    media='(max-width: 425px)'
+                                    srcSet={require(`../img/${project.image.mobile}`)}
+                                    alt={`Screenshot of ${project.title} project`}
+                                    className='
+                                        w-11/12 h-full m-auto
+                                        md:w-[450px] md:h-[271px] 
+                                        min-[900px]:w-[500px] min-[900px]:h-[301px] 
+                                        lg:w-[600px] lg:h-[361px] 
+                                    '
+                                />
+                                <source
+                                    media='(max-width: 560px)'
+                                    srcSet={require(`../img/${project.image.tablet}`)}
+                                    alt={`Screenshot of ${project.title} project`}
+                                    className='
+                                        w-11/12 h-full m-auto
+                                        md:w-[450px] md:h-[271px] 
+                                        min-[900px]:w-[500px] min-[900px]:h-[301px] 
+                                        lg:w-[600px] lg:h-[361px]
+                                    '
+                                />
+                                <img
+                                    src={require(`../img/${project.image.desktop}`)}
+                                    alt={`Screenshot of ${project.title} project`}
+                                    className='w-11/12 h-full m-auto 
+                                        md:w-[390px] md:h-[235px] 
+                                        min-[825px]:w-[420px] min-[825px]:h-[253px]
+                                        min-[900px]:w-[500px] min-[900px]-h-[301px] 
+                                        lg:w-[600px] lg:h-[361px]
+                                    '
+                                />
+                            </picture>
+                            <div key={project.title + index} style={fadeIn} className='text-white w-11/12 md:w-2/5'>
+                                <h3 className='font-bold text-xl text-[#0FF76C]'>
+                                    {project.title}
+                                </h3>
+                                <p className='text-sm'>
+                                    {project.subtitle}
+                                </p>
+                                <h4 className='font-bold text-lg text-[#0FF76C] pt-7'>
+                                    {project.stack.title}
+                                </h4>
+                                <ul>
+                                    {project.stack.list.map((item) =>
+                                        <li className='list-none before:content-["•"] before:pr-2 before:text-base' key={item}>
+                                            {item}
+                                        </li>
+                                    )}
+                                </ul>
+                                <h4 className='font-bold text-lg text-[#0FF76C] pt-7'>
+                                    {project.description.title}
+                                </h4>
+                                <p>
+                                    {project.description.text}
+                                </p>
+                                <div className='flex items-center gap-5 mt-7'>
+                                    {project.links.map((link, index) =>
+                                        <a key={link + index} href={link.url} target='_blank'
+                                            className='
+                                                p-2
+                                                no-underline text-lg font-bold text-[#F0E508] 
+                                                border-[1px] border-white shadow-[3px_3px_3px_0px_rgba(255,255,255,0.5)] 
+                                                hover:scale-105 hover:ease-in-out hover:duration-200 hover:opacity-70
+                                            '
+                                        >
+                                            {link.title}
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     )
                 })}
-            </Section>
+            </section>
         </>
     )
 })
-
-const Section = styled.section`
-    background: linear-gradient(180deg, #2F5E55 0%, #ACCCC6 45.83%, #2F5E55 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding: 60px 20px;
-    width: 100%;
-    max-width: 1440px;
-    @media (max-width: 768px) {
-        gap: 60px;
-    }
-`
-const H2 = styled.h2`
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    padding-bottom: 20px;
-    scroll-margin-top: 85px;
-    margin-top: 55px;
-`
-const Project = styled.div`
-    display: flex;
-    width: 90%;
-    gap: 20px;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    flex-direction: ${props => props.number === 0 || props.number%2 === 0 ? 'row' : 'row-reverse'};
-    @media (max-width: 1052px) {
-        width: 95%;
-    }
-    @media (max-width: 768px) {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-    }
-    background: #000000;
-    border: 5px solid #D8D8D8;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
-`
-const Div = styled.div` 
-    color: #fff;
-    width: 40%;
-    @media (max-width: 768px) {
-        width: 90%;
-    }
-`
-const Picture = styled.picture` 
-    text-align: center;
-`
-const Img = styled.img`
-    width: 600px;
-    height: 361px;
-    @media (max-width: 1052px) {
-        width: 500px;
-        height: 301px;
-    }
-    @media (max-width: 900px) {
-        width: 450px;
-        height: 271px;
-    }
-    @media (max-width: 900px) {
-        width: 420px;
-        height: 253px;
-    }
-    @media (max-width: 825px) {
-        width: 390px;
-        height: 235px;
-    }
-    @media (max-width: 768px) {
-        width: 90%;
-        height: 100%;
-    }
-
-`
-// border: 5px solid #D8D8D8;
-// box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.71);
-const Source = styled.source`
-    width: 600px;
-    height: 361px;
-    @media (max-width: 1000px) {
-        width: 500px;
-        height: 301px;
-    }
-    @media (max-width: 900px) {
-        width: 450px;
-        height: 271px;
-    }
-    @media (max-width: 768px) {
-        width: 90%;
-        height: 100%;
-    }
-`
-const H3 = styled.h3`
-    font-weight: 700;
-    font-size: 22px;
-    color: #0FF76C;
-`
-const P = styled.p`
-    font-weight: 400;
-    font-size: 13px;
-`
-const H4 = styled.h4`
-    font-weight: 700;
-    font-size: 17px;
-    color: #0FF76C;
-    padding-top: 30px;
-`
-const Li = styled.li`
-    list-style: none;
-    &:before {
-        content: "•";
-        padding-right: 10px;
-        font-size: 15px;
-    }
-`
-const BtnContainer = styled.div`
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 30px;
-`
-const Btn = styled.a`
-    text-decoration: none;
-    padding: 10px;
-    font-size: 18px;
-    color: #F0E508;
-    border: 1px solid #FFFFFF;
-    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
-    font-weight: 700;
-    &:hover{
-        transform: scale(1.03);
-        transition: ease-in-out 0.2s;
-        opacity: 0.7;
-    }
-`
 
 export default ProjectsSection
