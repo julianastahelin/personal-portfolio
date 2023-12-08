@@ -2,19 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  color: #000;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;600;700&display=swap');
 
-body {
-  font-family: 'Roboto Mono', monospace;
-  word-wrap: break-word;
+
+@layer base {
+  :root {
+    --background-primary: linear-gradient(to bottom, #DCF2E7, #DEF7F3);
+    --background-primary-reverse: linear-gradient(to top, #DCF2E7, #DEF7F3);
+    --background-secondary: linear-gradient(to bottom, #2F5E55, #ACCCC6 45%, #2F5E55);
+    --background-tertiary: #395f56;
+
+    --foreground-primary: #000;
+    --foreground-secondary: #FFF;
+    --foreground-tertiary: #FFF;
+
+    --accent-primary: #FF00A1;
+    --accent-secondary: #0FF76C;
+    --accent-tertiary: #F0E508;
+    --accent-quaternary: #2F5E55;
+
+    --border-primary: #000;
+    --border-secondary: #fff;
+    --border-tertiary: #D8D8D8;
+  }
+  
+  body {
+    font-family: 'Roboto Mono', monospace;
+    word-wrap: break-word;
+  }
 }

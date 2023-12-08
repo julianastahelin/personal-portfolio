@@ -21,7 +21,7 @@ const TopSection = forwardRef((props, ref) => {
         >
             <div className='flex flex-col items-center gap-4 w-11/12 min-[500px]:w-2/3 md:w-2/5 text-center'>
                 <img
-                    className='w-40 min-[425px]:w-52 rounded-[50%] shadow-[2px_2px_12px_0px_rgba(0,0,0,0.71)]'
+                    className='w-40 min-[425px]:w-52 rounded-[50%] shadow-medium-dark'
                     src={png}
                     alt='Profile photo'
                 />
@@ -38,7 +38,7 @@ const TopSection = forwardRef((props, ref) => {
                     font-light text-sm leading-8 
                     p-9 mt-5 
                     w-11/12 min-[500px]:w-2/3 md:w-1/2
-                    bg-black text-white border-4 border-[#D8D8D8] shadow-[2px_2px_12px_0px_rgba(0,0,0,0.71)] 
+                    bg-primary-foreground text-secondary-foreground border-4 border-border-tertiary shadow-medium-dark 
                 '
             >
                 <p style={fadeIn}>
@@ -47,16 +47,16 @@ const TopSection = forwardRef((props, ref) => {
                 <button
                     className='
                             self-end p-2 mt-3
-                            bg-inherit border-[1px] border-white shadow-[3px_3px_5px_0px_rgba(255,255,255,0.8)]  
-                            font-light text-sm text-white
+                            bg-inherit border-[1px] border-border-secondary shadow-big-light  
+                            font-light text-sm text-secondary-foreground
                             hover:scale-105 hover:ease-in-out hover:opacity-70
                         '
                     style={fadeIn}
                     onClick={() => scrollTo(projectRef)}
                 >
-                    &lt;<span className='text-[#FF00A1]'>button</span>&gt;
+                    &lt;<span className='text-accent-primary'>button</span>&gt;
                     {content.header.projectsButton}
-                    &lt;<span className='text-[#FF00A1]'>/button</span>&gt;
+                    &lt;<span className='text-accent-primary'>/button</span>&gt;
                 </button>
             </div>
         </section>
