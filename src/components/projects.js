@@ -17,7 +17,7 @@ const ProjectsSection = forwardRef((props, ref) => {
             <section className='
                     flex flex-col items-center gap-14 md:gap-12 
                     px-5 py-14 w-full max-w-[1440px]
-                    bg-gradient-to-b from-[#2F5E55] via-[#ACCCC6] via-45% to-[#2F5E55] 
+                    bg-secondary 
                 '
             >
                 {content.projectSection.projects.map((project, index) => {
@@ -29,7 +29,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                 : 'md:flex-row-reverse'
                             }
                                 max-w-7xl w-11/12 lg:w-[95%] gap-5 p-5 
-                                border-4 border-[#D8D8D8] bg-black shadow-[1px_1px_7px_0px_rgba(0,0,0,0.6)]
+                                border-4 border-border-tertiary bg-primary-foreground shadow-small-dark
                             `}
                         >
                             <picture>
@@ -66,14 +66,14 @@ const ProjectsSection = forwardRef((props, ref) => {
                                     '
                                 />
                             </picture>
-                            <div key={project.title + index} style={fadeIn} className='text-white w-11/12 md:w-2/5'>
-                                <h3 className='font-bold text-xl text-[#0FF76C]'>
+                            <div key={project.title + index} style={fadeIn} className='text-secondary-foreground w-11/12 md:w-2/5'>
+                                <h3 className='font-bold text-xl text-accent-secondary'>
                                     {project.title}
                                 </h3>
                                 <p className='text-sm'>
                                     {project.subtitle}
                                 </p>
-                                <h4 className='font-bold text-lg text-[#0FF76C] pt-7'>
+                                <h4 className='font-bold text-lg text-accent-secondary pt-7'>
                                     {project.stack.title}
                                 </h4>
                                 <ul>
@@ -83,7 +83,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                         </li>
                                     )}
                                 </ul>
-                                <h4 className='font-bold text-lg text-[#0FF76C] pt-7'>
+                                <h4 className='font-bold text-lg text-accent-secondary pt-7'>
                                     {project.description.title}
                                 </h4>
                                 <p>
@@ -94,8 +94,8 @@ const ProjectsSection = forwardRef((props, ref) => {
                                         <a key={link + index} href={link.url} target='_blank'
                                             className='
                                                 p-2
-                                                no-underline text-lg font-bold text-[#F0E508] 
-                                                border-[1px] border-white shadow-[3px_3px_3px_0px_rgba(255,255,255,0.5)] 
+                                                no-underline text-lg font-bold text-accent-tertiary 
+                                                border-[1px] border-secondary-foreground shadow-medium-light 
                                                 hover:scale-105 hover:ease-in-out hover:duration-200 hover:opacity-70
                                             '
                                         >

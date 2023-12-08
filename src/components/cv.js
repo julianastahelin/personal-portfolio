@@ -26,7 +26,7 @@ const CvSection = forwardRef((props, ref) => {
                              text-2xl text-center md:text-right
                              flex justify-center md:justify-end items-center 
                              w-1/2 md:w-1/3 pr-0 md:pr-4 pb-1 md:pb-0
-                             border-black border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0 
+                             border-border-primary border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0 
                         '>
                             {exp.title}
                         </h3>
@@ -73,7 +73,7 @@ const CvSection = forwardRef((props, ref) => {
                     text-2xl text-center md:text-right
                     flex justify-center md:justify-end items-center 
                     w-1/2 md:w-1/3 pr-0 md:pr-4 pb-1
-                    border-black border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0 
+                    border-border-primary border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0 
                 '>
                     {content.cvSection.abilities.title}
                 </h3>
@@ -102,7 +102,7 @@ const CvSection = forwardRef((props, ref) => {
                     text-2xl text-center md:text-right
                     flex justify-center md:justify-end items-center 
                     w-1/2 md:w-1/3 pr-0 md:pr-4 pb-1
-                    border-black border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0 '>
+                    border-border-primary border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0 '>
                     {content.cvSection.languages.title}
                 </h3>
                 <div className='flex flex-col w-4/5 md:w-2/3 px-2 gap-5'>
@@ -123,7 +123,7 @@ const CvSection = forwardRef((props, ref) => {
                     text-2xl text-center md:text-right
                     flex justify-center md:justify-end items-center 
                     w-1/2 md:w-1/3 pr-0 md:pr-4 pb-1
-                    border-black border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0
+                    border-border-primary border-r-0 md:border-r-[1px] border-b-[1px] md:border-b-0
                  '>
                     {content.cvSection.links.title}
                 </h3>
@@ -134,8 +134,8 @@ const CvSection = forwardRef((props, ref) => {
                                 <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base'>
                                     {link.name} - {
                                         link.name === 'Currículo em pdf' || link.name === 'Curriculum in pdf'
-                                            ? <a className='underline leading-6 visited:text-[#2F5E55]' href={require(`../files/${link.url}`)} target='_blank'><FaRegFilePdf /></a>
-                                            : <a className='underline leading-6 visited:text-[#2F5E55]' href={link.url} target='_blank'>{link.url}</a>
+                                            ? <a className='underline leading-6 visited:text-accent-quaternary' href={require(`../files/${link.url}`)} target='_blank'><FaRegFilePdf /></a>
+                                            : <a className='underline leading-6 visited:text-accent-quaternary' href={link.url} target='_blank'>{link.url}</a>
                                     }
                                 </li>)
                         }

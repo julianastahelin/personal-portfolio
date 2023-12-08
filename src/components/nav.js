@@ -21,40 +21,40 @@ export default function Nav({ content, changeLang, topRef, cvRef, projectRef, co
             flex items-center justify-center 
             fixed top-0 z-10
             min-h-[70px] w-full py-7 pl-14 pr-20 
-            list-none 
-            bg-gradient-to-b from-[#DCF2E7] to-[#DEF7F3] shadow-[1px_1px_7px_0px_rgba(0,0,0,0.6)] 
+            list-none
+            bg-primary shadow-small-dark 
         '>
             <ul open={open} className={`
-                flex flex-col md:flex-row flex-nowrap items-center justify-start md:justify-between gap-7 md:gap-20 lg:gap-36
+                flex flex-col md:flex-row flex-nowrap items-center justify-start md:justify-between gap-7 md:gap-14 lg:gap-36
                 h-full w-52 md:w-full max-w-[1440px] 
                 fixed md:static top-0 right-0 px-14 py-8 md:p-0
                 list-none 
-                 bg-[#395f56] md:bg-inherit
+                bg-tertiary md:bg-inherit
                 transition-transform duration-300 ease-in-out ${open ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0  
             `}>
                 <li
-                    className='text-white md:text-black hover:cursor-pointer'
+                    className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(topRef)}
                 >
                     {content.nav.home}
                 </li>
                 <li
-                    className='text-white md:text-black hover:cursor-pointer'
+                    className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(cvRef)}
                 >
                     {content.nav.cv}
                 </li>
                 <li
-                    className='text-white md:text-black hover:cursor-pointer'
+                    className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(projectRef)}
                 >
                     {content.nav.projects}
                 </li>
                 <li
-                    className='text-white md:text-black hover:cursor-pointer'
+                    className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(contactRef)}
                 >
@@ -76,9 +76,9 @@ export default function Nav({ content, changeLang, topRef, cvRef, projectRef, co
                 w-8 h-8 fixed top-4 right-5 z-20 
                 hover:opacity-80 hover:cursor-pointer
             '>
-                <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-white rotate-45' : 'bg-black rotate-0'}`} />
-                <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-white translate-x-full opacity-0' : 'bg-black translate-x-0 opacity-100'}`} />
-                <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-white rotate-[-45deg]' : 'bg-black rotate-0'}`} />
+                <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-45' : 'bg-primary-foreground rotate-0'}`} />
+                <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground translate-x-full opacity-0' : 'bg-primary-foreground translate-x-0 opacity-100'}`} />
+                <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-[-45deg]' : 'bg-primary-foreground rotate-0'}`} />
             </div>
         </nav>
     )

@@ -40,7 +40,7 @@ export default function App() {
   }, [lang])
 
   return (
-    <div className='flex flex-col items-center bg-gradient-to-b from-[#DCF2E7] to-[#DEF7F3]'>
+    <div className='flex flex-col items-center bg-primary'>
       <Nav content={content} changeLang={changeLang} topRef={top} cvRef={cv} projectRef={project} contactRef={contact} fadeIn={fadeIn} />
       <TopSection changeLang={changeLang} content={content} ref={top} projectRef={project} fadeIn={fadeIn} />
       <CvSection content={content} ref={cv} fadeIn={fadeIn} />
