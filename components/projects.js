@@ -34,35 +34,38 @@ const ProjectsSection = forwardRef((props, ref) => {
                         >
                             <picture>
                                 <source
-                                    media='(max-width: 425px)'
-                                    srcSet={require(`../img/${project.image.mobile}`)}
+                                    media='(min-width: 768px)'
+                                    srcSet={`/assets/img/${project.image.desktop}`}
                                     alt={`Screenshot of ${project.title} project`}
-                                    className='
-                                        w-11/12 h-full m-auto
-                                        md:w-[450px] md:h-[271px] 
-                                        min-[900px]:w-[500px] min-[900px]:h-[301px] 
-                                        lg:w-[600px] lg:h-[361px] 
-                                    '
+                                    className='w-11/12 h-full m-auto 
+                                            md:w-[390px] md:h-[235px] 
+                                            min-[825px]:w-[420px] min-[825px]:h-[253px]
+                                            min-[900px]:w-[500px] min-[900px]-h-[301px] 
+                                            lg:w-[600px] lg:h-[361px]
+                                            text-secondary-foreground
+                                        '
                                 />
                                 <source
-                                    media='(max-width: 560px)'
-                                    srcSet={require(`../img/${project.image.tablet}`)}
+                                    media='(min-width: 425px)'
+                                    srcSet={`/assets/img/${project.image.tablet}`}
                                     alt={`Screenshot of ${project.title} project`}
                                     className='
                                         w-11/12 h-full m-auto
                                         md:w-[450px] md:h-[271px] 
                                         min-[900px]:w-[500px] min-[900px]:h-[301px] 
                                         lg:w-[600px] lg:h-[361px]
+                                        text-secondary-foreground
                                     '
                                 />
                                 <img
-                                    src={require(`../img/${project.image.desktop}`)}
+                                    src={`/assets/img/${project.image.mobile}`}
                                     alt={`Screenshot of ${project.title} project`}
-                                    className='w-11/12 h-full m-auto 
-                                        md:w-[390px] md:h-[235px] 
-                                        min-[825px]:w-[420px] min-[825px]:h-[253px]
-                                        min-[900px]:w-[500px] min-[900px]-h-[301px] 
+                                    className='
+                                        w-11/12 h-full m-auto
+                                        md:w-[450px] md:h-[271px] 
+                                        min-[900px]:w-[500px] min-[900px]:h-[301px] 
                                         lg:w-[600px] lg:h-[361px]
+                                        text-secondary-foreground
                                     '
                                 />
                             </picture>

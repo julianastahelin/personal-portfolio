@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
-
-import png from '../img/ju2.JPG'
+import Image from 'next/image'
+import profileImg from '@/public/assets/img/ju.JPG'
 
 
 const TopSection = forwardRef((props, ref) => {
@@ -20,9 +20,9 @@ const TopSection = forwardRef((props, ref) => {
             '
         >
             <div className='flex flex-col items-center gap-4 w-11/12 min-[500px]:w-2/3 md:w-2/5 text-center'>
-                <img
+                <Image
+                    src={profileImg}
                     className='w-40 min-[425px]:w-52 rounded-[50%] shadow-medium-dark'
-                    src={png}
                     alt='Profile photo'
                 />
                 <h1 className='text-3xl sm:text-4xl'>
