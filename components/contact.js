@@ -21,16 +21,15 @@ const ContactSection = forwardRef((props, ref) => {
             <ul className='list-none w-11/12'>
                 {content.contactSection.contact.map((contact) => {
                     return (
-                        <>
-                            <li className='mb-7 w-full' key={contact.title}>
-                                <p className='tracking-[3px] text-xl'>{contact.title}:</p>
-                                {
-                                    contact.title === 'Linkedin'
-                                        ? <a className='font-light tracking-widest underline' href={contact.address} target='_blank'>{contact.address}</a>
-                                        : <p className='font-light tracking-widest'>{contact.address}</p>
-                                }
-                            </li>
-                        </>)
+                        <li className='mb-7 w-full' key={contact.title}>
+                            <p className='tracking-[3px] text-xl'>{contact.title}:</p>
+                            {
+                                contact.title === 'Linkedin'
+                                    ? <a className='font-light tracking-widest underline' href={contact.address} target='_blank'>{contact.address}</a>
+                                    : <p className='font-light tracking-widest'>{contact.address}</p>
+                            }
+                        </li>
+                    )
                 })}
             </ul>
         </section>

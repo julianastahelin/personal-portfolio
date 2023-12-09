@@ -1,17 +1,17 @@
+'use client'
 import { useState, useEffect, useRef } from 'react'
 
-import './App.css'
-import Nav from './components/nav'
-import TopSection from './components/top'
-import CvSection from './components/cv'
-import ProjectsSection from './components/projects'
-import ContactSection from './components/contact'
-import Footer from './components/footer'
-import dataPt from './content/pt.json'
-import dataEn from './content/en.json'
+import Nav from '@/components/nav'
+import TopSection from '@/components/top'
+import CvSection from '@/components/cv'
+import ProjectsSection from '@/components/projects'
+import ContactSection from '@/components/contact'
+import Footer from '@/components/footer'
+import dataPt from '@/content/pt.json'
+import dataEn from '@/content/en.json'
 
 
-export default function App() {
+export default function Home() {
   const [lang, setLang] = useState('pt')
 
   const top = useRef(null)
