@@ -148,4 +148,5 @@ const CvSection = forwardRef((props, ref) => {
     )
 })
 
+CvSection.displayName = 'CvSection'
 export default CvSection
