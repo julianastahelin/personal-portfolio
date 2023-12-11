@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;600;700&display=swap');
-
 
 @layer base {
   :root {
@@ -24,10 +22,5 @@
     --border-primary: #000;
     --border-secondary: #fff;
     --border-tertiary: #D8D8D8;
-  }
-  
-  body {
-    font-family: 'Roboto Mono', monospace;
-    word-wrap: break-word;
   }
 }

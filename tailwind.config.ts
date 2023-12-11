@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-roboto-mono)'],
+      },
       colors: {
         primary: {
           foreground: 'var(--foreground-primary)',
