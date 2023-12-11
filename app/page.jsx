@@ -37,6 +37,8 @@ export default function Home() {
     setTimeout(() => {
       setFadeIn(show)
     }, 80)
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang])
 
   return (

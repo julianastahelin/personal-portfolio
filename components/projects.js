@@ -115,4 +115,5 @@ const ProjectsSection = forwardRef((props, ref) => {
     )
 })
 
+ProjectsSection.displayName = 'ProjectsSection'
 export default ProjectsSection

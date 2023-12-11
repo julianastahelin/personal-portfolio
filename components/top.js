@@ -63,4 +63,5 @@ const TopSection = forwardRef((props, ref) => {
     )
 })
 
+TopSection.displayName = 'TopSection'
 export default TopSection
