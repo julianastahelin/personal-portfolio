@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import ReactCountryFlag from 'react-country-flag'
 
+import { getSectionData } from '@/lib/data/loader.ts'
 
-export default function Nav({ content, changeLang, topRef, cvRef, projectRef, contactRef, fadeIn }) {
+
+export default function Nav({ lang, changeLang, topRef, cvRef, projectRef, contactRef, fadeIn }) {
+
+    const nav = getSectionData('Nav', lang)
 
     const [open, setOpen] = useState(false)
 
@@ -37,28 +41,28 @@ export default function Nav({ content, changeLang, topRef, cvRef, projectRef, co
                     style={fadeIn}
                     onClick={() => scrollTo(topRef)}
                 >
-                    {content.nav.home}
+                    {nav.home}
                 </li>
                 <li
                     className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(cvRef)}
                 >
-                    {content.nav.cv}
+                    {nav.cv}
                 </li>
                 <li
                     className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(projectRef)}
                 >
-                    {content.nav.projects}
+                    {nav.projects}
                 </li>
                 <li
                     className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
                     onClick={() => scrollTo(contactRef)}
                 >
-                    {content.nav.contact}
+                    {nav.contact}
                 </li>
 
                 <div className='flex gap-4 md:gap-2'>

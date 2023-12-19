@@ -1,12 +1,16 @@
 import { forwardRef } from 'react'
 import Image from 'next/image'
+
+import { getSectionData } from '@/lib/data/loader.ts'
 import profileImg from '@/public/assets/img/ju.JPG'
 
 
-const TopSection = forwardRef((props, ref) => {
-    const { content } = props
+const Header = forwardRef((props, ref) => {
+    const { lang } = props
     const { projectRef } = props
     const { fadeIn } = props
+
+    const header = getSectionData('Header', lang)
 
     function scrollTo(section) {
         section.current.scrollIntoView({ behavior: 'smooth' })
@@ -26,10 +30,10 @@ const TopSection = forwardRef((props, ref) => {
                     alt='Profile photo'
                 />
                 <h1 className='text-3xl sm:text-4xl'>
-                    {content.header.name}
+                    {header.name}
                 </h1>
                 <p className='font-light text:lg sm:text-xl' style={fadeIn}>
-                    {content.header.jobTitle}
+                    {header.jobTitle}
                 </p>
             </div>
 
@@ -42,7 +46,7 @@ const TopSection = forwardRef((props, ref) => {
                 '
             >
                 <p style={fadeIn}>
-                    {content.header.description}
+                    {header.description}
                 </p>
                 <button
                     className='
@@ -55,7 +59,7 @@ const TopSection = forwardRef((props, ref) => {
                     onClick={() => scrollTo(projectRef)}
                 >
                     &lt;<span className='text-accent-primary'>button</span>&gt;
-                    {content.header.projectsButton}
+                    {header.projectsButton}
                     &lt;<span className='text-accent-primary'>/button</span>&gt;
                 </button>
             </div>
@@ -63,5 +67,5 @@ const TopSection = forwardRef((props, ref) => {
     )
 })
 
-TopSection.displayName = 'TopSection'
-export default TopSection
+Header.displayName = 'Header'
+export default Header

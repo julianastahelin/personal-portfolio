@@ -1,9 +1,13 @@
 import { forwardRef } from 'react'
 
+import { getSectionData } from '@/lib/data/loader.ts'
+
 
 const ProjectsSection = forwardRef((props, ref) => {
-    const { content } = props
+    const { lang } = props
     const { fadeIn } = props
+
+    const projects = getSectionData('Projects', lang)
 
     return (
         <>
@@ -12,7 +16,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                 style={fadeIn}
                 className='text-center text-3xl font-light pb-6 mt-14 scroll-mt-24'
             >
-                {content.projectSection.title}
+                {projects.title}
             </h2>
             <section className='
                     flex flex-col items-center gap-14 md:gap-12 
@@ -20,7 +24,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                     bg-secondary 
                 '
             >
-                {content.projectSection.projects.map((project, index) => {
+                {projects.projects.map((project, index) => {
                     return (
                         <div key={project + index} number={index} className={`
                                 flex justify-center md:justify-between items-center flex-col-reverse 
@@ -35,7 +39,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                             <picture>
                                 <source
                                     media='(min-width: 768px)'
-                                    srcSet={`/assets/img/${project.image.desktop}`}
+                                    srcSet={`/assets/img/${project.images.desktop}`}
                                     alt={`Screenshot of ${project.title} project`}
                                     className='w-11/12 h-full m-auto 
                                             md:w-[390px] md:h-[235px] 
@@ -47,7 +51,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                 />
                                 <source
                                     media='(min-width: 425px)'
-                                    srcSet={`/assets/img/${project.image.tablet}`}
+                                    srcSet={`/assets/img/${project.images.tablet}`}
                                     alt={`Screenshot of ${project.title} project`}
                                     className='
                                         w-11/12 h-full m-auto
@@ -58,7 +62,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                     '
                                 />
                                 <img
-                                    src={`/assets/img/${project.image.mobile}`}
+                                    src={`/assets/img/${project.images.mobile}`}
                                     alt={`Screenshot of ${project.title} project`}
                                     className='
                                         w-11/12 h-full m-auto
@@ -93,8 +97,8 @@ const ProjectsSection = forwardRef((props, ref) => {
                                     {project.description.text}
                                 </p>
                                 <div className='flex items-center gap-5 mt-7'>
-                                    {project.links.map((link, index) =>
-                                        <a key={link + index} href={link.url} target='_blank'
+                                    {project.links.list.map((link, index) =>
+                                        <a key={link.name + index} href={link.url} target='_blank'
                                             className='
                                                 p-2
                                                 no-underline text-lg font-bold text-accent-tertiary 
@@ -102,7 +106,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                                 hover:scale-105 hover:ease-in-out hover:duration-200 hover:opacity-70
                                             '
                                         >
-                                            {link.title}
+                                            {link.name}
                                         </a>
                                     )}
                                 </div>
