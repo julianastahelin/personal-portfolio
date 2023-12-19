@@ -1,9 +1,13 @@
 import { forwardRef } from 'react'
 
+import { getSectionData } from '@/lib/data/loader.ts'
+
 
 const ContactSection = forwardRef((props, ref) => {
-    const { content } = props
+    const { lang } = props
     const { fadeIn } = props
+
+    const contact = getSectionData('Contact', lang)
 
     return (
         <section
@@ -16,12 +20,12 @@ const ContactSection = forwardRef((props, ref) => {
             '
         >
             <h2 className='text-center text-3xl font-light pb-6'>
-                {content.contactSection.title}
+                {contact.title}
             </h2>
             <ul className='list-none w-11/12'>
-                {content.contactSection.contact.map((contact) => {
+                {contact.contacts.map((contact, index) => {
                     return (
-                        <li className='mb-7 w-full' key={contact.title}>
+                        <li className='mb-7 w-full' key={contact.title + index}>
                             <p className='tracking-[3px] text-xl'>{contact.title}:</p>
                             {
                                 contact.title === 'Linkedin'
