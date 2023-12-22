@@ -5,7 +5,7 @@ home: Início
 cv: Currículo
 projects: Projetos
 contact: Contato
-lang: 
-    - PT
-    - EN
+languages: 
+    - pt
+    - en
 ---

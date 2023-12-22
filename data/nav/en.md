@@ -5,7 +5,7 @@ home: Home
 cv: Curriculum
 projects: Projects
 contact: Contact
-lang: 
-    - PT
-    - EN
+languages: 
+    - pt
+    - en
 ---

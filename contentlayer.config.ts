@@ -12,7 +12,7 @@ const Nav = defineDocumentType(() => ({
     cv: { type: 'string', required: true },
     projects: { type: 'string', required: true },
     contact: { type: 'string', required: true },
-    lang: { type: 'list', required: true, of: { type: 'string'} },
+    languages: { type: 'list', required: true, of: { type: 'string'} },
   }
 }))
 
@@ -80,7 +80,7 @@ const Courses = defineNestedType(() => ({
   }
 }))
 
-const Details = defineDocumentType(() => ({
+const Details = defineNestedType(() => ({
   name: 'Details',
   fields: {
     name:  { type: 'string', required: true },
