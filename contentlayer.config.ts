@@ -85,7 +85,7 @@ const Details = defineNestedType(() => ({
   fields: {
     name:  { type: 'string', required: true },
     period:  { type: 'string', required: true },
-    description: { type: 'list', required: true, of: { type: 'string'} },
+    description: { type: 'list', required: false, of: { type: 'string'} },
   }
 }))
 
