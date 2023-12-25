@@ -1,21 +1,30 @@
 import { useState } from 'react'
 import ReactCountryFlag from 'react-country-flag'
 
-import { getSectionData } from '@/lib/data/loader.ts'
+import { getSectionData, Nav } from '@/lib/data/loader.ts'
+import { Language, MutableRef, SectionProps } from '@/types/core'
 
 
-export default function Nav({ lang, changeLang, topRef, cvRef, projectRef, contactRef, fadeIn }) {
+interface NavProps extends SectionProps {
+    changeLang: (lang: Language) => void,
+    topRef: MutableRef,
+    cvRef: MutableRef,
+    projectRef: MutableRef,
+    contactRef: MutableRef,
+}
 
-    const nav = getSectionData('Nav', lang)
+export default function Nav({ language, fadeIn, changeLang, topRef, cvRef, projectRef, contactRef }: NavProps) {
 
-    const [open, setOpen] = useState(false)
+    const nav = getSectionData('Nav', language) as Nav
 
-    function scrollTo(section) {
-        section.current.scrollIntoView({ behavior: 'smooth' })
+    const [open, setOpen] = useState<boolean>(false)
+
+    function scrollTo(ref: MutableRef) {
+        ref!.current!.scrollIntoView({ behavior: 'smooth' })
         setOpen(!open)
     }
 
-    function handleLanguageChange(lang) {
+    function handleLanguageChange(lang: Language) {
         changeLang(lang)
         setOpen(!open)
     }
@@ -28,8 +37,8 @@ export default function Nav({ lang, changeLang, topRef, cvRef, projectRef, conta
             list-none
             bg-primary shadow-small-dark 
         '>
-            <ul open={open} className={`
-                flex flex-col md:flex-row flex-nowrap items-center justify-start md:justify-between gap-7 md:gap-14 lg:gap-36
+            <ul className={`
+                flex flex-col md:flex-row flex-nowrap items-center justify-start md:justify-between gap-7 md:gap-14 lg:gap-32
                 h-full w-52 md:w-full max-w-[1440px] 
                 fixed md:static top-0 right-0 px-14 py-8 md:p-0
                 list-none 
@@ -64,18 +73,18 @@ export default function Nav({ lang, changeLang, topRef, cvRef, projectRef, conta
                 >
                     {nav.contact}
                 </li>
-
                 <div className='flex gap-4 md:gap-2'>
-                    <button className='text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
+                    {/* TODO: map on languages array to define buttons dinamically */}
+                    <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
                         <ReactCountryFlag countryCode='BR' svg style={{ borderRadius: 20 }} />
                     </button>
-                    <button className='text-2xl hover:opacity-80' onClick={() => handleLanguageChange('en')}>
+                    <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('en')}>
                         <ReactCountryFlag countryCode='GB' svg style={{ borderRadius: 20 }} />
                     </button>
                 </div>
             </ul>
 
-            <div open={open} onClick={() => setOpen(!open)} className='
+            <div onClick={() => setOpen(!open)} className='
                 flex md:hidden flex-col flex-nowrap justify-around
                 w-8 h-8 fixed top-4 right-5 z-20 
                 hover:opacity-80 hover:cursor-pointer

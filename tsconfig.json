@@ -4,6 +4,7 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
@@ -21,7 +22,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "contentlayer/generated": ["./.contentlayer/generated"],
+      "@/public/assets/img/": ["/public/assets/img/"],
     }
   },
   "include": [
@@ -30,7 +32,7 @@
     "**/*.tsx", 
     ".next/types/**/*.ts", 
     "app/page.jsx",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
   ],
   "exclude": ["node_modules"]
 }

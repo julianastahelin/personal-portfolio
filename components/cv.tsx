@@ -1,14 +1,13 @@
-import { forwardRef } from 'react'
+import { LegacyRef, forwardRef } from 'react'
 import { FaRegFilePdf } from 'react-icons/fa6'
 
-import { getSectionData } from '@/lib/data/loader.ts'
+import { getSectionData, Curriculum } from '@/lib/data/loader.ts'
+import { SectionProps } from '@/types/core'
 
 
-const CvSection = forwardRef((props, ref) => {
-    const { lang } = props
-    const { fadeIn } = props
+const CvSection = forwardRef(({ language, fadeIn }: SectionProps, ref: LegacyRef<HTMLElement>) => {
 
-    const cv = getSectionData('Curriculum', lang)
+    const cv = getSectionData('Curriculum', language) as Curriculum
 
     return (
         <section
@@ -35,7 +34,7 @@ const CvSection = forwardRef((props, ref) => {
                 <div className='flex flex-col w-4/5 md:w-2/3 px-2 gap-5'>
                     {cv.experience.details.map((item, index) => {
                         return (
-                            <div key={item + index}>
+                            <div key={item.name + index}>
                                 <h4 className='leading-6 font-semibold'>
                                     {item.name}
                                 </h4>
@@ -54,8 +53,9 @@ const CvSection = forwardRef((props, ref) => {
                             </div>
                         )
                     })}
+                    </div>
                 </div>
-            </div>
+
             <div className='flex flex-col md:flex-row items-center md:items-stretch w-full gap-2 md:gap-7'>
                 <h3 className='
                              text-2xl text-center md:text-right
@@ -68,23 +68,23 @@ const CvSection = forwardRef((props, ref) => {
                 <div className='flex flex-col w-4/5 md:w-2/3 px-2 gap-5'>
                     {cv.education.degrees.map((degree, index) => {
                         return (
-                            <div key={degree + index}>
+                            <div key={degree.level + index}>
                                 <p className='text-lg font-light leading-6 lowercase [font-variant-caps:small-caps]'>
                                     {degree.level}
                                 </p>
                                 <div className='flex flex-col gap-2'>
-                                {degree.details.map((detail, index) => {
+                                {degree.details.map((item, index) => {
                                     return (
-                                        <div key={detail + index}>
+                                        <div key={item.name + index}>
                                             <h4 className='leading-6 font-semibold'>
-                                                {detail.name}
+                                                {item.name}
                                             </h4>
                                             <p className='font-normal'>
-                                                {detail.period}
+                                                {item.period}
                                             </p>
                                             <ul className='list-none pl-2'>
                                                 {
-                                                    detail.description?.map((item, index) =>
+                                                    item.description?.map((item, index) =>
                                                         <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={item + index}>
                                                             {item}
                                                         </li>
@@ -100,6 +100,7 @@ const CvSection = forwardRef((props, ref) => {
                     })}
                 </div>
             </div>
+
             <div className='flex flex-col md:flex-row items-center md:items-stretch w-full gap-2 md:gap-7'>
                 <h3 className='
                              text-2xl text-center md:text-right
@@ -112,7 +113,7 @@ const CvSection = forwardRef((props, ref) => {
                 <div className='flex flex-col w-4/5 md:w-2/3 px-2 gap-5'>
                     {cv.courses.details.map((item, index) => {
                         return (
-                            <div key={item + index}>
+                            <div key={item.name + index}>
                                 <h4 className='leading-6 font-semibold'>
                                     {item.name}
                                 </h4>
@@ -175,7 +176,7 @@ const CvSection = forwardRef((props, ref) => {
                     <ul className='list-none pl-2'>
                         {
                             cv.languages.list.map((language, index) =>
-                                <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={language + index}>
+                                <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={language.name + index}>
                                     {language.name} - {language.level}
                                 </li>
                             )
@@ -197,7 +198,7 @@ const CvSection = forwardRef((props, ref) => {
                     <ul className='list-none pl-2'>
                         {
                             cv.links.list.map((link, index) =>
-                                <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={link + index}>
+                                <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={link.name + index}>
                                     {link.name} -
                                     {
                                         link.name === 'Currículo em pdf' || link.name === 'Curriculum in pdf'

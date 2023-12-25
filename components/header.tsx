@@ -1,19 +1,21 @@
-import { forwardRef } from 'react'
+import { forwardRef, LegacyRef } from 'react'
 import Image from 'next/image'
 
-import { getSectionData } from '@/lib/data/loader.ts'
-import profileImg from '@/public/assets/img/ju.JPG'
+import { getSectionData, Header } from '@/lib/data/loader.ts'
+import profileImg from '@/public/assets/img/ju.jpg'
+import { MutableRef, SectionProps } from '@/types/core'
 
 
-const Header = forwardRef((props, ref) => {
-    const { lang } = props
-    const { projectRef } = props
-    const { fadeIn } = props
+interface HeaderProps extends SectionProps {
+    projectRef: MutableRef,
+}
 
-    const header = getSectionData('Header', lang)
+const Header = forwardRef(({ language, fadeIn, projectRef }: HeaderProps, ref: LegacyRef<HTMLElement>) => {
 
-    function scrollTo(section) {
-        section.current.scrollIntoView({ behavior: 'smooth' })
+    const header = getSectionData('Header', language) as Header
+
+    function scrollTo(ref: MutableRef) {
+        ref!.current!.scrollIntoView({ behavior: 'smooth' })
     }
 
     return (
@@ -28,6 +30,7 @@ const Header = forwardRef((props, ref) => {
                     src={profileImg}
                     className='w-40 min-[425px]:w-52 rounded-[50%] shadow-medium-dark'
                     alt='Profile photo'
+                    priority
                 />
                 <h1 className='text-3xl sm:text-4xl'>
                     {header.name}

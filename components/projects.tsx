@@ -1,13 +1,12 @@
-import { forwardRef } from 'react'
+import { LegacyRef, forwardRef } from 'react'
 
-import { getSectionData } from '@/lib/data/loader.ts'
+import { Projects, getSectionData } from '@/lib/data/loader.ts'
+import { SectionProps } from '@/types/core'
 
 
-const ProjectsSection = forwardRef((props, ref) => {
-    const { lang } = props
-    const { fadeIn } = props
+const ProjectsSection = forwardRef(({language, fadeIn}: SectionProps, ref: LegacyRef<HTMLHeadingElement>) => {
 
-    const projects = getSectionData('Projects', lang)
+    const projects = getSectionData('Projects', language) as Projects
 
     return (
         <>
@@ -26,7 +25,7 @@ const ProjectsSection = forwardRef((props, ref) => {
             >
                 {projects.projects.map((project, index) => {
                     return (
-                        <div key={project + index} number={index} className={`
+                        <div key={project.title + index} className={`
                                 flex justify-center md:justify-between items-center flex-col-reverse 
                                 ${index === 0 || index % 2 === 0
                                 ? 'md:flex-row'
@@ -40,7 +39,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                 <source
                                     media='(min-width: 768px)'
                                     srcSet={`/assets/img/${project.images.desktop}`}
-                                    alt={`Screenshot of ${project.title} project`}
+                                    about={`Screenshot of ${project.title} project`}
                                     className='w-11/12 h-full m-auto 
                                             md:w-[390px] md:h-[235px] 
                                             min-[825px]:w-[420px] min-[825px]:h-[253px]
@@ -52,7 +51,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                 <source
                                     media='(min-width: 425px)'
                                     srcSet={`/assets/img/${project.images.tablet}`}
-                                    alt={`Screenshot of ${project.title} project`}
+                                    about={`Screenshot of ${project.title} project`}
                                     className='
                                         w-11/12 h-full m-auto
                                         md:w-[450px] md:h-[271px] 
@@ -63,7 +62,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                                 />
                                 <img
                                     src={`/assets/img/${project.images.mobile}`}
-                                    alt={`Screenshot of ${project.title} project`}
+                                    about={`Screenshot of ${project.title} project`}
                                     className='
                                         w-11/12 h-full m-auto
                                         md:w-[450px] md:h-[271px] 

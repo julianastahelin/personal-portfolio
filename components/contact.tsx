@@ -1,13 +1,12 @@
-import { forwardRef } from 'react'
+import { LegacyRef, forwardRef } from 'react'
 
-import { getSectionData } from '@/lib/data/loader.ts'
+import { Contact, getSectionData } from '@/lib/data/loader.ts'
+import { SectionProps } from '@/types/core'
 
 
-const ContactSection = forwardRef((props, ref) => {
-    const { lang } = props
-    const { fadeIn } = props
+const ContactSection = forwardRef(({ language, fadeIn }: SectionProps, ref: LegacyRef<HTMLElement> ) => {
 
-    const contact = getSectionData('Contact', lang)
+    const contact = getSectionData('Contact', language) as Contact
 
     return (
         <section
