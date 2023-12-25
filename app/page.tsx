@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 
 import Nav from '@/components/nav'
 import Header from '@/components/header'
-import CvSection from '@/components/cv'
+import CurriculumSection from '@/components/curriculum'
 import ProjectsSection from '@/components/projects'
 import ContactSection from '@/components/contact'
 import Footer from '@/components/footer'
@@ -39,7 +39,7 @@ export default function Home() {
     <div className='flex flex-col items-center bg-primary'>
       <Nav language={lang} fadeIn={fadeIn} changeLang={changeLang} topRef={top} cvRef={cv} projectRef={project} contactRef={contact} />
       <Header language={lang} fadeIn={fadeIn} ref={top} projectRef={project} />
-      <CvSection language={lang} fadeIn={fadeIn} ref={cv} />
+      <CurriculumSection language={lang} fadeIn={fadeIn} ref={cv} />
       <ProjectsSection language={lang} fadeIn={fadeIn} ref={project} />
       <ContactSection language={lang} fadeIn={fadeIn} ref={contact} />
       <Footer language={lang} fadeIn={fadeIn} />
