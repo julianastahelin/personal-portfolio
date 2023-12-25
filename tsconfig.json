@@ -23,7 +23,7 @@
     "paths": {
       "@/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
-      "@/public/assets/img/": ["/public/assets/img/"],
+      "@/public/assets/img/": ["./public/assets/img/"],      
     }
   },
   "include": [
