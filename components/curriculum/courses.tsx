@@ -29,7 +29,7 @@ export function CoursesPart({ courses }: CoursesPartProps) {
                             </p>
                             <ul className='list-none pl-2'>
                                 {
-                                    item.description.map((item, index) =>
+                                    item.description?.map((item, index) =>
                                         <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={item + index}>
                                             {item}
                                         </li>
