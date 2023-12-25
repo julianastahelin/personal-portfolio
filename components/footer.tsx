@@ -1,9 +1,10 @@
-import { getSectionData } from '@/lib/data/loader.ts'
+import { getSectionData, Footer } from '@/lib/data/loader.ts'
+import { SectionProps } from '@/types/core'
 
 
-export default function Footer({ lang, fadeIn }) {
+export default function Footer({ language, fadeIn }: SectionProps) {
 
-    const footer = getSectionData('Footer', lang)
+    const footer = getSectionData('Footer', language) as Footer
 
     return (
         <footer className='
