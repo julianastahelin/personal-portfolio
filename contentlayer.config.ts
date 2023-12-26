@@ -29,6 +29,37 @@ export const Header = defineDocumentType(() => ({
   }
 }))
 
+// ABOUT
+export const About = defineDocumentType(() => ({
+  name: 'About',
+  filePathPattern: 'about/**/*.md',
+  fields: {
+    language: { type: 'string', required: true },
+    title: { type: 'string', required: true },
+    text: { type: 'string', required: true },
+  }
+}))
+
+// TECH STACK
+export const TechStack = defineDocumentType(() => ({
+  name: 'TechStack',
+  filePathPattern: 'tech-stack/**/*.md',
+  fields: {
+    language: { type: 'string', required: true },
+    title: { type: 'string', required: true },
+    technologies: { type: 'list', required: true, of: TechnologiesDetails }
+  }
+}))
+
+const TechnologiesDetails = defineNestedType(() => ({
+  title: 'ContactDetails',
+  fields: {
+    title: { type: 'string', required: true },
+    address: { type: 'string', required: false },
+  }
+}))
+
+
 // CURRICULUM
 export const Curriculum = defineDocumentType(() => ({
   name: 'Curriculum',
@@ -227,4 +258,4 @@ const Credits = defineNestedType(() => ({
 }))
 
 
-export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Header, Curriculum, Projects, Contact, Footer] })
+export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Header, About, TechStack, Curriculum, Projects, Contact, Footer] })

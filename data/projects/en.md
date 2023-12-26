@@ -29,8 +29,10 @@ projects:
       stack: 
         title: Tech Stack
         list:
-            - React
-            - 'Styled Components'
+            - Next.js
+            - Typescript
+            - Tailwind
+            - Contentlayer
       description:
         title: Description
         text: 'Personal project built to show curriculum, projects and abilities in web development. Available in two languages.'

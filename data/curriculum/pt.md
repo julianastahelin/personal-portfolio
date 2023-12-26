@@ -52,18 +52,28 @@ abilities:
     list:          
         - sort: Técnicas/específicas 
           abilities:
+            - Next.js
+            - React
+            - Typescript
+            - JavaScript
+            - Tailwind
+            - Bootstrap
+            - 'Styled Components'
             - HTML
             - CSS
-            - JS
-            - React
-            - Bootstrap
             - Git
             - GitHub
-            - 'Consumo de API'
+            - 'API Rest'
             - Figma
-            - 'Styled Components'
+            - Postman
+            - Node.js
+            - SQL
+            - Auth.js
         - sort: 'Gerais e interpessoais'
           abilities: 
+            - Perseverança
+            - Determinação
+            - Autodidata
             - 'Trabalho em equipe' 
             - Pró-atividade
             - Flexibilidade
