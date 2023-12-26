@@ -2,6 +2,6 @@
 language: pt
 name: 'Juliana Stahelin'
 jobTitle: 'Desenvolvedora front-end'
-description: 'Olá! Eu sou a Juliana, sou programadora front-end. Tenho desenvolvido projetos envolvendo HTML, CSS, Javascript, React, Bootstrap e Styled Components, buscando escrever meus códigos da melhor maneira possível a fim de deixá-los funcionais, facilmente compreensíveis e bem organizados. Sigo me desenvolvendo em front-end e, em breve, em back-end. Venha conhecer um pouco dos meus projetos recentes!'
+description: 'Olá! Eu sou a Juliana, sou programadora front-end. Desenvolvo meus projetos buscando escrever código limpo, organizado e escalável. Tenho paixão por aprender e busco constantemente aprofundar meus conhecimentos e dominar as ferramentas. Venha conhecer meus projetos mais recentes!'
 projectsButton: Ir para projetos
 ---

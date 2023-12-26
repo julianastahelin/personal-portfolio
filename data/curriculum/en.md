@@ -52,18 +52,28 @@ abilities:
     list:          
         - sort: 'Hard skills' 
           abilities:
+            - Next.js
+            - React
+            - Typescript
+            - JavaScript
+            - Tailwind
+            - Bootstrap
+            - 'Styled Components'
             - HTML
             - CSS
-            - JS
-            - React
-            - Bootstrap
             - Git
             - GitHub
-            - 'Use of API'
+            - 'Rest API'
             - Figma
-            - 'Styled Components'
+            - Postman
+            - Node.js
+            - SQL
+            - Auth.js
         - sort: 'Soft skills'
           abilities: 
+            - Perseverance
+            - Determination
+            - Self learning
             - Teamwork 
             - Proactivity
             - Flexibility

@@ -7,6 +7,7 @@ export function getSectionData(section: DocumentTypeNames, language: string) {
 
 export type {
     Abilities,
+    About,
     Contact,
     Courses,
     Curriculum,
@@ -17,4 +18,5 @@ export type {
     Languages,
     Nav,
     Projects,
+    TechStack
 } from '@/.contentlayer/generated'

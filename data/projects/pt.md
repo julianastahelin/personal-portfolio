@@ -29,8 +29,10 @@ projects:
       stack: 
         title: Tecnologias 
         list:
-            - React
-            - 'Styled Components'
+            - Next.js
+            - Typescript
+            - Tailwind
+            - Contentlayer
       description:
         title: Descrição
         text: 'Projeto pessoal feito para demonstrar currículo, projetos e habilidades em programação. Disponível em dois idiomas.'
