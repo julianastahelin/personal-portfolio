@@ -2,11 +2,11 @@
 language: en
 title: Tech stack
 technologies: 
-    - title: Next.js
+    - title: NextJS
       address: https://nextjs.org/
     - title: Typescript
       address: https://www.typescriptlang.org/
-    - title: JavaScript
+    - title: Javascript
       address: https://developer.mozilla.org/en-US/docs/Web/JavaScript
     - title: React
       address: https://react.dev/
@@ -26,11 +26,11 @@ technologies:
       address: https://git-scm.com/
     - title: GitHub
       address: https://github.com/
-    - title: Node.js
+    - title: NodeJS
       address: https://nodejs.org/en
     - title: SQL
       address:
-    - title: Auth.js
+    - title: AuthJS
       address: https://authjs.dev/
     - title: Postman
       address: https://www.postman.com/
