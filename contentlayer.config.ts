@@ -9,6 +9,7 @@ const Nav = defineDocumentType(() => ({
     language: { type: 'string', required: true },
     title: { type: 'string', required: true },
     home: { type: 'string', required: true },
+    tech: { type: 'string', required: true },
     cv: { type: 'string', required: true },
     projects: { type: 'string', required: true },
     contact: { type: 'string', required: true },
