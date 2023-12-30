@@ -8,12 +8,13 @@ import { Language, MutableRef, SectionProps } from '@/types/core'
 interface NavProps extends SectionProps {
     changeLang: (lang: Language) => void,
     topRef: MutableRef,
+    techRef: MutableRef,
     cvRef: MutableRef,
     projectRef: MutableRef,
     contactRef: MutableRef,
 }
 
-export default function Nav({ language, fadeIn, changeLang, topRef, cvRef, projectRef, contactRef }: NavProps) {
+export default function Nav({ language, fadeIn, changeLang, topRef, techRef, cvRef, projectRef, contactRef }: NavProps) {
 
     const nav = getSectionData('Nav', language) as Nav
 
@@ -55,6 +56,13 @@ export default function Nav({ language, fadeIn, changeLang, topRef, cvRef, proje
                 <li
                     className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
                     style={fadeIn}
+                    onClick={() => scrollTo(techRef)}
+                >
+                    {nav.tech}
+                </li>
+                <li
+                    className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer'
+                    style={fadeIn}
                     onClick={() => scrollTo(cvRef)}
                 >
                     {nav.cv}
@@ -84,11 +92,14 @@ export default function Nav({ language, fadeIn, changeLang, topRef, cvRef, proje
                 </div>
             </ul>
 
-            <div onClick={() => setOpen(!open)} className='
-                flex md:hidden flex-col flex-nowrap justify-around
-                w-8 h-8 fixed top-4 right-5 z-20 
-                hover:opacity-80 hover:cursor-pointer
-            '>
+            <div 
+                onClick={() => setOpen(!open)}
+                className='
+                    flex md:hidden flex-col flex-nowrap justify-around
+                    w-8 h-8 fixed top-4 right-5 z-20 
+                    hover:opacity-80 hover:cursor-pointer
+                '
+            >
                 <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-45' : 'bg-primary-foreground rotate-0'}`} />
                 <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground translate-x-full opacity-0' : 'bg-primary-foreground translate-x-0 opacity-100'}`} />
                 <div className={`w-8 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-[-45deg]' : 'bg-primary-foreground rotate-0'}`} />
