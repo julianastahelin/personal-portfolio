@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 
 import Nav from '@/components/nav'
 import Header from '@/components/header'
+import TechStackSection from '@/components/tech-stack'
 import CurriculumSection from '@/components/curriculum'
 import ProjectsSection from '@/components/projects'
 import ContactSection from '@/components/contact'
@@ -14,6 +15,7 @@ export default function Home() {
   const [lang, setLang] = useState<Language>('en')
 
   const top = useRef<null | HTMLDivElement>(null)
+  const tech = useRef<null | HTMLDivElement>(null)
   const cv = useRef<null | HTMLDivElement>(null)
   const project = useRef<null | HTMLDivElement>(null)
   const contact = useRef<null | HTMLDivElement>(null)
@@ -37,8 +39,9 @@ export default function Home() {
 
   return (
     <div className='flex flex-col items-center bg-primary'>
-      <Nav language={lang} fadeIn={fadeIn} changeLang={changeLang} topRef={top} cvRef={cv} projectRef={project} contactRef={contact} />
+      <Nav language={lang} fadeIn={fadeIn} changeLang={changeLang} topRef={top} techRef={tech} cvRef={cv} projectRef={project} contactRef={contact} />
       <Header language={lang} fadeIn={fadeIn} ref={top} projectRef={project} />
+      <TechStackSection language={lang} fadeIn={fadeIn} ref={tech} />
       <CurriculumSection language={lang} fadeIn={fadeIn} ref={cv} />
       <ProjectsSection language={lang} fadeIn={fadeIn} ref={project} />
       <ContactSection language={lang} fadeIn={fadeIn} ref={contact} />
