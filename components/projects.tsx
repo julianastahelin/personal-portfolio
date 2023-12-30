@@ -18,11 +18,10 @@ const ProjectsSection = forwardRef(({language, fadeIn}: SectionProps, ref: Legac
                 {projects.title}
             </h2>
             <section className='
-                    flex flex-col items-center gap-14 md:gap-12 
-                    px-5 py-14 w-full max-w-[1440px]
-                    bg-secondary 
-                '
-            >
+                flex flex-col items-center gap-14 md:gap-12 
+                px-5 py-14 w-full max-w-[1440px]
+                bg-secondary 
+            '>
                 {projects.projects.map((project, index) => {
                     return (
                         <div key={project.title + index} className={`
