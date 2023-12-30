@@ -19,7 +19,9 @@ const Header = forwardRef(({ language, fadeIn, projectRef }: HeaderProps, ref: L
     }
 
     return (
-        <section ref={ref} className='
+        <section 
+            ref={ref} 
+            className='
                 flex flex-col md:flex-row justify-evenly items-center 
                 px-7 md:px-16 min-[880px]:px-10 pb-12 pt-[70px] md:py-20 mt-[73px] scroll-mt-[72px]  
                 max-w-7xl
@@ -41,23 +43,22 @@ const Header = forwardRef(({ language, fadeIn, projectRef }: HeaderProps, ref: L
             </div>
 
             <div className='
-                    flex flex-col 
-                    font-light text-sm leading-8 
-                    p-9 mt-5 
-                    w-11/12 min-[500px]:w-2/3 md:w-1/2
-                    bg-primary-foreground text-secondary-foreground border-4 border-border-tertiary shadow-medium-dark 
-                '
-            >
+                flex flex-col 
+                font-light text-sm leading-8 
+                p-9 mt-5 
+                w-11/12 min-[500px]:w-2/3 md:w-1/2
+                bg-primary-foreground text-secondary-foreground border-4 border-border-tertiary shadow-medium-dark 
+            '>
                 <p style={fadeIn}>
                     {header.description}
                 </p>
                 <button
                     className='
-                            self-end p-2 mt-3
-                            bg-inherit border-[1px] border-border-secondary shadow-big-light  
-                            font-light text-sm text-secondary-foreground
-                            hover:scale-105 hover:ease-in-out hover:opacity-70
-                        '
+                        self-end p-2 mt-3
+                        bg-inherit border-[1px] border-border-secondary shadow-big-light  
+                        font-light text-sm text-secondary-foreground
+                        hover:scale-105 hover:ease-in-out hover:opacity-70
+                    '
                     style={fadeIn}
                     onClick={() => scrollTo(projectRef)}
                 >
