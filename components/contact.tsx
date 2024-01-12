@@ -1,28 +1,20 @@
-import { LegacyRef, forwardRef } from 'react'
-
-import { Contact, getSectionData } from '@/lib/data/loader.ts'
-import { SectionProps } from '@/types/core'
+import { Contact } from '@/lib/data/loader'
 
 
-const ContactSection = forwardRef(({ language, fadeIn }: SectionProps, ref: LegacyRef<HTMLElement> ) => {
-
-    const contact = getSectionData('Contact', language) as Contact
+export function ContactSection ({ data } : { data:Contact }) {
 
     return (
-        <section
-            ref={ref}
-            style={fadeIn}
-            className='
-                flex flex-col items-center justify-center text-center
-                gap-5 scroll-mt-[85px] mt-14 
-                w-4/5 max-w-7xl 
+        <section className='
+            flex flex-col items-center justify-center text-center
+            gap-5 mt-12 
+            w-4/5 max-w-7xl 
             '
         >
             <h2 className='text-center text-3xl font-light pb-6'>
-                {contact.title}
+                {data.title}
             </h2>
             <ul className='list-none w-11/12'>
-                {contact.contacts.map((contact, index) => {
+                {data.contacts.map((contact, index) => {
                     return (
                         <li className='mb-7 w-full' key={contact.title + index}>
                             <p className='tracking-[3px] text-xl'>{contact.title}:</p>
@@ -37,7 +29,4 @@ const ContactSection = forwardRef(({ language, fadeIn }: SectionProps, ref: Lega
             </ul>
         </section>
     )
-})
-
-ContactSection.displayName = 'ContactSection'
-export default ContactSection
+}
