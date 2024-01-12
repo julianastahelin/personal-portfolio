@@ -29,7 +29,7 @@ export function Nav() {
             '
         >
             <ul className={`
-                flex flex-col md:flex-row flex-nowrap items-center justify-start md:justify-between gap-7 md:gap-14 lg:gap-32
+                flex flex-col md:flex-row flex-nowrap items-center md:justify-between gap-7 md:gap-14 lg:gap-32
                 h-full w-52 md:w-full max-w-[1440px] 
                 fixed md:static top-0 right-0 px-14 py-8 md:p-0
                 list-none 
@@ -51,7 +51,7 @@ export function Nav() {
                 <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
                     <Link href='/contact' onClick={() => setOpen(!open)}>{data.contact}</Link>
                 </li>
-                <div className='flex gap-4 md:gap-2'>
+                <div className='flex gap-4 md:gap-2 flex-wrap justify-center'>
                     {/* TODO: map on languages array to define buttons dinamically */}
                     <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
                         <ReactCountryFlag countryCode='BR' svg style={{ borderRadius: 20 }} />
