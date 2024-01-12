@@ -1,21 +1,26 @@
+'use client'
+import { useContext } from 'react'
+
 import { getSectionData, Footer } from '@/lib/data/loader.ts'
-import { SectionProps } from '@/types/core'
+import { LanguageContext } from '@/components/providers'
 
 
-export default function Footer({ language, fadeIn }: SectionProps) {
+export function Footer() {
 
-    const footer = getSectionData('Footer', language) as Footer
+    const { language } = useContext(LanguageContext)
+    const data = getSectionData('Footer', language) as Footer
 
     return (
         <footer className='
-            flex flex-col gap-2 mt-14 p-7 w-full 
-            text-center font-light 
+            flex flex-col gap-2 p-4 w-full 
+            text-center font-light text-sm
             bg-primary-reverse shadow-small-dark
-        '>
+            '
+        >
             {
-                footer.credits.map((item, index) =>
-                    <p key={item.title + index} style={fadeIn}>
-                        {item.title} - <a className='visited:text-accent-quaternary' href={item.url} target='_blank'>@{item.name}</a>
+                data.credits.map((item, index) =>
+                    <p key={item.title + index}>
+                        {item.title}: <a className='visited:text-accent-quaternary' href={item.url} target='_blank'>@{item.name}</a>
                     </p>
                 )
             }
