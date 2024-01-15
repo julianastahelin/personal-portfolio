@@ -184,7 +184,7 @@ export const Projects = defineDocumentType(() => ({
 }))
 
 const Project = defineNestedType(() => ({
-  title: 'Project',
+  name: 'Project',
   fields: {
     title: { type: 'string', required: true },
     subtitle: { type: 'string', required: true },
@@ -196,7 +196,7 @@ const Project = defineNestedType(() => ({
 }))
 
 const Stack = defineNestedType(() => ({
-  title: 'Stack',
+  name: 'Stack',
   fields: {
     title: { type: 'string', required: true },
     list: { type: 'list', required: true, of: { type: 'string'} },
@@ -204,7 +204,7 @@ const Stack = defineNestedType(() => ({
 }))
 
 const ProjectDescription = defineNestedType(() => ({
-  title: 'ProjectDescription',
+  name: 'ProjectDescription',
   fields: {
     title: { type: 'string', required: true },
     text: { type: 'string', required: true },
@@ -212,7 +212,7 @@ const ProjectDescription = defineNestedType(() => ({
 }))
 
 const Images = defineNestedType(() => ({
-  title: 'Images',
+  name: 'Images',
   fields: {
     desktop: { type: 'string', required: true },
     tablet: { type: 'string', required: true },
