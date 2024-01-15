@@ -5,12 +5,7 @@ import { TechIcon, TechName } from '@/components/tech-icons'
 export function TechStackSection ({ data }: { data:TechStack }) {
 
     return (
-        <section className='
-            flex flex-col items-center
-            gap-10 pb-7 mt-12
-            w-full md:w-4/5 max-w-7xl
-            '
-        >
+        <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
             <h2 className='text-center text-3xl font-light md:pb-6'>
                 {data.title}
             </h2>
