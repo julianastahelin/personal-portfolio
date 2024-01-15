@@ -239,18 +239,18 @@ const ContactDetails = defineNestedType(() => ({
   }
 }))
 
-// FOOTER
-export const Footer = defineDocumentType(() => ({
-  name: 'Footer',
-  filePathPattern: 'footer/**/*.md',
+// ATTRIBUTES
+export const Attributes = defineDocumentType(() => ({
+  name: 'Attributes',
+  filePathPattern: 'attributes/**/*.md',
   fields: {
     language: { type: 'string', required: true },
-    credits: { type: 'list', required: true, of: Credits },
+    attributes: { type: 'list', required: true, of: Attribute },
   }
 }))
 
-const Credits = defineNestedType(() => ({
-  title: 'Credits',
+const Attribute = defineNestedType(() => ({
+  title: 'Attribute',
   fields: {
     title: { type: 'string', required: true },
     name: { type: 'string', required: true },
@@ -259,4 +259,4 @@ const Credits = defineNestedType(() => ({
 }))
 
 
-export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Home, About, TechStack, Curriculum, Projects, Contact, Footer] })
+export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Home, About, TechStack, Curriculum, Projects, Contact, Attributes] })

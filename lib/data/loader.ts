@@ -8,12 +8,12 @@ export function getSectionData(section: DocumentTypeNames, language: string) {
 export type {
     Abilities,
     About,
+    Attributes,
     Contact,
     Courses,
     Curriculum,
     Education,
     Experience,
-    Footer,
     Home,
     Languages,
     Nav,
