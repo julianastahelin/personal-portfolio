@@ -29,7 +29,7 @@ export function Nav() {
             '
         >
             <ul className={`
-                flex flex-col md:flex-row flex-nowrap items-center md:justify-between gap-7 md:gap-14 lg:gap-32
+                flex flex-col md:flex-row flex-nowrap items-center md:justify-between gap-7
                 h-full w-52 md:w-full max-w-[1440px] 
                 fixed md:static top-0 right-0 px-14 py-8 md:p-0
                 list-none 
@@ -51,7 +51,7 @@ export function Nav() {
                 <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
                     <Link href='/contact' onClick={() => setOpen(!open)}>{data.contact}</Link>
                 </li>
-                <div className='flex gap-4 md:gap-2 flex-wrap justify-center'>
+                <div className='flex gap-4 md:gap-2 justify-center'>
                     {/* TODO: map on languages array to define buttons dinamically */}
                     <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
                         <ReactCountryFlag countryCode='BR' svg style={{ borderRadius: 20 }} />
@@ -63,12 +63,8 @@ export function Nav() {
             </ul>
 
             <div 
-                onClick={() => setOpen(!open)}
-                className='
-                    flex md:hidden flex-col flex-nowrap justify-around
-                    w-7 h-7 fixed top-2 right-5 z-20 
-                    hover:opacity-80 hover:cursor-pointer
-                '
+                onClick={() => setOpen(!open)} 
+                className='flex md:hidden flex-col flex-nowrap justify-around w-7 h-7 fixed top-2 right-5 z-20 hover:opacity-80 hover:cursor-pointer'
             >
                 <div className={`w-7 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-45' : 'bg-primary-foreground rotate-0'}`} />
                 <div className={`w-7 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground translate-x-full opacity-0' : 'bg-primary-foreground translate-x-0 opacity-100'}`} />
