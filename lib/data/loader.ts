@@ -18,5 +18,6 @@ export type {
     Languages,
     Nav,
     Projects,
-    TechStack
+    Project,
+    TechStack,
 } from '@/.contentlayer/generated'
