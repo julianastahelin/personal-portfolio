@@ -48,9 +48,6 @@ export function Nav() {
                 <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
                     <Link href='/curriculum' onClick={() => setOpen(!open)}>{data.cv}</Link>
                 </li>
-                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/contact' onClick={() => setOpen(!open)}>{data.contact}</Link>
-                </li>
                 <div className='flex gap-4 md:gap-2 justify-center'>
                     {/* TODO: map on languages array to define buttons dinamically */}
                     <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
