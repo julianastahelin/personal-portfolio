@@ -17,10 +17,10 @@ const Nav = defineDocumentType(() => ({
   }
 }))
 
-// HEADER
-export const Header = defineDocumentType(() => ({
-  name: 'Header',
-  filePathPattern: 'header/**/*.md',
+// Home
+export const Home = defineDocumentType(() => ({
+  name: 'Home',
+  filePathPattern: 'home/**/*.md',
   fields: {
     language: { type: 'string', required: true },
     name: { type: 'string', required: true },
@@ -259,4 +259,4 @@ const Credits = defineNestedType(() => ({
 }))
 
 
-export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Header, About, TechStack, Curriculum, Projects, Contact, Footer] })
+export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Home, About, TechStack, Curriculum, Projects, Contact, Footer] })

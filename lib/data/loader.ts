@@ -14,7 +14,7 @@ export type {
     Education,
     Experience,
     Footer,
-    Header,
+    Home,
     Languages,
     Nav,
     Projects,
