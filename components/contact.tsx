@@ -4,12 +4,7 @@ import { Contact } from '@/lib/data/loader'
 export function ContactSection ({ data } : { data:Contact }) {
 
     return (
-        <section className='
-            flex flex-col items-center justify-center text-center
-            gap-5 mt-12 
-            w-4/5 max-w-7xl 
-            '
-        >
+        <section className='flex flex-col items-center text-center gap-5 w-4/5 max-w-7xl'>
             <h2 className='text-center text-3xl font-light pb-6'>
                 {data.title}
             </h2>

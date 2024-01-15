@@ -8,16 +8,10 @@ import { LanguagesPart } from './languages'
 import { LinksPart } from './links'
 
 
-export function CurriculumSection ({ data } : { data:Curriculum }) {
+export function CurriculumSection({ data }: { data: Curriculum }) {
 
     return (
-        <section
-            className='
-                flex flex-col items-center
-                gap-10 pb-7 scroll-mt-20 mt-12
-                w-full md:w-4/5 max-w-7xl
-            '
-        >
+        <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
             <h2 className='text-center text-3xl font-light md:pb-6'>
                 {data.title}
             </h2>
