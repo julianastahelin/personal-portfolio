@@ -1,6 +1,6 @@
 ---
 language: pt
-credits:
+attributes:
     - title: Código
       name: 'Juliana Stahelin'
       url: https://github.com/julianastahelin

@@ -1,7 +1,7 @@
 'use client'
 import { useContext } from 'react'
 
-import { getSectionData, Footer, Contact } from '@/lib/data/loader.ts'
+import { getSectionData, Attributes, Contact } from '@/lib/data/loader.ts'
 import { LanguageContext } from '@/components/providers'
 import { Icon, IconName } from './icons'
 
@@ -10,7 +10,7 @@ export function Footer() {
 
     const { language } = useContext(LanguageContext)
     const contact = getSectionData('Contact', language) as Contact
-    const credits = getSectionData('Footer', language) as Footer
+    const attributes = getSectionData('Attributes', language) as Attributes
 
     return (
         <footer className='
@@ -19,7 +19,7 @@ export function Footer() {
             '
         >
             <ContactIcons data={contact} />
-            <Credits data={credits} />
+            <Credits data={attributes} />
         </footer>
     )
 }
@@ -50,11 +50,11 @@ function ContactIcons({ data }: { data: Contact }) {
 }
 
 
-function Credits({ data }: { data: Footer }) {
+function Credits({ data }: { data: Attributes }) {
     return (
         <div className='flex flex-col items-center justify-center gap-1 text-center font-light text-xs'>
             {
-                data.credits.map((item, index) =>
+                data.attributes.map((item, index) =>
                     <span key={item.title + index}>
                         {item.title}: <a className='visited:text-accent-quaternary font-normal underline' href={item.url} target='_blank'>@{item.name}</a>
                     </span>
