@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className='flex flex-col min-h-screen'>
         <Providers>
           <Nav />
-          <div className='mt-12 pt-12 md:pt-16 pb-9 flex justify-center flex-grow bg-primary break-words'>
+          <div className='mt-12 md:mt-16 py-10 flex justify-center flex-grow bg-primary break-words'>
             {children}
           </div>
           <Footer />

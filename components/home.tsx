@@ -8,12 +8,7 @@ import profileImg from '@/public/assets/img/ju.jpg'
 export function HomeSection({ data } : { data:Home }) {
 
     return (
-        <section className='
-                flex flex-col md:flex-row justify-evenly items-center 
-                px-7 md:px-16 min-[880px]:px-10 pb-6 pt-[70px] md:py-20  
-                max-w-7xl      
-            '
-        >
+        <section className='flex flex-col md:flex-row justify-evenly items-center px-7 md:px-16 py-8 md:py-0 max-w-7xl'>
             <div className='flex flex-col items-center gap-4 w-11/12 min-[500px]:w-2/3 md:w-2/5 text-center'>
                 <Image
                     src={profileImg}
