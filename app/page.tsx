@@ -1,16 +1,16 @@
 'use client'
 import { useContext } from 'react'
 
-import { HeaderSection } from '@/components/header'
-import { getSectionData, Header } from '@/lib/data/loader.ts'
+import { HomeSection } from '@/components/home'
+import { getSectionData, Home } from '@/lib/data/loader.ts'
 import { LanguageContext } from '@/components/providers'
 
 export default function Home() {
 
   const { language } = useContext(LanguageContext)
-  const data = getSectionData('Header', language) as Header
+  const data = getSectionData('Home', language) as Home
 
   return (
-    <HeaderSection data={data} />
+    <HomeSection data={data} />
   )
 }

@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Header } from '@/lib/data/loader.ts'
+import { Home } from '@/lib/data/loader.ts'
 import profileImg from '@/public/assets/img/ju.jpg'
 
 
-export function HeaderSection({ data } : { data:Header }) {
+export function HomeSection({ data } : { data:Home }) {
 
     return (
         <section className='
