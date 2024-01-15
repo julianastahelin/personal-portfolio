@@ -8,17 +8,9 @@ interface AbilitiesPartProps {
 export function AbilitiesPart({ abilities }: AbilitiesPartProps) {
 
     return (
-        <div className='flex flex-col items-center w-full gap-2 md:gap-7'>
-            <h3 className='
-                text-2xl text-center 
-                flex justify-center items-center 
-                w-4/5 md:w-1/2 pr-0 pb-1
-                border-border-primary border-r-0 border-b-[1px]
-            '>
-                {abilities.title}
-            </h3>
-            <div className='flex flex-col w-4/5 md:w-1/2 px-2 gap-5'>
-                {abilities.list.map((item, index) => {
+        <div className='flex flex-col gap-5 md:flex-row md:gap-16 lg:gap-28'>
+            {
+                abilities.list.map((item, index) => {
                     return (
                         <div key={item.sort + index}>
                             <h4 className='leading-6 font-semibold'>{item.sort}</h4>
@@ -33,8 +25,8 @@ export function AbilitiesPart({ abilities }: AbilitiesPartProps) {
                             </ul>
                         </div>
                     )
-                })}
-            </div>
+                })
+            }
         </div>
     )
 }
