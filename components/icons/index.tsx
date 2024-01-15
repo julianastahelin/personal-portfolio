@@ -1,13 +1,18 @@
-export { CSS } from './css'
-export { GitHub } from './github'
-export { HTML } from './html'
-export { Javascript } from './javascript'
-export { NextJS } from './nextjs'
-export { Postman } from './postman'
-export { React } from './react'
-export { Typescript } from './typescript'
-export { Tailwind } from './tailwind'
-export { Bootstrap } from './bootstrap'
-export { Git } from './git'
-export { NodeJS } from './nodejs'
-export { AuthJS } from './authjs'
+import * as Icons from './icons'
+
+
+export type IconName = keyof typeof Icons
+
+
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+    name: IconName
+}
+
+export function Icon({ name, ...props }: IconProps) {
+    if (Object.keys(Icons).includes(name)) {
+        const Icon = Icons[name]
+        return <Icon {...props} />
+    } else {
+        return null
+    }
+}

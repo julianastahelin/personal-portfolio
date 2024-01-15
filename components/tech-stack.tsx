@@ -1,8 +1,8 @@
 import { TechStack } from '@/lib/data/loader.ts'
-import { TechIcon, TechName } from '@/components/tech-icons'
+import { Icon, IconName } from '@/components/icons'
 
 
-export function TechStackSection ({ data }: { data:TechStack }) {
+export function TechStackSection({ data }: { data: TechStack }) {
 
     return (
         <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
@@ -13,7 +13,7 @@ export function TechStackSection ({ data }: { data:TechStack }) {
                 {data.technologies.map((tech, index) => {
                     return (
                         <div className='flex flex-col items-center' key={tech.title + index}>
-                            <TechIcon name={tech.title as TechName} className='h-10 w-10' />
+                            <Icon name={tech.title as IconName} className='h-10 w-10' />
                             {tech.address
                                 ? <a href={tech.address} target='_blank'><span>{tech.title}</span></a>
                                 : <span>{tech.title}</span>
