@@ -30,7 +30,7 @@ export function Nav() {
         >
             <ul className={`
                 flex flex-col md:flex-row flex-nowrap items-center md:justify-between gap-7
-                h-full w-52 md:w-full max-w-[1440px] 
+                h-full w-52 md:w-5/6 max-w-[1440px] 
                 fixed md:static top-0 right-0 px-14 py-8 md:p-0
                 list-none 
                 bg-tertiary md:bg-inherit
