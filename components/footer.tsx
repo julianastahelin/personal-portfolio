@@ -1,8 +1,16 @@
 'use client'
 import { useContext } from 'react'
+import { Copy } from 'lucide-react'
 
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { useToast } from '@/components/ui/use-toast'
+import { LanguageContext, Language } from '@/components/providers'
 import { getSectionData, Attributes, Contact } from '@/lib/data/loader.ts'
-import { LanguageContext } from '@/components/providers'
 import { Icon, IconName } from './icons'
 
 
@@ -14,34 +22,56 @@ export function Footer() {
 
     return (
         <footer className='
-            flex gap-14 p-5 w-full items-center justify-center flex-wrap
+            flex gap-8 md:gap-14 p-5 w-full items-center justify-center flex-wrap
             bg-primary-reverse shadow-small-dark
             '
         >
-            <ContactIcons data={contact} />
+            <ContactIcons data={contact} language={language} />
             <Credits data={attributes} />
         </footer>
     )
 }
 
 
-function ContactIcons({ data }: { data: Contact }) {
+function ContactIcons({ data, language }: { data: Contact, language: Language }) {
+
+    const { toast } = useToast()
+
+    const toastDescription = {
+        en: 'Copied to the clipboard',
+        pt: 'Copiado para a área de transferência'
+    }
+
+    function copyAddress(address: string) {
+        navigator.clipboard.writeText(address)
+        toast({
+            description: toastDescription[language],
+        })
+    }
+
     return (
         <ul className='flex gap-5 md:gap-10 items-center justify-center flex-wrap'>
             {data.contacts.map((contact, index) => {
                 return (
-                    <li key={contact.title + index}>
-                        <a className='font-light tracking-widest underline'
-                            href={contact.title === 'Phone'
-                                ? `tel:${contact.address}`
-                                : contact.title === 'Email'
-                                    ? `mailto:${contact.address}`
-                                    : contact.address
-                            }
-                            target='_blank'
-                        >
-                            <Icon name={contact.title as IconName} className='h-8 w-8' />
-                        </a>
+                    <li key={contact.title + index} className='flex'>
+                        {contact.title === 'Phone' || contact.title === 'Email'
+                            ? <TooltipProvider delayDuration={400}>
+                                <Tooltip>
+                                    <TooltipTrigger onClick={() => copyAddress(contact.address)}>
+                                        <Icon name={contact.title as IconName} className='h-8 w-8' />
+                                    </TooltipTrigger>
+                                    <TooltipContent className='bg-primary-foreground text-tertiary-foreground'>
+                                        <button onClick={() => copyAddress(contact.address)} className='flex gap-2 items-center'>
+                                            {contact.address}
+                                            <Copy className='h-4 w-4' />
+                                        </button>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
+                            : <a className='font-light tracking-widest underline' href={contact.address} target='_blank'>
+                                <Icon name={contact.title as IconName} className='h-8 w-8' />
+                            </a>
+                        }
                     </li>
                 )
             })}
