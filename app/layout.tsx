@@ -3,6 +3,7 @@ import { Roboto_Mono } from 'next/font/google'
 import './globals.css'
 
 import { Providers } from '@/components/providers'
+import { CustomToaster } from '@/components/custom-ui/toaster'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 
@@ -32,6 +33,7 @@ export default function RootLayout({
             {children}
           </div>
           <Footer />
+          <CustomToaster />
         </Providers>
       </body>
     </html>
