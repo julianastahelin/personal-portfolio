@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background-primary: linear-gradient(to bottom, #DCF2E7, #DEF7F3);
