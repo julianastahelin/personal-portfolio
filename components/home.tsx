@@ -1,25 +1,17 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { Home } from '@/lib/data/loader.ts'
-import profileImg from '@/public/assets/img/ju.jpg'
 
 
 export function HomeSection({ data } : { data:Home }) {
 
     return (
-        <section className='flex flex-col md:flex-row justify-evenly items-center px-7 md:px-16 py-8 md:py-0 max-w-7xl'>
+        <section className='flex flex-col md:flex-row justify-evenly items-center px-7 md:px-16 py-8 md:py-0 max-w-7xl gap-4'>
             <div className='flex flex-col items-center gap-4 w-11/12 min-[500px]:w-2/3 md:w-2/5 text-center'>
-                <Image
-                    src={profileImg}
-                    className='w-40 min-[425px]:w-52 rounded-[50%] shadow-medium-dark'
-                    alt='Profile photo'
-                    priority
-                />
-                <h1 className='text-3xl sm:text-4xl'>
+                <h1 className='text-3xl sm:text-4xl md:text-[42px]'>
                     {data.name}
                 </h1>
-                <p className='font-light text:lg sm:text-xl'>
+                <p className='font-light text:lg sm:text-xl md:text-2xl'>
                     {data.jobTitle}
                 </p>
             </div>
