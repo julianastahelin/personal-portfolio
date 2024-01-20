@@ -14,7 +14,6 @@ import { EducationPart } from './education'
 import { CoursesPart } from './courses'
 import { AbilitiesPart } from './abilities'
 import { LanguagesPart } from './languages'
-import { LinksPart } from './links'
 
 
 export function CurriculumSection({ data }: { data: Curriculum }) {
@@ -25,7 +24,6 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
         { title: data.courses.title, component: <CoursesPart courses={data.courses} /> },
         { title: data.abilities.title, component: <AbilitiesPart abilities={data.abilities} /> },
         { title: data.languages.title, component: <LanguagesPart languages={data.languages} /> },
-        { title: data.links.title, component: <LinksPart links={data.links} /> },
     ]
 
     const { language } = data
