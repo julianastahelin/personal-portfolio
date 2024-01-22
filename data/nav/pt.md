@@ -3,9 +3,8 @@ language: pt
 title: 'Juliana Stahelin - Portfólio'
 home: Início
 tech: Tecnologias
-cv: Currículo
+curriculum: Currículo
 projects: Projetos
-contact: Contato
 languages: 
     - pt
     - en

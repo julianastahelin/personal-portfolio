@@ -46,7 +46,7 @@ export function Nav() {
                     <Link href='/projects' onClick={() => setOpen(!open)}>{data.projects}</Link>
                 </li>
                 <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/curriculum' onClick={() => setOpen(!open)}>{data.cv}</Link>
+                    <Link href='/curriculum' onClick={() => setOpen(!open)}>{data.curriculum}</Link>
                 </li>
                 <div className='flex gap-4 md:gap-2 justify-center'>
                     {/* TODO: map on languages array to define buttons dinamically */}

@@ -10,10 +10,9 @@ const Nav = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     home: { type: 'string', required: true },
     tech: { type: 'string', required: true },
-    cv: { type: 'string', required: true },
     projects: { type: 'string', required: true },
-    contact: { type: 'string', required: true },
-    languages: { type: 'list', required: true, of: { type: 'string'} },
+    curriculum: { type: 'string', required: true },
+    languages: { type: 'list', required: true, of: { type: 'string' } },
   }
 }))
 
@@ -115,9 +114,9 @@ const Courses = defineNestedType(() => ({
 const Details = defineNestedType(() => ({
   name: 'Details',
   fields: {
-    name:  { type: 'string', required: true },
-    period:  { type: 'string', required: true },
-    description: { type: 'list', required: false, of: { type: 'string'} },
+    name: { type: 'string', required: true },
+    period: { type: 'string', required: true },
+    description: { type: 'list', required: false, of: { type: 'string' } },
   }
 }))
 
@@ -134,7 +133,7 @@ const AbilityType = defineNestedType(() => ({
   name: 'AbilityType',
   fields: {
     sort: { type: 'string', required: true },
-    abilities: { type: 'list', required: true, of: { type: 'string'} },
+    abilities: { type: 'list', required: true, of: { type: 'string' } },
   }
 }))
 
@@ -199,7 +198,7 @@ const Stack = defineNestedType(() => ({
   name: 'Stack',
   fields: {
     title: { type: 'string', required: true },
-    list: { type: 'list', required: true, of: { type: 'string'} },
+    list: { type: 'list', required: true, of: { type: 'string' } },
   }
 }))
 
@@ -227,7 +226,7 @@ export const Contact = defineDocumentType(() => ({
   fields: {
     language: { type: 'string', required: true },
     title: { type: 'string', required: true },
-    contacts: { type: 'list', required: true, of: ContactDetails }, 
+    contacts: { type: 'list', required: true, of: ContactDetails },
   }
 }))
 
