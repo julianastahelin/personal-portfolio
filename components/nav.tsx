@@ -8,7 +8,7 @@ import { Language, LanguageContext } from '@/components/providers'
 
 
 export function Nav() {
-    
+
     const { language, setLanguage } = useContext(LanguageContext)
     const data = getSectionData('Nav', language) as Nav
 
@@ -48,19 +48,22 @@ export function Nav() {
                 <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
                     <Link href='/curriculum' onClick={() => setOpen(!open)}>{data.curriculum}</Link>
                 </li>
+                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
+                    <Link href='/blog' onClick={() => setOpen(!open)}>{data.blog}</Link>
+                </li>
                 <div className='flex gap-4 md:gap-2 justify-center'>
                     {/* TODO: map on languages array to define buttons dinamically */}
                     <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
                         <ReactCountryFlag countryCode='BR' svg style={{ borderRadius: 20 }} />
                     </button>
-                    <button className='flex text-2xl hover:opacity-80' onClick={() =>  handleLanguageChange('en')}>
+                    <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('en')}>
                         <ReactCountryFlag countryCode='GB' svg style={{ borderRadius: 20 }} />
                     </button>
                 </div>
             </ul>
 
-            <div 
-                onClick={() => setOpen(!open)} 
+            <div
+                onClick={() => setOpen(!open)}
                 className='flex md:hidden flex-col flex-nowrap justify-around w-7 h-7 fixed top-2 right-5 z-20 hover:opacity-80 hover:cursor-pointer'
             >
                 <div className={`w-7 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-45' : 'bg-primary-foreground rotate-0'}`} />
