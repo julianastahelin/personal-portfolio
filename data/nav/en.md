@@ -3,8 +3,9 @@ language: en
 title: 'Juliana Stahelin - Portfolio'
 home: Home
 tech: Tech stack
-curriculum: Curriculum
 projects: Projects
+curriculum: Curriculum
+blog: Blog
 languages: 
     - pt
     - en
