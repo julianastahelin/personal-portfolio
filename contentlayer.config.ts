@@ -12,6 +12,7 @@ const Nav = defineDocumentType(() => ({
     tech: { type: 'string', required: true },
     projects: { type: 'string', required: true },
     curriculum: { type: 'string', required: true },
+    blog: { type: 'string', required: true },
     languages: { type: 'list', required: true, of: { type: 'string' } },
   }
 }))
@@ -238,6 +239,18 @@ const ContactDetails = defineNestedType(() => ({
   }
 }))
 
+// BLOG
+export const Blog = defineDocumentType(() => ({
+  name: 'Blog',
+  filePathPattern: 'blog/**/*.md',
+  fields: {
+    language: { type: 'string', required: true },
+    title: { type: 'string', required: true },
+    sectionTitle: { type: 'string', required: true },
+    readButton: { type: 'string', required: true },
+  }
+}))
+
 // ATTRIBUTES
 export const Attributes = defineDocumentType(() => ({
   name: 'Attributes',
@@ -258,4 +271,4 @@ const Attribute = defineNestedType(() => ({
 }))
 
 
-export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Home, About, TechStack, Curriculum, Projects, Contact, Attributes] })
+export default makeSource({ contentDirPath: 'data', documentTypes: [Nav, Home, About, TechStack, Curriculum, Projects, Contact, Blog, Attributes] })
