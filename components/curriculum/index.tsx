@@ -28,25 +28,13 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
 
     const { language } = data
 
-    type PDFButton = {
-        en: string,
-        pt: string
-    }
-
-    const downloadPDFButton: PDFButton = {
-        en: 'Download PDF',
-        pt: 'Baixar PDF'
-    }
-
-    const currentDownloadPDFButton: string = downloadPDFButton[language as Language]
-
     return (
         <section className='flex flex-col items-center gap-5 w-4/5 max-w-7xl'>
             <div className='w-full md:w-2/3 flex flex-col gap-2'>
                 <h2 className='text-center text-3xl font-light md:pb-6'>
                     {data.title}
                 </h2>
-                <DownloadPDFButton language={language as Language} currentDownloadPDFButton={currentDownloadPDFButton} />
+                <DownloadPDFButton language={language as Language} />
             </div>
             {
                 curriculumParts.map((part, index) => {
@@ -67,21 +55,32 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
 }
 
 
-interface DownloadPDFButtonProps {
-    language: Language,
-    currentDownloadPDFButton: string, 
-}
+function DownloadPDFButton({language} : { language: Language }) {
 
-function DownloadPDFButton({language, currentDownloadPDFButton} : DownloadPDFButtonProps) {
+    type PDFButton = {
+        en: string,
+        pt: string
+    }
+
+    const downloadPDFButton: PDFButton = {
+        en: 'Download PDF',
+        pt: 'Baixar PDF'
+    }
+
+    const pdfFileName = {
+        en: 'Juliana Coelho Stahelin - Junior Front-end web developer',
+        pt: 'Juliana Coelho Stahelin - Desenvolvedora Front-end Júnior',
+    }
+
     return (
-        <a className='self-end' href={`../assets/pdf/cv-${language}.pdf`} target='_blank'>
+        <a className='self-end' href={`../assets/pdf/${pdfFileName[language]}.pdf`} target='_blank'>
         <TooltipProvider>
             <Tooltip delayDuration={400}>
                 <TooltipTrigger>
                     <Download className='h-6 w-6'/>
                 </TooltipTrigger>
                 <TooltipContent className='bg-primary-foreground text-tertiary-foreground'>
-                    <p>{currentDownloadPDFButton}</p>
+                    <p>{downloadPDFButton[language]}</p>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
