@@ -9,6 +9,7 @@ export type {
     Abilities,
     About,
     Attributes,
+    Blog,
     Contact,
     Courses,
     Curriculum,
@@ -21,3 +22,23 @@ export type {
     Project,
     TechStack,
 } from '@/.contentlayer/generated'
+
+export interface Post {
+    cover_image: string,
+    published_at: string,
+    reading_time_minutes: number,
+    url: string,
+    title: string,
+    description: string,
+}
+
+export type Posts = Post[]
+
+export async function getBlogPosts() {
+    try {
+        const res = await fetch('https://dev.to/api/articles?username=julianastahelin')
+        return await res.json()
+    } catch (error) {
+        return error
+    }
+}
