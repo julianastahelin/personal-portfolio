@@ -4,15 +4,22 @@ title: Curriculum
 experience: 
     title: Experience
     details:
-        - name: 'Frontend Web Developer – CEPEDOC'
-          period: 'apr/23 – jun/23'
+        - name: 'Front-end Web Developer – Supernova'
+          period: 'May/23 – Dec/23'
+          description:
+            - 'Implementation of full-stack applications using Next.js, Typescript, Tailwind, Contentlayer and Framer-motion'
+            - 'REST API integration'
+            - 'Code integration following best practices for versioning and Git feature branch workflow'
+            - 'Implementation of authentication using Next-Auth'
+        - name: 'Front-end Web Developer – CEPEDOC'
+          period: 'Apr/23 – Jun/23'
           description:
             - 'Building HTML pages for online course'
             - 'Styling using CSS and Bootstrap'
             - 'Building interactive graphics using JS'
             - 'Version control using Git'
         - name: 'Pharmacist – City Hall of Águas Mornas, SC'
-          period: 'may/22 – nov/22'
+          period: 'May/22 – Nov/22'
           description: 
             - 'Technical manager'
             - 'Pharmaceutical Assistance'
@@ -24,27 +31,27 @@ education:
         - level: Post-graduation
           details:
             - name: 'Multiprofessional Residency in Family Health – UFSC'
-              period: 'mar/20 – feb/22'
+              period: 'Mar/20 – Feb/22'
               description: 
         - level: Graduation
           details:
             - name: 'Academic exchange program – Anglia Ruskin University/UK'
-              period: 'sep/15 – aug/16'
+              period: 'Sep/15 – Aug/16'
               description:
                 - 'Program Science Without Borders (SwB/CNPq)'
                 - 'Course of Public Health'
             - name: 'Pharmacy – UFSC'
-              period: 'mar/12 – jul/19'
+              period: 'Mar/12 – Jul/19'
               description: 
 courses:
     title: Courses
     details:
         - name: DevQuest
-          period: 'jan/23 – current'
+          period: 'Jan/23 – current'
           description: 
             - 'Course in fullstack web development with mentors and support'
         - name: Udemy
-          period: 'dec/22 – current'
+          period: 'Dec/22 – current'
           description:
             - 'Course in fullstack web development'
 abilities: 
@@ -83,7 +90,7 @@ languages:
         - name: Portuguese
           level: Native
         - name: English 
-          level: Advanced
+          level: Fluent
         - name: Spanish
           level: Basic
         - name: French
