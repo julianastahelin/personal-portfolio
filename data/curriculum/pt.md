@@ -4,7 +4,14 @@ title: Currículo
 experience: 
     title: Experiência
     details:
-        - name: 'Desenvolvedora Web Frontend – CEPEDOC'
+        - name: 'Desenvolvedora Web Front-end – Supernova'
+          period: 'mai/23 – dez/23'
+          description:
+            - 'Implementação de aplicações web full-stack usando Next.js, Typescript, Tailwind, Contentlayer e Framer-motion'
+            - 'Integração com API REST'
+            - 'Integração de código seguindo boas práticas de versionamento e Git feature branch workflow'
+            - 'Implementação de autenticação com Next-Auth'
+        - name: 'Desenvolvedora Web Front-end – CEPEDOC'
           period: 'abr/23 – jun/23'
           description:
             - 'Plotagem de conteúdo em HTML para curso online'
@@ -83,7 +90,7 @@ languages:
         - name: Português 
           level: Nativo
         - name: Inglês 
-          level: Avançado
+          level: Fluente
         - name: Espanhol
           level: Básico
         - name: Francês
