@@ -28,6 +28,11 @@ experience:
 education:
     title: 'Academic education'
     degrees:
+        - level: 'Graduation - technologist'
+          details:
+            - name: 'Analysis and Systems Development - Estácio'
+              period: 'Feb/2024 - Current'
+              description: 
         - level: Post-graduation
           details:
             - name: 'Multiprofessional Residency in Family Health – UFSC'
