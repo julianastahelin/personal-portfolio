@@ -26,22 +26,27 @@ experience:
             - 'Acompanhamento de pacientes'
             - 'Suporte à equipe de saúde'
 education:
-    title: "Formação acadêmica"
+    title: 'Formação acadêmica'
     degrees:
-        - level: "Pós-graduação"
+        - level: 'Graduação - Tecnólogo'
           details:
-            - name: "Residência Multiprofissional em Saúde da Família – UFSC"
-              period: "mar/20 – fev/22"
+            - name: 'Análise e Desenvolvimento de Sistemas - Estácio'
+              period: 'fev/2024 - cursando'
               description: 
-        - level: "Graduação"
+        - level: 'Pós-graduação'
           details:
-            - name: "Intercâmbio Acadêmico – Anglia Ruskin University/UK"
-              period: "set/2015 – ago/2016"
+            - name: 'Residência Multiprofissional em Saúde da Família – UFSC'
+              period: 'mar/20 – fev/22'
+              description: 
+        - level: 'Graduação'
+          details:
+            - name: 'Intercâmbio Acadêmico – Anglia Ruskin University/UK'
+              period: 'set/2015 – ago/2016'
               description:
-                - "Programa Ciência Sem Fronteiras (CsF/CNPq)"
-                - "Curso de Saúde Pública"
-            - name: "Farmácia – UFSC"
-              period: "mar/12 – jul/19"
+                - 'Programa Ciência Sem Fronteiras (CsF/CNPq)'
+                - 'Curso de Saúde Pública'
+            - name: 'Farmácia – UFSC'
+              period: 'mar/12 – jul/19'
               description: 
 courses:
     title: Cursos
