@@ -2,6 +2,7 @@
 import { useContext, useState } from 'react'
 import Link from 'next/link'
 import ReactCountryFlag from 'react-country-flag'
+import { motion } from 'framer-motion'
 
 import { getSectionData, Nav } from '@/lib/data/loader.ts'
 import { Language, LanguageContext } from '@/components/providers'
@@ -20,13 +21,17 @@ export function Nav() {
     }
 
     return (
-        <nav className='
+        <motion.nav className='
             flex items-center justify-center 
             fixed top-0 z-10
             min-h-[48px] w-full py-5 pl-14 pr-20 
             list-none
             bg-primary shadow-small-dark 
             '
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            key={language}
         >
             <ul className={`
                 flex flex-col md:flex-row flex-nowrap items-center md:justify-between gap-7
@@ -70,6 +75,6 @@ export function Nav() {
                 <div className={`w-7 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground translate-x-full opacity-0' : 'bg-primary-foreground translate-x-0 opacity-100'}`} />
                 <div className={`w-7 h-[2px] rounded-3xl transition-all duration-300 ease-linear origin-[1px] ${open ? 'bg-tertiary-foreground rotate-[-45deg]' : 'bg-primary-foreground rotate-0'}`} />
             </div>
-        </nav>
+        </motion.nav>
     )
 }
