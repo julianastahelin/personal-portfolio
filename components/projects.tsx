@@ -1,4 +1,7 @@
+import { motion } from 'framer-motion'
+
 import { Projects, Project } from '@/lib/data/loader.ts'
+import { AnimatedButton, AnimatedTitle } from '@/components/custom-ui'
 
 
 export function ProjectsSection({ data }: { data: Projects }) {
@@ -7,12 +10,12 @@ export function ProjectsSection({ data }: { data: Projects }) {
 
     return (
         <section className='flex flex-col items-center gap-14 md:gap-12 px-5 w-full max-w-[1440px]'>
-            <h2 className='text-center text-3xl font-light pb-6'>
+            <AnimatedTitle key={'title' + data.language}>
                 {data.title}
-            </h2>
+            </AnimatedTitle>
             {activeProjects.map((project, index) => {
                 return (
-                    <SingleProject project={project} index={index} key={project.title + index} />
+                    <SingleProject project={project} index={index} key={project.title + index} language={data.language} />
                 )
             })}
         </section>
@@ -20,13 +23,24 @@ export function ProjectsSection({ data }: { data: Projects }) {
 }
 
 
-function SingleProject({ project, index }: { project: Project, index: number }) {
+function SingleProject({
+    project, 
+    index, 
+    language
+}: {
+    project: Project,
+    index: number,
+    language: string
+}) {
     return (
-        <div key={project.title + index}
+        <motion.div key={project.title + index + language}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index / 2 }}
             className={`
                 flex justify-center md:justify-between items-center flex-col-reverse
                 ${index === 0 || index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
-                max-w-7xl w-11/12 lg:w-[95%] gap-5 p-5
+                max-w-7xl w-11/12 lg:w-[95%] gap-5 p-5 pb-8
                 border-4 border-border-tertiary bg-primary-foreground shadow-small-dark
             `}
         >
@@ -35,7 +49,7 @@ function SingleProject({ project, index }: { project: Project, index: number }) 
                 <ProjectInfo project={project} />
                 <ProjectLinks project={project} />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
@@ -116,18 +130,19 @@ function ProjectInfo({ project }: { project: Project }) {
 
 function ProjectLinks({ project }: { project: Project }) {
     return (
-        <div className='flex items-center gap-5 mt-7 flex-wrap'>
+        <div className='flex items-center gap-6 md:gap-5 mt-7 flex-wrap'>
             {project.links.list.map((link, index) =>
-                <a key={link.name + index} href={link.url} target='_blank'
-                    className='
-                        p-2
-                        no-underline text-lg font-bold text-accent-tertiary
-                        border-[1px] border-secondary-foreground shadow-medium-light
-                        hover:scale-105 hover:ease-in-out hover:duration-200 hover:opacity-70
-                    '
-                >
-                    {link.name}
-                </a>
+                <AnimatedButton key={link.name + index}>
+                    <a href={link.url} target='_blank'
+                        className='
+                            p-2
+                            no-underline text-lg font-bold text-accent-tertiary
+                            border-[1px] border-secondary-foreground shadow-medium-light
+                        '
+                    >
+                        {link.name}
+                    </a>
+                </AnimatedButton>
             )}
         </div>
     )

@@ -1,6 +1,8 @@
 import { Download } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 import { Curriculum } from '@/lib/data/loader.ts'
+import { AnimatedTitle } from '@/components/custom-ui'
 import { Language } from '@/components/providers'
 import {
     Tooltip,
@@ -31,22 +33,28 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
     return (
         <section className='flex flex-col items-center gap-5 w-4/5 max-w-7xl'>
             <div className='w-full md:w-2/3 flex flex-col gap-2'>
-                <h2 className='text-center text-3xl font-light md:pb-6'>
+                <AnimatedTitle>
                     {data.title}
-                </h2>
+                </AnimatedTitle>
                 <DownloadPDFButton language={language as Language} />
             </div>
             {
                 curriculumParts.map((part, index) => {
                     return (
-                        <div className='flex flex-col items-center w-full gap-2 md:gap-7' key={part.title + index}>
+                        <motion.div
+                            className='flex flex-col items-center w-full gap-2 md:gap-7' key={part.title + index}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: 0.3 + index / 5 }}
+                            viewport={{ once: true }}
+                        >
                             <h3 className='text-2xl text-center flex justify-center items-center w-full md:w-2/3 pr-0 pb-1 border-border-primary border-r-0 border-b-[1px]'>
                                 {part.title}
                             </h3>
                             <div className='flex flex-col w-4/5 md:w-2/3 px-2 gap-5'>
                                 {part.component}
                             </div>
-                        </div>
+                        </motion.div>
                     )
                 })
             }
@@ -55,7 +63,7 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
 }
 
 
-function DownloadPDFButton({language} : { language: Language }) {
+function DownloadPDFButton({ language }: { language: Language }) {
 
     type PDFButton = {
         en: string,
@@ -73,17 +81,23 @@ function DownloadPDFButton({language} : { language: Language }) {
     }
 
     return (
-        <a className='self-end' href={`../assets/pdf/${pdfFileName[language]}.pdf`} target='_blank'>
-        <TooltipProvider>
-            <Tooltip delayDuration={400}>
-                <TooltipTrigger>
-                    <Download className='h-6 w-6'/>
-                </TooltipTrigger>
-                <TooltipContent className='bg-primary-foreground text-tertiary-foreground'>
-                    <p>{downloadPDFButton[language]}</p>
-                </TooltipContent>
-            </Tooltip>
-        </TooltipProvider>
-    </a>
+        <motion.a
+            className='self-end' href={`../assets/pdf/${pdfFileName[language]}.pdf`} target='_blank'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay:1 }}
+            viewport={{ once: true }}
+        >
+            <TooltipProvider>
+                <Tooltip delayDuration={400}>
+                    <TooltipTrigger>
+                        <Download className='h-6 w-6' />
+                    </TooltipTrigger>
+                    <TooltipContent className='bg-primary-foreground text-tertiary-foreground'>
+                        <p>{downloadPDFButton[language]}</p>
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
+        </motion.a>
     )
 }

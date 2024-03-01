@@ -1,7 +1,9 @@
 import { BookText } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 import { Blog, Post, Posts } from '@/lib/data/loader.ts'
 import { convertDateFromIsoToDayMonthYear } from '@/lib/utils'
+import { AnimatedButton, AnimatedTitle } from '@/components/custom-ui'
 import {
     Card,
     CardContent,
@@ -20,12 +22,18 @@ export function BlogSection({ sectionData, posts }: { sectionData: Blog, posts: 
 
     return (
         <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
-            <h2 className='text-center text-3xl font-light md:pb-6'>
+            <AnimatedTitle>
                 {sectionData.sectionTitle}
-            </h2>
+            </AnimatedTitle>
             <ul className='flex flex-wrap gap-6 w-full justify-center'>
                 {posts.map((post, index) => (
-                    <div className='shadow-small-dark' key={index}>
+                    <motion.div
+                        className='shadow-small-dark' key={index + language}
+                        initial={{ opacity: 0, x: -15 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 + index / 5 }}
+                        viewport={{ once: true }}
+                    >
                         <Card className='flex flex-col max-w-xs rounded-none border-2 border-accent-quarternary bg-primary w-full h-full'>
                             <CardHeader className='px-0 pt-0'>
                                 <img src={post.cover_image ? post.cover_image : coverImageTemplate} alt='Cover image of blog post' className='min-h-[8.37rem]' />
@@ -33,8 +41,9 @@ export function BlogSection({ sectionData, posts }: { sectionData: Blog, posts: 
                             <div className='flex flex-col flex-grow justify-between'>
                                 <CardInfo post={post} language={language as Language} />
                                 <CardFooter className='self-end'>
-                                    <a href={post.url} target='_blank'
-                                        className='
+                                    <AnimatedButton>
+                                        <a href={post.url} target='_blank'
+                                            className='
                                             p-2
                                             no-underline text-lg font-bold text-secondary-foreground
                                             border-2 border-secondary-foreground
@@ -42,13 +51,14 @@ export function BlogSection({ sectionData, posts }: { sectionData: Blog, posts: 
                                             shadow-medium-dark
                                             hover:scale-105 hover:ease-in-out hover:duration-200 hover:opacity-70
                                             '
-                                    >
-                                        {sectionData.readButton}
-                                    </a>
+                                        >
+                                            {sectionData.readButton}
+                                        </a>
+                                    </AnimatedButton>
                                 </CardFooter>
                             </div>
                         </Card>
-                    </div>
+                    </motion.div>
                 ))}
             </ul>
         </section>

@@ -1,6 +1,7 @@
 'use client'
 import { useContext } from 'react'
 import { Copy } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 import {
     Tooltip,
@@ -21,14 +22,18 @@ export function Footer() {
     const attributes = getSectionData('Attributes', language) as Attributes
 
     return (
-        <footer className='
+        <motion.footer className='
             flex gap-8 md:gap-14 p-5 w-full items-center justify-center flex-wrap
             bg-primary-reverse shadow-small-dark
             '
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            key={language}
         >
             <ContactIcons data={contact} language={language} />
             <Credits data={attributes} />
-        </footer>
+        </motion.footer>
     )
 }
 
