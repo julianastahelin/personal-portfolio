@@ -26,3 +26,7 @@ export function convertDateFromIsoToDayMonthYear(isoDate: string, language: Lang
   }
   return null
 }
+
+export function kebabToCamelCase(s:string) {
+  return s.replace(/-./g, x => x[1].toUpperCase())
+}

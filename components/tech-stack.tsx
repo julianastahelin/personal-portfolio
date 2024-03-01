@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion'
 
 import { TechStack } from '@/lib/data/loader.ts'
+import { kebabToCamelCase } from '@/lib/utils'
 import { AnimatedTitle } from '@/components/custom-ui/animated-title'
 import { Icon, IconName } from '@/components/icons'
 
 
 export function TechStackSection({ data }: { data: TechStack }) {
+
+    const techIcons = data.technologies.map((item) => kebabToCamelCase(item.title))
 
     return (
         <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
@@ -19,13 +22,23 @@ export function TechStackSection({ data }: { data: TechStack }) {
                             initial={{ opacity: 0, x: 10, y: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: index / 3 }}
-                            className='flex flex-col items-center'
                             key={tech.title + index + data.language}
                         >
-                            <Icon name={tech.title as IconName} className='h-10 w-10' />
                             {tech.address
-                                ? <a href={tech.address} target='_blank'><span>{tech.title}</span></a>
-                                : <span>{tech.title}</span>
+                                ? <motion.a
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 0.3 }}
+                                    href={tech.address} target='_blank' className='flex flex-col items-center'>
+                                    <Icon name={techIcons[index] as IconName} className='h-10 w-10' />
+                                    <span>{tech.title}</span>
+                                </motion.a>
+                                : <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <Icon name={techIcons[index] as IconName} className='h-10 w-10' />
+                                    <span>{tech.title}</span>
+                                </motion.div>
                             }
                         </motion.div>
                     )
