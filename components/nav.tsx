@@ -20,6 +20,19 @@ export function Nav() {
         setOpen(!open)
     }
 
+    const navItems = [
+        { href: '/', name: data.home },
+        { href: '/tech-stack', name: data.tech },
+        { href: '/projects', name: data.projects },
+        { href: '/curriculum', name: data.curriculum, },
+        { href: '/blog', name: data.blog, }
+    ]
+
+    const languages = [
+        { language: 'pt', country: 'BR' },
+        { language: 'en', country: 'GB' }
+    ]
+
     return (
         <motion.nav className='
             flex items-center justify-center 
@@ -41,29 +54,26 @@ export function Nav() {
                 bg-tertiary md:bg-inherit
                 transition-transform duration-300 ease-in-out ${open ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0  
             `}>
-                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/' onClick={() => setOpen(!open)}>{data.home}</Link>
-                </li>
-                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/tech-stack' onClick={() => setOpen(!open)}>{data.tech}</Link>
-                </li>
-                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/projects' onClick={() => setOpen(!open)}>{data.projects}</Link>
-                </li>
-                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/curriculum' onClick={() => setOpen(!open)}>{data.curriculum}</Link>
-                </li>
-                <li className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'>
-                    <Link href='/blog' onClick={() => setOpen(!open)}>{data.blog}</Link>
-                </li>
+                {navItems.map((item) => {
+                    return (
+                        <li
+                            key={item.name + language}
+                            className='text-tertiary-foreground md:text-primary-foreground hover:cursor-pointer text-center'
+                        >
+                            <Link href={item.href} onClick={() => setOpen(!open)}>
+                                {item.name}
+                            </Link>
+                        </li>
+                    )
+                })}
                 <div className='flex gap-4 md:gap-2 justify-center'>
-                    {/* TODO: map on languages array to define buttons dinamically */}
-                    <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('pt')}>
-                        <ReactCountryFlag countryCode='BR' svg style={{ borderRadius: 20 }} />
-                    </button>
-                    <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange('en')}>
-                        <ReactCountryFlag countryCode='GB' svg style={{ borderRadius: 20 }} />
-                    </button>
+                    {languages.map((item) => {
+                        return (
+                            <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange(item.language as Language)}>
+                                <ReactCountryFlag countryCode={item.country} svg style={{ borderRadius: 20 }} />
+                            </button>
+                        )
+                    })}
                 </div>
             </ul>
 
