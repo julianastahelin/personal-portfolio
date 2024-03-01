@@ -111,8 +111,8 @@ function ProjectInfo({ project }: { project: Project }) {
                 {project.stack.title}
             </h4>
             <ul>
-                {project.stack.list.map((item) =>
-                    <li className='list-none before:content-["•"] before:pr-2 before:text-base' key={item}>
+                {project.stack.list.map((item, index) =>
+                    <li className='list-none before:content-["•"] before:pr-2 before:text-base' key={item + index}>
                         {item}
                     </li>
                 )}

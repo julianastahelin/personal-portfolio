@@ -67,9 +67,13 @@ export function Nav() {
                     )
                 })}
                 <div className='flex gap-4 md:gap-2 justify-center'>
-                    {languages.map((item) => {
+                    {languages.map((item, index) => {
                         return (
-                            <button className='flex text-2xl hover:opacity-80' onClick={() => handleLanguageChange(item.language as Language)}>
+                            <button
+                                className='flex text-2xl hover:opacity-80' 
+                                onClick={() => handleLanguageChange(item.language as Language)}
+                                key={item.language + index}
+                            >
                                 <ReactCountryFlag countryCode={item.country} svg style={{ borderRadius: 20 }} />
                             </button>
                         )
