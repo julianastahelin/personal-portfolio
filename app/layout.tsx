@@ -26,7 +26,7 @@ export default function RootLayout({
 
   return (
     <html lang='en' className={`${roboto_mono.variable} font-sans`}>
-      <body className='flex flex-col min-h-screen'>
+      <body className='flex flex-col min-h-screen bg-primary'>
         <Providers>
           <Nav />
           <div className='mt-12 md:mt-16 py-10 flex justify-center flex-grow bg-primary break-words'>

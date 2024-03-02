@@ -13,7 +13,7 @@ export function HomeSection({ data }: { data: Home }) {
                 className='flex flex-col items-center gap-4 w-11/12 min-[500px]:w-2/3 md:w-2/5 text-center'
                 initial={{ opacity: 0, x: -15 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
                 key={'title' + data.language}
             >
                 <h1 className='text-3xl sm:text-4xl md:text-[42px]'>
@@ -27,7 +27,7 @@ export function HomeSection({ data }: { data: Home }) {
             <motion.div
                 initial={{ opacity: 0, x: 15 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.8 }}
+                transition={{ duration: 0.7, delay: 1 }}
                 key={'description' + data.language}
                 className='
                 flex flex-col 
