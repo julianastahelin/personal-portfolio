@@ -31,7 +31,7 @@ export function BlogSection({ sectionData, posts }: { sectionData: Blog, posts: 
                         className='shadow-small-dark' key={index + language}
                         initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 + index / 5 }}
+                        transition={{ duration: 0.6, delay: 0.5 + index / 5 }}
                         viewport={{ once: true }}
                     >
                         <Card className='flex flex-col max-w-xs rounded-none border-2 border-accent-quarternary bg-primary w-full h-full'>
