@@ -79,7 +79,8 @@ abilities:
             - Figma
             - Postman
             - Node.js
-            - SQL
+            - Java
+            - PostgreSQL
             - Auth.js
         - sort: 'Soft skills'
           abilities: 
