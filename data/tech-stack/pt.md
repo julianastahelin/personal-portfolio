@@ -28,8 +28,10 @@ technologies:
       address: https://github.com/
     - title: NodeJS
       address: https://nodejs.org/en
-    - title: SQL
-      address:
+    - title: Java
+      address: https://dev.java/learn/
+    - title: PostgreSQL
+      address: https://www.postgresql.org/
     - title: AuthJS
       address: https://authjs.dev/
     - title: Postman
