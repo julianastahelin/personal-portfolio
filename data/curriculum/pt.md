@@ -4,7 +4,7 @@ title: Currículo
 experience: 
     title: Experiência
     details:
-        - name: 'Desenvolvedora Web Front-end – Supernova'
+        - name: 'Desenvolvedora Web Front-end – Supernovax'
           period: 'mai/23 – dez/23'
           description:
             - 'Implementação de aplicações web full-stack usando Next.js, Typescript, Tailwind, Contentlayer e Framer-motion'

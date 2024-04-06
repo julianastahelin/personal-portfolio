@@ -4,7 +4,7 @@ title: Curriculum
 experience: 
     title: Experience
     details:
-        - name: 'Front-end Web Developer – Supernova'
+        - name: 'Front-end Web Developer – Supernovax'
           period: 'May/23 – Dec/23'
           description:
             - 'Implementation of full-stack applications using Next.js, Typescript, Tailwind, Contentlayer and Framer-motion'
