@@ -6,7 +6,7 @@ import { getSectionData, Home } from '@/lib/data/loader.ts'
 import { LanguageContext } from '@/components/providers'
 
 
-export default function Home() {
+export default function HomePage() {
 
   const { language } = useContext(LanguageContext)
   const data = getSectionData('Home', language) as Home
