@@ -1,5 +1,6 @@
 'use client'
 import { useContext, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ReactCountryFlag from 'react-country-flag'
 import { motion } from 'framer-motion'
@@ -8,7 +9,12 @@ import { getSectionData, Nav } from '@/lib/data/loader.ts'
 import { Language, LanguageContext } from '@/components/providers'
 
 
-export function Nav() {
+export function NavBar() {
+    
+    const router = useRouter()
+    const pathname = usePathname()
+    const currentLang = pathname.split('/')[1]
+    const currentPage = pathname.split('/')[2]
 
     const { language, setLanguage } = useContext(LanguageContext)
     const data = getSectionData('Nav', language) as Nav
@@ -16,16 +22,19 @@ export function Nav() {
     const [open, setOpen] = useState<boolean>(false)
 
     function handleLanguageChange(language: Language) {
-        setLanguage(language)
-        setOpen(!open)
+        if (!currentLang || !currentPage) {
+            setLanguage(language)
+            setOpen(!open)
+        }
+        else router.push(`/${language}/${currentPage}`)
     }
 
     const navItems = [
         { href: '/', name: data.home },
-        { href: '/tech-stack', name: data.tech },
-        { href: '/projects', name: data.projects },
-        { href: '/curriculum', name: data.curriculum, },
-        { href: '/blog', name: data.blog, }
+        { href: `/${language}/tech-stack`, name: data.tech },
+        { href: `/${language}/projects`, name: data.projects },
+        { href: `/${language}/curriculum`, name: data.curriculum, },
+        { href: `/${language}/blog`, name: data.blog, }
     ]
 
     const languages = [
