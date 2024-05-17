@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Juliana Stahelin - Front-end web developer | Portfolio',
     description: 'Driven front-end web developer with experience in React, Next.js, TypeScript, JavaScript, Tailwind, and Git. Eager learner dedicated to excellence.',
     type: 'website',
-    url: 'https://julianastahelin.vercel.app/',
+    url: 'https://julianastahelin.com',
     siteName: 'Juliana Stahelin - Front-end web developer | Portfolio',
     locale: 'en_US'
   },
