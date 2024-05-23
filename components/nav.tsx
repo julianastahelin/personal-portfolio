@@ -22,8 +22,8 @@ export function NavBar() {
     const [open, setOpen] = useState<boolean>(false)
 
     function handleLanguageChange(language: Language) {
+        setLanguage(language)
         if (!currentLang || !currentPage) {
-            setLanguage(language)
             setOpen(!open)
         }
         else router.push(`/${language}/${currentPage}`)
