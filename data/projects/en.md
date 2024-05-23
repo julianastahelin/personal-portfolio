@@ -2,6 +2,30 @@
 language: en
 title: Projects
 projects:
+    - title: Duo Baobá
+      subtitle: 'Website for a duo of musicians'
+      stack: 
+        title: Tech stack
+        list:
+            - Next.js
+            - Typescript
+            - Tailwind
+            - Notion as a CMS (Content Management System)
+            - Framer motion
+      description: 
+        title: Description
+        text: "Website to showcase a duo of musicians. It has a Content Management System built using the Notion API, through which the clients can easily edit the website's content."
+      links: 
+        title: Links
+        list:
+          - name: Website
+            url: 'https://duobaoba.vercel.app/'
+          - name: Repository
+            url: 'https://github.com/julianastahelin/duo-baoba'
+      images: 
+            desktop: duobaoba-desktop.gif
+            tablet: duobaoba-tablet.gif
+            mobile: duobaoba-mobile.gif
     - title: Pokédex
       subtitle: 'List of Pokémons'
       stack: 

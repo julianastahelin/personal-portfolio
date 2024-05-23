@@ -2,6 +2,30 @@
 language: pt
 title: Projetos
 projects:
+    - title: Duo Baobá
+      subtitle: 'Site para um duo de músicos'
+      stack: 
+        title: Tecnologias 
+        list:
+            - Next.js
+            - Typescript
+            - Tailwind
+            - Uso do Notion como Sistema de Gerenciamento de Conteúdo
+            - Framer motion
+      description: 
+        title: Descrição
+        text: 'Site de portfólio para um duo de músicos. Possui um Sistema de Gerenciamento de Conteúdo construído utilizando a API do Notion, através do qual os clientes podem editar o conteúdo do site com facilidade.'
+      links: 
+        title: Links
+        list:
+          - name: Site
+            url: 'https://duobaoba.vercel.app/'
+          - name: Repositório
+            url: 'https://github.com/julianastahelin/duo-baoba'
+      images: 
+            desktop: duobaoba-desktop.gif
+            tablet: duobaoba-tablet.gif
+            mobile: duobaoba-mobile.gif
     - title: Pokédex
       subtitle: 'Lista de Pokémons'
       stack: 
