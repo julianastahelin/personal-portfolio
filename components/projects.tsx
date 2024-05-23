@@ -36,7 +36,7 @@ function SingleProject({
         <motion.div key={project.title + index + language}
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 + index / 2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className={`
                 flex justify-center md:justify-between items-center flex-col-reverse
                 ${index === 0 || index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
