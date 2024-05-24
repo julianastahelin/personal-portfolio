@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 
 import { Home } from '@/lib/data/loader.ts'
 import { AnimatedButton } from '@/components/custom-ui'
+import { Language } from '@/components/providers'
 
 
-export function HomeSection({ data }: { data: Home }) {
+export function HomeSection({ data, language }: { data: Home, language: Language }) {
 
     return (
         <section className='flex flex-col md:flex-row justify-evenly items-center px-7 md:px-16 py-8 md:py-0 max-w-7xl gap-4'>
@@ -48,7 +49,7 @@ export function HomeSection({ data }: { data: Home }) {
                         flex items-center justify-center flex-wrap
                         font-light text-sm text-secondary-foreground text-center
                     '
-                        href='/projects'
+                        href={`/${language}/projects`}
                     >
                         <div>&lt;<span className='text-accent-primary'>button</span>&gt;</div>
                         {data.projectsButton}

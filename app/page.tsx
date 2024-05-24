@@ -12,6 +12,6 @@ export default function HomePage() {
   const data = getSectionData('Home', language) as Home
 
   return (
-    <HomeSection data={data} />
+    <HomeSection data={data} language={language} />
   )
 }
