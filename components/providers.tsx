@@ -9,7 +9,7 @@ interface LanguageContextType {
 }
 
 const defaultLanguage = {
-    language: 'en' as Language,
+    language: 'pt' as Language,
     setLanguage: () => {},
 }
 
