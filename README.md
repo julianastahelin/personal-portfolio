@@ -13,11 +13,11 @@
 
 <h3>Links</h3>
 <ul>
-    <li>Live site URL: <a href='https://julianastahelin.vercel.app/'>https://julianastahelin.vercel.app/</a></li>
+    <li>Live site URL: <a href='https://julianastahelin.com/'>https://julianastahelin.com/</a></li>
 </ul>
 
 <h3>Preview</h3>
-<a href='https://julianastahelin.vercel.app/'><img src='docs/design-desktop.gif' alt='gif of project being displayed and used on desktop' style='width: 60%'></a>
+<a href='https://julianastahelin.com/'><img src='docs/design-desktop.gif' alt='gif of project being displayed and used on desktop' style='width: 60%'></a>
 
 <h2>My process</h2>
 
