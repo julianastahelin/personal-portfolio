@@ -9,7 +9,7 @@ export function ProjectsSection({ data }: { data: Projects }) {
     const activeProjects = data.projects.filter((project) => project.title !== 'Juflix')
 
     return (
-        <section className='flex flex-col items-center gap-14 md:gap-12 px-5 w-full max-w-[1440px]'>
+        <section className='flex flex-col items-center gap-12 sm:px-5 w-full max-w-[1440px]'>
             <AnimatedTitle key={'title' + data.language}>
                 {data.title}
             </AnimatedTitle>
@@ -24,8 +24,8 @@ export function ProjectsSection({ data }: { data: Projects }) {
 
 
 function SingleProject({
-    project, 
-    index, 
+    project,
+    index,
     language
 }: {
     project: Project,
@@ -40,12 +40,12 @@ function SingleProject({
             className={`
                 flex justify-center md:justify-between items-center flex-col-reverse
                 ${index === 0 || index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
-                max-w-7xl w-11/12 lg:w-[95%] gap-5 p-5 pb-8
+                max-w-7xl w-full md:w-11/12 lg:w-[95%] gap-6 py-5 md:p-5 
                 border-4 border-border-tertiary bg-primary-foreground shadow-small-dark
             `}
         >
             <ProjectGif project={project} />
-            <div className='text-secondary-foreground w-11/12 md:w-2/5'>
+            <div className='text-secondary-foreground w-11/12 md:w-2/5 flex flex-col gap-5'>
                 <ProjectInfo project={project} />
                 <ProjectLinks project={project} />
             </div>
@@ -101,28 +101,36 @@ function ProjectGif({ project }: { project: Project }) {
 function ProjectInfo({ project }: { project: Project }) {
     return (
         <>
-            <h3 className='font-bold text-xl text-accent-secondary'>
-                {project.title}
-            </h3>
-            <p className='text-sm'>
-                {project.subtitle}
-            </p>
-            <h4 className='font-bold text-lg text-accent-secondary pt-7'>
-                {project.stack.title}
-            </h4>
-            <ul>
-                {project.stack.list.map((item, index) =>
-                    <li className='list-none before:content-["•"] before:pr-2 before:text-base' key={item + index}>
-                        {item}
-                    </li>
-                )}
-            </ul>
-            <h4 className='font-bold text-lg text-accent-secondary pt-7'>
-                {project.description.title}
-            </h4>
-            <p>
-                {project.description.text}
-            </p>
+            <div>
+                <h3 className='font-bold text-xl text-accent-secondary'>
+                    {project.title}
+                </h3>
+                <p className='text-sm'>
+                    {project.subtitle}
+                </p>
+            </div>
+
+            <div>
+                <h4 className='font-bold text-lg text-accent-secondary'>
+                    {project.stack.title}
+                </h4>
+                <ul>
+                    {project.stack.list.map((item, index) =>
+                        <li className='list-none before:content-["•"] before:pr-2 before:text-base' key={item + index}>
+                            {item}
+                        </li>
+                    )}
+                </ul>
+            </div>
+
+            <div>
+                <h4 className='font-bold text-lg text-accent-secondary'>
+                    {project.description.title}
+                </h4>
+                <p>
+                    {project.description.text}
+                </p>
+            </div>
         </>
     )
 }
@@ -130,12 +138,12 @@ function ProjectInfo({ project }: { project: Project }) {
 
 function ProjectLinks({ project }: { project: Project }) {
     return (
-        <div className='flex items-center gap-6 md:gap-5 mt-7 flex-wrap'>
+        <div className='flex items-center gap-6 md:gap-5 flex-wrap h-9'>
             {project.links.list.map((link, index) =>
                 <AnimatedButton key={link.name + index}>
                     <a href={link.url} target='_blank'
                         className='
-                            p-2
+                            p-1 md:p-2 h-fit 
                             no-underline text-lg font-bold text-accent-tertiary
                             border-[1px] border-secondary-foreground shadow-medium-light
                         '
