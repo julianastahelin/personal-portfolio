@@ -5,15 +5,12 @@ import { AnimatedButton, AnimatedTitle } from '@/components/custom-ui'
 
 
 export function ProjectsSection({ data }: { data: Projects }) {
-
-    const activeProjects = data.projects.filter((project) => project.title !== 'Juflix')
-
     return (
         <section className='flex flex-col items-center gap-12 sm:px-5 w-full max-w-[1440px]'>
             <AnimatedTitle key={'title' + data.language}>
                 {data.title}
             </AnimatedTitle>
-            {activeProjects.map((project, index) => {
+            {data.projects.map((project, index) => {
                 return (
                     <SingleProject project={project} index={index} key={project.title + index} language={data.language} />
                 )
