@@ -48,10 +48,10 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
                             transition={{ duration: 0.6, delay: 0.3 + index / 10 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className='text-2xl text-center flex justify-center items-center w-full md:w-2/3 pr-0 pb-1 border-border-primary border-r-0 border-b-[1px]'>
+                            <h3 className='text-xl sm:text-2xl text-center flex justify-center items-center w-full md:w-2/3 pr-0 pb-1 border-border-primary border-r-0 border-b-[1px]'>
                                 {part.title}
                             </h3>
-                            <div className='flex flex-col w-4/5 md:w-2/3 px-2 gap-5'>
+                            <div className='flex flex-col w-full md:w-2/3 px-2 gap-3 sm:gap-5'>
                                 {part.component}
                             </div>
                         </motion.div>
@@ -91,7 +91,7 @@ function DownloadPDFButton({ language }: { language: Language }) {
             <TooltipProvider>
                 <Tooltip delayDuration={400}>
                     <TooltipTrigger>
-                        <Download className='h-6 w-6' />
+                        <Download className='h-5 w-5 sm:h-6 sm:w-6' />
                     </TooltipTrigger>
                     <TooltipContent className='bg-primary-foreground text-tertiary-foreground'>
                         <p>{downloadPDFButton[language]}</p>

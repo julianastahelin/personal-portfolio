@@ -11,7 +11,7 @@ export function LinksPart({ links }: LinksPartProps) {
 
     return (
         <>
-            <ul className='list-none pl-2'>
+            <ul className='list-none pl-2 text-xs sm:text-base'>
                 {
                     links.list.map((link, index) =>
                         <li className='font-light leading-4 before:content-["•"] before:pr-2 before:text-base' key={link.name + index}>

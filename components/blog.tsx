@@ -19,9 +19,9 @@ export function BlogSection({ sectionData, posts }: { sectionData: Blog, posts: 
 
     const { language } = sectionData
     const coverImageTemplate = '/assets/img/dev.to-cover-template.png'
-
+    
     return (
-        <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
+        <section className='flex flex-col items-center gap-12 w-4/5 max-w-7xl'>
             <AnimatedTitle>
                 {sectionData.sectionTitle}
             </AnimatedTitle>
@@ -44,8 +44,8 @@ export function BlogSection({ sectionData, posts }: { sectionData: Blog, posts: 
                                     <AnimatedButton>
                                         <a href={post.url} target='_blank'
                                             className='
-                                            p-2
-                                            no-underline text-lg font-bold text-secondary-foreground
+                                            py-1 px-2 sm:p-2
+                                            no-underline text-base sm:text-lg font-bold text-secondary-foreground
                                             border-2 border-secondary-foreground
                                             bg-accent-quarternary
                                             shadow-medium-dark
@@ -70,19 +70,19 @@ function CardInfo({ post, language }: { post: Post, language: Language }) {
     
     return (
         <CardContent className='flex flex-col gap-2 min-h-[13rem]'>
-            <CardDescription className='flex w-full justify-between text-primary-foreground'>
+            <CardDescription className='flex w-full justify-between text-primary-foreground text-sm sm:text-base'>
                 {convertDateFromIsoToDayMonthYear(post.published_at, language as Language)}
                 <span className='font-light'>
                     {post.reading_time_minutes} min {' '}
                     <BookText className='inline' size={14} strokeWidth={1} />
                 </span>
             </CardDescription>
-            <CardTitle className='text-primary-foreground'>
+            <CardTitle className='text-primary-foreground text-xl sm:text-2xl'>
                 <a href={post.url} target='_blank'>
                     {post.title}
                 </a>
             </CardTitle>
-            <CardDescription className='text-primary-foreground'>
+            <CardDescription className='text-primary-foreground text-xs sm:text-sm'>
                 {post.description}
             </CardDescription>
         </CardContent>

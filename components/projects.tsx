@@ -45,7 +45,7 @@ function SingleProject({
             `}
         >
             <ProjectGif project={project} />
-            <div className='text-secondary-foreground w-11/12 md:w-2/5 flex flex-col gap-5'>
+            <div className='text-secondary-foreground w-11/12 md:w-2/5 flex flex-col gap-6'>
                 <ProjectInfo project={project} />
                 <ProjectLinks project={project} />
             </div>
@@ -102,21 +102,21 @@ function ProjectInfo({ project }: { project: Project }) {
     return (
         <>
             <div>
-                <h3 className='font-bold text-xl text-accent-secondary'>
+                <h3 className='font-bold text-lg sm:text-xl text-accent-secondary'>
                     {project.title}
                 </h3>
-                <p className='text-sm'>
+                <p className='text-xs sm:text-sm'>
                     {project.subtitle}
                 </p>
             </div>
 
             <div>
-                <h4 className='font-bold text-lg text-accent-secondary'>
+                <h4 className='font-bold text-base sm:text-lg text-accent-secondary'>
                     {project.stack.title}
                 </h4>
                 <ul>
                     {project.stack.list.map((item, index) =>
-                        <li className='list-none before:content-["•"] before:pr-2 before:text-base' key={item + index}>
+                        <li className='list-none before:content-["•"] before:pr-2 before:text-base text-sm sm:text-base' key={item + index}>
                             {item}
                         </li>
                     )}
@@ -124,10 +124,10 @@ function ProjectInfo({ project }: { project: Project }) {
             </div>
 
             <div>
-                <h4 className='font-bold text-lg text-accent-secondary'>
+                <h4 className='font-bold text-base sm:text-lg text-accent-secondary'>
                     {project.description.title}
                 </h4>
-                <p>
+                <p className='text-sm sm:text-base'>
                     {project.description.text}
                 </p>
             </div>
@@ -143,8 +143,8 @@ function ProjectLinks({ project }: { project: Project }) {
                 <AnimatedButton key={link.name + index}>
                     <a href={link.url} target='_blank'
                         className='
-                            p-1 md:p-2 h-fit 
-                            no-underline text-lg font-bold text-accent-tertiary
+                            py-1 px-2 md:p-2 h-fit 
+                            no-underline text-base sm:text-lg font-bold text-accent-tertiary
                             border-[1px] border-secondary-foreground shadow-medium-light
                         '
                     >
