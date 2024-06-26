@@ -19,7 +19,7 @@ projects:
         title: Links
         list:
           - name: Site
-            url: 'https://duobaoba.vercel.app/'
+            url: 'https://duobaoba.com.br/'
           - name: Repositório
             url: 'https://github.com/julianastahelin/duo-baoba'
       images: 
@@ -64,34 +64,11 @@ projects:
         title: Links
         list:
           - name: Site
-            url: 'https://julianastahelin.vercel.app/'
+            url: 'https://julianastahelin.com/'
           - name: Repositório
             url: 'https://github.com/julianastahelin/personal-portfolio'
       images:
         desktop: portfolio-desktop.gif
         tablet: portfolio-tablet.gif
         mobile: portfolio-mobile.gif
-    - title: Juflix
-      subtitle: 'Catálogo de filmes'
-      stack:
-        title: Tecnologias
-        list:
-            - HTML
-            - CSS
-            - Javascript 
-            - 'Consumo de API'
-      description: 
-        title: Descrição
-        text: 'Projeto pessoal. Catálogo que retorna filmes de uma API. Possível filtrar por gênero ou mais bem ranqueados e realizar busca por nome.' 
-      links:
-        title: Links
-        list:
-          - name: Site
-            url: 'https://julianastahelin.github.io/juflix-movies-catalog/'
-          - name: Repositório
-            url: 'https://github.com/julianastahelin/juflix-movies-catalog' 
-      images: 
-        desktop: juflix-desktop.gif
-        tablet: juflix-tablet.gif
-        mobile: juflix-mobile.gif
 ---
