@@ -63,7 +63,7 @@ function ContactIcons({ data, language }: { data: Contact, language: Language })
                             ? <TooltipProvider delayDuration={400}>
                                 <Tooltip>
                                     <TooltipTrigger onClick={() => copyAddress(contact.address)}>
-                                        <Icon name={contact.title as IconName} className='h-8 w-8' />
+                                        <Icon name={contact.title as IconName} className='h-7 w-7 sm:h-8 sm:w-8' />
                                     </TooltipTrigger>
                                     <TooltipContent className='bg-primary-foreground text-tertiary-foreground'>
                                         <button onClick={() => copyAddress(contact.address)} className='flex gap-2 items-center'>

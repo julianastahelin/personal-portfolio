@@ -11,11 +11,11 @@ export function TechStackSection({ data }: { data: TechStack }) {
     const techIcons = data.technologies.map((item) => kebabToCamelCase(item.title))
 
     return (
-        <section className='flex flex-col items-center gap-10 w-4/5 max-w-7xl'>
+        <section className='flex flex-col items-center gap-12 w-11/12 sm:w-4/5 max-w-7xl'>
             <AnimatedTitle>
                 {data.title}
             </AnimatedTitle>
-            <div className='flex items-end justify-center gap-11 flex-wrap w-4/5 md:w-3/5'>
+            <div className='flex items-end justify-center gap-5 sm:gap-11 flex-wrap w-11/12 md:w-3/5'>
                 {data.technologies.map((tech, index) => {
                     return (
                         <motion.div
@@ -29,15 +29,15 @@ export function TechStackSection({ data }: { data: TechStack }) {
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.3 }}
                                     href={tech.address} target='_blank' className='flex flex-col items-center'>
-                                    <Icon name={techIcons[index] as IconName} className='h-10 w-10' />
-                                    <span>{tech.title}</span>
+                                    <Icon name={techIcons[index] as IconName} className='h-8 w-8 sm:h-10 sm:w-10' />
+                                    <span className='text-sm sm:text-base'>{tech.title}</span>
                                 </motion.a>
                                 : <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <Icon name={techIcons[index] as IconName} className='h-10 w-10' />
-                                    <span>{tech.title}</span>
+                                    <Icon name={techIcons[index] as IconName} className='h-8 w-8 sm:h-10 sm:w-10' />
+                                    <span className='text-sm sm:text-base'>{tech.title}</span>
                                 </motion.div>
                             }
                         </motion.div>
