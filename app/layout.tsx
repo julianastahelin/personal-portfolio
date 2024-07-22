@@ -15,6 +15,7 @@ const roboto_mono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://julianastahelin.com'),
   title: {
     default: 'Juliana Stahelin - Front-end web developer | Portfolio',
     template: '%s | Juliana Stahelin - Front-end web developer',
