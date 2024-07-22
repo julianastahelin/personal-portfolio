@@ -18,13 +18,6 @@ experience:
             - 'Estilização em CSS e Bootstrap'
             - 'Aplicação de gráficos interativos em JS'
             - 'Versionamento em Git'
-        - name: 'Farmacêutica – Prefeitura Municipal de Águas Mornas, SC'
-          period: 'mai/22 – nov/22'
-          description: 
-            - 'Responsabilidade técnica'
-            - 'Assistência Farmacêutica'
-            - 'Acompanhamento de pacientes'
-            - 'Suporte à equipe de saúde'
 education:
     title: 'Formação acadêmica'
     degrees:
@@ -64,8 +57,8 @@ abilities:
     list:          
         - sort: Técnicas/específicas 
           abilities:
-            - Next.js
             - React
+            - Next.js
             - Typescript
             - JavaScript
             - Tailwind
@@ -75,11 +68,10 @@ abilities:
             - CSS
             - Git
             - GitHub
-            - 'API Rest'
+            - 'Integração com API REST'
             - Figma
             - Postman
             - Node.js
-            - Java
             - PostgreSQL
             - Auth.js
         - sort: 'Gerais e interpessoais'
