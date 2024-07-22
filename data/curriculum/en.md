@@ -14,17 +14,10 @@ experience:
         - name: 'Front-end Web Developer – CEPEDOC'
           period: 'Apr/23 – Jun/23'
           description:
-            - 'Building HTML pages for online course'
-            - 'Styling using CSS and Bootstrap'
-            - 'Building interactive graphics using JS'
+            - 'Build HTML pages for online course'
+            - 'Add styles using CSS and Bootstrap'
+            - 'Build interactive graphics using JS'
             - 'Version control using Git'
-        - name: 'Pharmacist – City Hall of Águas Mornas, SC'
-          period: 'May/22 – Nov/22'
-          description: 
-            - 'Technical manager'
-            - 'Pharmaceutical Assistance'
-            - 'Follow-up of patients'
-            - 'Support to health team'
 education:
     title: 'Academic education'
     degrees:
@@ -64,8 +57,8 @@ abilities:
     list:          
         - sort: 'Hard skills' 
           abilities:
-            - Next.js
             - React
+            - Next.js
             - Typescript
             - JavaScript
             - Tailwind
@@ -75,11 +68,10 @@ abilities:
             - CSS
             - Git
             - GitHub
-            - 'Rest API'
+            - 'Integration with REST API'
             - Figma
             - Postman
             - Node.js
-            - Java
             - PostgreSQL
             - Auth.js
         - sort: 'Soft skills'
