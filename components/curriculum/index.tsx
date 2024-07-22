@@ -76,7 +76,7 @@ function DownloadPDFButton({ language }: { language: Language }) {
     }
 
     const pdfFileName = {
-        en: 'Juliana Coelho Stahelin - Front-end Web Developer',
+        en: 'Juliana Coelho Stahelin - Front-end web developer',
         pt: 'Juliana Coelho Stahelin - Desenvolvedora Web Front-end',
     }
 
