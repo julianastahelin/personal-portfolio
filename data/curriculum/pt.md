@@ -4,6 +4,10 @@ title: Currículo
 experience: 
     title: Experiência
     details:
+        - name: 'Desenvolvedora Front-end Júnior – Dynamox'
+          period: 'ago/24 – presente'
+          description:
+            - 'Construção e manutenção de interfaces front-end em React usando Vite e Next.js'
         - name: 'Desenvolvedora Web Front-end – Supernovax'
           period: 'mai/23 – dez/23'
           description:

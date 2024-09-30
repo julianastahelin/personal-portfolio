@@ -4,6 +4,10 @@ title: Curriculum
 experience: 
     title: Experience
     details:
+        - name: 'Junior Front-end Web Developer – Dynamox'
+          period: 'Aug/24 – current'
+          description:
+            - 'Build and maintain front-end interfaces in React using Vite and Next.js'
         - name: 'Front-end Web Developer – Supernovax'
           period: 'May/23 – Dec/23'
           description:
