@@ -13,7 +13,7 @@ import {
 
 import { ExperiencePart } from './experience'
 import { EducationPart } from './education'
-import { CoursesPart } from './courses'
+// import { CoursesPart } from './courses'
 import { AbilitiesPart } from './abilities'
 import { LanguagesPart } from './languages'
 
@@ -23,7 +23,7 @@ export function CurriculumSection({ data }: { data: Curriculum }) {
     const curriculumParts: { title: string, component: JSX.Element }[] = [
         { title: data.experience.title, component: <ExperiencePart experience={data.experience} /> },
         { title: data.education.title, component: <EducationPart education={data.education} /> },
-        { title: data.courses.title, component: <CoursesPart courses={data.courses} /> },
+        // { title: data.courses.title, component: <CoursesPart courses={data.courses} /> },
         { title: data.abilities.title, component: <AbilitiesPart abilities={data.abilities} /> },
         { title: data.languages.title, component: <LanguagesPart languages={data.languages} /> },
     ]
