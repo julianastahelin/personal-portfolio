@@ -4,17 +4,30 @@ title: Curriculum
 experience: 
     title: Experience
     details:
-        - name: 'Junior Front-end Web Developer – Dynamox'
+        - name: 'Front-end Web Developer – Dynamox'
           period: 'Aug/24 – current'
           description:
-            - 'Build and maintain front-end interfaces in React using Vite and Next.js'
-        - name: 'Front-end Web Developer – Supernovax'
-          period: 'May/23 – Dec/23'
+            - 'Development of complex components and dynamic forms with validation using React and TypeScript'
+            - 'Creation of reusable and scalable components for use by other development teams'
+            - 'Advanced usage of Redux for managing global state'
+            - 'Integration with RESTful APIs and handling asynchronous data efficiently'
+            - 'Active participation in code reviews, promoting code quality, readability, and performance'
+            - 'Involvement in technical meetings to discuss front-end architecture and best practices'
+            - 'Maintenance and improvement of existing features with focus on performance and design system'
+            - 'Writing clear and concise technical documentation to support ongoing development and onboarding'
+            - 'Authoring of Architectural Decision Records (ADRs) to document key technical decisions'
+            - 'Implementation of unit tests using Jest and React Testing Library'
+        - name: 'Front-end Web Developer – Freelancer'
+          period: 'May/23 – Ago/24'
           description:
-            - 'Implementation of full-stack applications using Next.js, Typescript, Tailwind, Contentlayer and Framer-motion'
-            - 'REST API integration'
-            - 'Code integration following best practices for versioning and Git feature branch workflow'
-            - 'Implementation of authentication using Next-Auth'
+            - 'Implementation of full-stack web applications using Next.js, TypeScript, Tailwind, Redux, and Framer Motion'
+            - 'Integration with REST APIs'
+            - 'Code integration following version control best practices and the Git feature branch workflow'
+            - 'Implementation of authentication'
+            - 'Development of a website using Next.js with a custom CMS built on the Notion API'
+            - 'Development of an interactive interface for an online course'
+            - 'Development of a business website using WordPress'
+            - 'Development of an online photography exhibition website with accessibility features'
         - name: 'Front-end Web Developer – CEPEDOC'
           period: 'Apr/23 – Jun/23'
           description:

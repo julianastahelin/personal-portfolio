@@ -4,24 +4,32 @@ title: Currículo
 experience: 
     title: Experiência
     details:
-        - name: 'Desenvolvedora Front-end Júnior – Dynamox'
+        - name: 'Desenvolvedora Front-end – Dynamox'
           period: 'ago/24 – presente'
           description:
-            - 'Construção e manutenção de interfaces front-end em React usando Vite e Next.js'
-        - name: 'Desenvolvedora Web Front-end – Supernovax'
-          period: 'mai/23 – dez/23'
+            - 'Desenvolvimento de componentes complexos e formulários dinâmicos com validações usando React e TypeScript'
+            - 'Criação de componentes reutilizáveis e escaláveis para uso por outras equipes de desenvolvimento'
+            - 'Uso avançado de Redux para gerenciamento de estado global'
+            - 'Integração com APIs REST e manipulação eficiente de dados assíncronos'
+            - 'Participação em code reviews, garantindo qualidade de código, legibilidade e performance'
+            - 'Colaboração em reuniões técnicas sobre arquitetura e boas práticas de front-end'
+            - 'Manutenção e evolução da aplicação com foco em performance e aderência ao design system'
+            - 'Escrita de documentação técnica clara e objetiva para facilitar o uso e manutenção do código'
+            - 'Redação de ADRs (Architectural Decision Records) para registrar decisões técnicas importantes'
+            - 'Implementação de testes unitários com Jest e React Testing Library'
+        - name: 'Desenvolvedora Web Front-end - Freelancer'
+          period: 'mai/23 – ago/24'
           description:
-            - 'Implementação de aplicações web full-stack usando Next.js, Typescript, Tailwind, Contentlayer e Framer-motion'
+            - 'Implementação de aplicações web full-stack usando Next.js, Typescript, Tailwind, Redux e Framer-motion'
             - 'Integração com API REST'
             - 'Integração de código seguindo boas práticas de versionamento e Git feature branch workflow'
-            - 'Implementação de autenticação com Next-Auth'
-        - name: 'Desenvolvedora Web Front-end – CEPEDOC'
-          period: 'abr/23 – jun/23'
-          description:
-            - 'Plotagem de conteúdo em HTML para curso online'
-            - 'Estilização em CSS e Bootstrap'
-            - 'Aplicação de gráficos interativos em JS'
-            - 'Versionamento em Git'
+            - 'Implementação de autenticação'
+            - 'Construção de site em Next com CMS desenvolvido utilizando a API do Notion'
+            - 'Desenvolvimento de interfaces interativas para um curso online da UNA-SUS'
+            - 'Desenvolvimento de telas de dashboard'
+            - 'Desenvolvimento front-end para um sistema de prontuário eletrônico'
+            - 'Desenvolvimento de site empresarial em Wordpress'
+            - 'Desenvolvimento de site para exposição fotográfica online com recursos de acessibilidade'
 education:
     title: 'Formação acadêmica'
     degrees:
