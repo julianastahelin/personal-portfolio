@@ -75,6 +75,7 @@ abilities:
         - sort: 'Hard skills' 
           abilities:
             - React
+            - Redux
             - Next.js
             - Typescript
             - JavaScript
@@ -90,7 +91,8 @@ abilities:
             - Postman
             - Node.js
             - PostgreSQL
-            - Auth.js
+            - Jest
+            - React Testing Library
         - sort: 'Soft skills'
           abilities: 
             - Perseverance

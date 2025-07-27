@@ -70,6 +70,7 @@ abilities:
         - sort: Técnicas/específicas 
           abilities:
             - React
+            - Redux
             - Next.js
             - Typescript
             - JavaScript
@@ -85,7 +86,8 @@ abilities:
             - Postman
             - Node.js
             - PostgreSQL
-            - Auth.js
+            - Jest
+            - React Testing Library
         - sort: 'Gerais e interpessoais'
           abilities: 
             - Perseverança
