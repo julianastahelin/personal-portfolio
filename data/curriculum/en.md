@@ -16,7 +16,7 @@ experience:
             - 'Maintenance and improvement of existing features with focus on performance and design system'
             - 'Writing clear and concise technical documentation to support ongoing development and onboarding'
             - 'Authoring of Architectural Decision Records (ADRs) to document key technical decisions'
-            - 'Implementation of unit tests using Jest and React Testing Library'
+            - 'Implementation of unit tests using Vitest and React Testing Library'
         - name: 'Front-end Web Developer – Freelancer'
           period: 'May/23 – Ago/24'
           description:
@@ -91,7 +91,7 @@ abilities:
             - Postman
             - Node.js
             - PostgreSQL
-            - Jest
+            - Vitest
             - React Testing Library
         - sort: 'Soft skills'
           abilities: 

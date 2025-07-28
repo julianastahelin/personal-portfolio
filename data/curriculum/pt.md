@@ -16,7 +16,7 @@ experience:
             - 'Manutenção e evolução da aplicação com foco em performance e aderência ao design system'
             - 'Escrita de documentação técnica clara e objetiva para facilitar o uso e manutenção do código'
             - 'Redação de ADRs (Architectural Decision Records) para registrar decisões técnicas importantes'
-            - 'Implementação de testes unitários com Jest e React Testing Library'
+            - 'Implementação de testes unitários com Vitest e React Testing Library'
         - name: 'Desenvolvedora Web Front-end - Freelancer'
           period: 'mai/23 – ago/24'
           description:
@@ -86,7 +86,7 @@ abilities:
             - Postman
             - Node.js
             - PostgreSQL
-            - Jest
+            - Vitest
             - React Testing Library
         - sort: 'Gerais e interpessoais'
           abilities: 

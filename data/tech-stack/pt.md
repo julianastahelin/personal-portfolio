@@ -4,12 +4,16 @@ title: Tecnologias
 technologies: 
     - title: React
       address: https://react.dev/
+    - title: Redux
+      address: https://redux.js.org/
     - title: NextJS
       address: https://nextjs.org/
     - title: Typescript
       address: https://www.typescriptlang.org/
     - title: Javascript
       address: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+    - title: MaterialUI
+      address: https://mui.com/material-ui/
     - title: Tailwind
       address: https://tailwindcss.com/
     - title: Bootstrap
@@ -34,6 +38,4 @@ technologies:
       address: https://nodejs.org/en
     - title: PostgreSQL
       address: https://www.postgresql.org/
-    - title: AuthJS
-      address: https://authjs.dev/
 ---
