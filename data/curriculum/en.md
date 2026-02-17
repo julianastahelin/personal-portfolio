@@ -4,7 +4,7 @@ title: Curriculum
 experience:
   title: Experience
   details:
-    - name: "Front-end developer – Riachuelo - Midway Financial"
+    - name: "Front-end developer – Riachuelo/Midway Financial"
       period: "Oct/25 – current"
       description:
         - "Development of scalable and reusable components using React and TypeScript"
