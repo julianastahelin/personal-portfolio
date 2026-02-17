@@ -1,124 +1,132 @@
 ---
 language: en
 title: Curriculum
-experience: 
-    title: Experience
-    details:
-        - name: 'Front-end Web Developer – Dynamox'
-          period: 'Aug/24 – current'
-          description:
-            - 'Development of complex components and dynamic forms with validation using React and TypeScript'
-            - 'Creation of reusable and scalable components for use by other development teams'
-            - 'Advanced usage of Redux for managing global state'
-            - 'Integration with RESTful APIs and handling asynchronous data efficiently'
-            - 'Active participation in code reviews, promoting code quality, readability, and performance'
-            - 'Involvement in technical meetings to discuss front-end architecture and best practices'
-            - 'Maintenance and improvement of existing features with focus on performance and design system'
-            - 'Writing clear and concise technical documentation to support ongoing development and onboarding'
-            - 'Authoring of Architectural Decision Records (ADRs) to document key technical decisions'
-            - 'Implementation of unit tests using Vitest and React Testing Library'
-        - name: 'Front-end Web Developer – Freelancer'
-          period: 'May/23 – Ago/24'
-          description:
-            - 'Implementation of full-stack web applications using Next.js, TypeScript, Tailwind, Redux, and Framer Motion'
-            - 'Integration with REST APIs'
-            - 'Code integration following version control best practices and the Git feature branch workflow'
-            - 'Implementation of authentication'
-            - 'Development of a website using Next.js with a custom CMS built on the Notion API'
-            - 'Development of an interactive interface for an online course'
-            - 'Development of a business website using WordPress'
-            - 'Development of an online photography exhibition website with accessibility features'
-        - name: 'Front-end Web Developer – CEPEDOC'
-          period: 'Apr/23 – Jun/23'
-          description:
-            - 'Build HTML pages for online course'
-            - 'Add styles using CSS and Bootstrap'
-            - 'Build interactive graphics using JS'
-            - 'Version control using Git'
+experience:
+  title: Experience
+  details:
+    - name: "Front-end developer – Riachuelo - Midway Financial"
+      period: "Oct/25 – current"
+      description:
+        - "Development of scalable and reusable components using React and TypeScript"
+        - "Development of dynamic tools for content management and user interface creation"
+        - "Migration of applications to modern frameworks and libraries, focusing on functionality and compatibility"
+        - "Integration of front-end applications with REST APIs"
+        - "Implementation of unit tests using Jest and React Testing Library to ensure code quality and reliability"
+        - "Monitoring CI/CD pipelines, including analysis of build and deployment failures"
+    - name: "Front-end Web Developer – Dynamox"
+      period: "Aug/24 – Oct/25"
+      description:
+        - "Development of complex components and dynamic forms with validation using React and TypeScript"
+        - "Creation of reusable and scalable components for use by other development teams"
+        - "Advanced usage of Redux for managing global state"
+        - "Integration with RESTful APIs and handling asynchronous data efficiently"
+        - "Active participation in code reviews, promoting code quality, readability, and performance"
+        - "Involvement in technical meetings to discuss front-end architecture and best practices"
+        - "Maintenance and improvement of existing features with focus on performance and design system"
+        - "Writing clear and concise technical documentation to support ongoing development and onboarding"
+        - "Authoring of Architectural Decision Records (ADRs) to document key technical decisions"
+        - "Implementation of unit tests using Vitest and React Testing Library"
+    - name: "Front-end Web Developer – Freelancer"
+      period: "May/23 – Ago/24"
+      description:
+        - "Implementation of full-stack web applications using Next.js, TypeScript, Tailwind, Redux, and Framer Motion"
+        - "Integration with REST APIs"
+        - "Code integration following version control best practices and the Git feature branch workflow"
+        - "Implementation of authentication"
+        - "Development of a website using Next.js with a custom CMS built on the Notion API"
+        - "Development of an interactive interface for an online course"
+        - "Development of a business website using WordPress"
+        - "Development of an online photography exhibition website with accessibility features"
+    - name: "Front-end Web Developer – CEPEDOC"
+      period: "Apr/23 – Jun/23"
+      description:
+        - "Build HTML pages for online course"
+        - "Add styles using CSS and Bootstrap"
+        - "Build interactive graphics using JS"
+        - "Version control using Git"
 education:
-    title: 'Academic education'
-    degrees:
-        - level: 'Graduation - technologist'
-          details:
-            - name: 'Analysis and Systems Development - Estácio'
-              period: 'Feb/24 – Current'
-              description: 
-        - level: Post-graduation
-          details:
-            - name: 'Multiprofessional Residency in Family Health – UFSC'
-              period: 'Mar/20 – Feb/22'
-              description: 
-        - level: Graduation
-          details:
-            - name: 'Academic exchange program – Anglia Ruskin University/UK'
-              period: 'Sep/15 – Aug/16'
-              description:
-                - 'Program Science Without Borders (SwB/CNPq)'
-                - 'Course of Public Health'
-            - name: 'Pharmacy – UFSC'
-              period: 'Mar/12 – Jul/19'
-              description: 
-courses:
-    title: Courses
-    details:
-        - name: DevQuest
-          period: 'Jan/23 – current'
-          description: 
-            - 'Course in fullstack web development with mentors and support'
-        - name: Udemy
-          period: 'Dec/22 – current'
+  title: "Academic education"
+  degrees:
+    - level: "Graduation - technologist"
+      details:
+        - name: "Analysis and Systems Development - Estácio"
+          period: "Feb/24 – Current"
           description:
-            - 'Course in fullstack web development'
-abilities: 
-    title: Abilities 
-    list:          
-        - sort: 'Hard skills' 
-          abilities:
-            - React
-            - Redux
-            - Next.js
-            - Typescript
-            - JavaScript
-            - Tailwind
-            - Bootstrap
-            - 'Styled Components'
-            - HTML
-            - CSS
-            - Git
-            - GitHub
-            - 'Integration with REST API'
-            - Figma
-            - Postman
-            - Node.js
-            - PostgreSQL
-            - Vitest
-            - React Testing Library
-        - sort: 'Soft skills'
-          abilities: 
-            - Perseverance
-            - Determination
-            - Self learning
-            - Teamwork 
-            - Proactivity
-            - Flexibility
+    - level: Post-graduation
+      details:
+        - name: "Multiprofessional Residency in Family Health – UFSC"
+          period: "Mar/20 – Feb/22"
+          description:
+    - level: Graduation
+      details:
+        - name: "Academic exchange program – Anglia Ruskin University/UK"
+          period: "Sep/15 – Aug/16"
+          description:
+            - "Program Science Without Borders (SwB/CNPq)"
+            - "Course of Public Health"
+        - name: "Pharmacy – UFSC"
+          period: "Mar/12 – Jul/19"
+          description:
+courses:
+  title: Courses
+  details:
+    - name: DevQuest
+      period: "Jan/23 – current"
+      description:
+        - "Course in fullstack web development with mentors and support"
+    - name: Udemy
+      period: "Dec/22 – current"
+      description:
+        - "Course in fullstack web development"
+abilities:
+  title: Abilities
+  list:
+    - sort: "Hard skills"
+      abilities:
+        - React
+        - Redux
+        - Next.js
+        - Typescript
+        - JavaScript
+        - Material UI
+        - Tailwind
+        - Bootstrap
+        - "Styled Components"
+        - HTML
+        - CSS
+        - Git
+        - GitHub
+        - "Integration with REST API"
+        - Figma
+        - Postman
+        - Jest
+        - React Testing Library
+    - sort: "Soft skills"
+      abilities:
+        - Perseverance
+        - Determination
+        - Self learning
+        - Teamwork
+        - Proactivity
+        - Flexibility
 languages:
-    title: Languages
-    list: 
-        - name: Portuguese
-          level: Native
-        - name: English 
-          level: Fluent
-        - name: Spanish
-          level: Basic
-        - name: French
-          level: Basic
-links: 
-    title: Links
-    list: 
-      - name: Github
-        url: 'https://github.com/julianastahelin'
-      - name: LinkedIn
-        url: 'https://www.linkedin.com/in/julianastahelin/'
-      - name: 'Curriculum in pdf'
-        url: cv-en.pdf
+  title: Languages
+  list:
+    - name: Portuguese
+      level: Native
+    - name: English
+      level: Fluent
+    - name: Spanish
+      level: Basic
+    - name: French
+      level: Basic
+links:
+  title: Links
+  list:
+    - name: Github
+      url: "https://github.com/julianastahelin"
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/julianastahelin/"
+    - name: "Curriculum in pdf"
+      url: cv-en.pdf
 ---
