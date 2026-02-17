@@ -1,7 +1,7 @@
 ---
 language: en
-name: 'Juliana Stahelin'
-jobTitle: 'Front-end Web Developer'
-description: 'Hello! I am Juliana, a front-end web developer. I develop my projects trying to write clean, organised and scalable code. I have a passion for learning and I’m constantly working on improving my knowledge and mastering the technologies. Check out my recent projects!'
+name: "Juliana Stahelin"
+jobTitle: "Front-end Web Developer"
+description: "Hello! I’m Juliana, a front-end developer with experience building modern, scalable web applications. I work with React, TypeScript, and Next.js, creating robust and reusable interfaces. I focus on quality, best practices, and continuous growth. Explore my projects."
 projectsButton: Go to projects
 ---
