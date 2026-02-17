@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import { TechStack } from "@/lib/data/loader.ts";
 import { kebabToCamelCase } from "@/lib/utils";
 import { AnimatedTitle } from "@/components/custom-ui/animated-title";
@@ -11,12 +10,13 @@ export function TechStackSection({ data }: { data: TechStack }) {
   );
   const getTitle = (title: string) => {
     if (title === "MaterialUI") return "Material UI";
+    if (title === "ReactTestingLibrary") return "React Testing Library";
     else return title;
   };
 
   return (
     <section className="flex flex-col items-center gap-12 w-11/12 sm:w-4/5 max-w-7xl">
-      <AnimatedTitle>{getTitle(data.title)}</AnimatedTitle>
+      <AnimatedTitle>{data.title}</AnimatedTitle>
       <div className="flex items-end justify-center gap-5 sm:gap-11 flex-wrap w-11/12 md:w-3/5">
         {data.technologies.map((tech, index) => {
           return (
@@ -38,7 +38,9 @@ export function TechStackSection({ data }: { data: TechStack }) {
                     name={techIcons[index] as IconName}
                     className="h-8 w-8 sm:h-10 sm:w-10"
                   />
-                  <span className="text-sm sm:text-base">{tech.title}</span>
+                  <span className="text-sm sm:text-base">
+                    {getTitle(tech.title)}
+                  </span>
                 </motion.a>
               ) : (
                 <motion.div
